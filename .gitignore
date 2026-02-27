@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+*.tfplan
+override.tf
+override.tf.json
+
+# Terraform variable files may contain secrets
+*.tfvars
+!environments/dev.tfvars.example
+!environments/prod.tfvars.example
+
+# Data files
+data/
+*.csv
+*.parquet
+*.zip
+
+# Secrets and environment
+.env
+*.pem
+*.key
+
+# Lambda build artifacts
+lambdas/**/package/
+lambdas/**/*.zip
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store

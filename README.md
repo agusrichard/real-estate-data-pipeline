@@ -18,56 +18,56 @@ The two sources are normalized independently, loaded into a star schema in Snowf
 ```
 ┌───────────────────────────────────────────────────────────────────┐
 │                           AWS MWAA                                │
-│                    (Managed Apache Airflow)                        │
+│                    (Managed Apache Airflow)                       │
 │                                                                   │
 │  Orchestrates the entire pipeline: schedules runs, triggers       │
 │  Lambdas, monitors progress, loads Snowflake, handles retries     │
 └───┬───────────────┬───────────────┬───────────────────┬───────────┘
     │ 1. Trigger    │ 1. Trigger    │ 3. Trigger        │ 5. Load into
-    │    ingestion  │    ingestion  │    transformation  │    Snowflake
+    │    ingestion  │    ingestion  │    transformation │    Snowflake
     ▼               ▼               │                   │
-┌─────────┐  ┌──────────┐          │                   │
-│ Kaggle  │  │ RentCast │          │                   │
-│ CSV     │  │ API      │          │                   │
-└────┬────┘  └────┬─────┘          │                   │
+┌─────────┐  ┌──────────┐           │                   │
+│ Kaggle  │  │ RentCast │           │                   │
+│ CSV     │  │ API      │           │                   │
+└────┬────┘  └────┬─────┘           │                   │
      │            │                 │                   │
      ▼            ▼                 │                   │
-┌─────────┐  ┌──────────┐          │                   │
-│ Lambda  │  │ Lambda   │          │                   │
-│ (Bulk   │  │ (API     │          │                   │
-│ Ingest) │  │ Ingest)  │          │                   │
-└────┬────┘  └────┬─────┘          │                   │
+┌─────────┐  ┌──────────┐           │                   │
+│ Lambda  │  │ Lambda   │           │                   │
+│ (Bulk   │  │ (API     │           │                   │
+│ Ingest) │  │ Ingest)  │           │                   │
+└────┬────┘  └────┬─────┘           │                   │
      │            │                 │                   │
      ▼            ▼                 │                   │
-┌─────────────────────────┐        │                   │
-│  Amazon S3 (Raw Zone)   │        │                   │
-│  s3://bucket/raw/       │        │                   │
-└────────────┬────────────┘        │                   │
-             │ 2. Raw data         │                   │
-             │    lands in S3      │                   │
-             ▼                     ▼                   │
-┌──────────────────────────────────────┐               │
-│      Transformation Layer            │               │
-│      (Polars on Lambda)             │               │
-│                                      │               │
-│  • Read raw data from S3             │               │
-│  • Clean & deduplicate               │               │
-│  • Normalize schemas                 │               │
-│  • Build dimension conformity        │               │
-│  • Write to S3 staging zone          │               │
-└──────────────┬───────────────────────┘               │
-               │ 4. Cleaned data                       │
-               │    lands in S3                        │
-               ▼                                       │
-┌──────────────────────────────┐                       │
-│  Amazon S3 (Staging Zone)    │                       │
-│  s3://bucket/staging/        │                       │
-└──────────────┬───────────────┘                       │
-               │                                       │
-               ▼                                       ▼
+┌─────────────────────────┐         │                   │
+│  Amazon S3 (Raw Zone)   │         │                   │
+│  s3://bucket/raw/       │         │                   │
+└────────────┬────────────┘         │                   │
+             │ 2. Raw data          │                   │
+             │    lands in S3       │                   │
+             ▼                      ▼                   │
+┌──────────────────────────────────────┐                │
+│      Transformation Layer            │                │
+│      (Polars on Lambda)              │                │
+│                                      │                │
+│  • Read raw data from S3             │                │
+│  • Clean & deduplicate               │                │
+│  • Normalize schemas                 │                │
+│  • Build dimension conformity        │                │
+│  • Write to S3 staging zone          │                │
+└──────────────┬───────────────────────┘                │
+               │ 4. Cleaned data                        │
+               │    lands in S3                         │
+               ▼                                        │
+┌──────────────────────────────┐                        │
+│  Amazon S3 (Staging Zone)    │                        │
+│  s3://bucket/staging/        │                        │
+└──────────────┬───────────────┘                        │
+               │                                        │
+               ▼                                        ▼
 ┌──────────────────────────────────────────────────────────┐
 │                      Snowflake                           │
-│                (COPY INTO from S3 stage)                  │
+│                (COPY INTO from S3 stage)                 │
 │                                                          │
 │  dim_location  dim_property_type                         │
 │  fact_listings  fact_property_details                    │
