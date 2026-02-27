@@ -45,5 +45,5 @@ lambdas/**/*.zip
 .vscode/
 *.iml
 
-# OS
-.DS_Store
+# OS + more
+.DS_Stores

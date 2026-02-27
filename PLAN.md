@@ -1,14 +1,20 @@
 # Build Plan
 
-A step-by-step plan for building the real-estate-data-pipeline project solo, organized into weekend-sized milestones. Each milestone is designed to produce a working, testable increment.
+A step-by-step plan for building the real-estate-data-pipeline project solo, organized into step-sized milestones. Each milestone is designed to produce a working, testable increment.
 
 ---
 
-## Phase 1: Foundation (Weekends 1–2)
+## Phase 0: AWS Prerequisites (Before Any Code)
+
+See [`plans/plan_phase0.md`](plans/plan_phase0.md) for the full setup steps.
+
+---
+
+## Phase 1: Foundation (Steps 1–2)
 
 The goal of this phase is to set up the project skeleton, provision core AWS infrastructure with Terraform, and get raw data flowing into S3.
 
-### Weekend 1: Project Setup & Terraform Foundation
+### Step 1: Project Setup & Terraform Foundation
 
 **Objective:** Repository structure, Terraform scaffolding, and core AWS resources.
 
@@ -27,7 +33,7 @@ The goal of this phase is to set up the project skeleton, provision core AWS inf
 
 **Checkpoint:** You should be able to run `terraform apply` cleanly and see the S3 bucket in the AWS console.
 
-### Weekend 2: Lambda Infrastructure & Kaggle Ingestion
+### Step 2: Lambda Infrastructure & Kaggle Ingestion
 
 **Objective:** Deploy the first Lambda function that downloads and lands the Kaggle CSV in S3.
 
@@ -52,11 +58,11 @@ The goal of this phase is to set up the project skeleton, provision core AWS inf
 
 ---
 
-## Phase 2: Data Extraction (Weekends 3–4)
+## Phase 2: Data Extraction (Steps 3–4)
 
 The goal of this phase is to complete the extraction layer by adding the RentCast API integration and establishing the two-source ingestion pattern.
 
-### Weekend 3: RentCast API Ingestion Lambda
+### Step 3: RentCast API Ingestion Lambda
 
 **Objective:** Second Lambda that calls the RentCast API and lands JSON responses in S3.
 
@@ -85,7 +91,7 @@ The goal of this phase is to complete the extraction layer by adding the RentCas
 
 **Checkpoint:** Both Lambdas work independently. You have Parquet files from Kaggle and JSON files from RentCast sitting in separate S3 prefixes.
 
-### Weekend 4: Extraction Polish & Testing
+### Step 4: Extraction Polish & Testing
 
 **Objective:** Add operational polish, idempotency, and tests to both ingestion Lambdas.
 
@@ -107,11 +113,11 @@ The goal of this phase is to complete the extraction layer by adding the RentCas
 
 ---
 
-## Phase 3: Transformation (Weekends 5–6)
+## Phase 3: Transformation (Steps 5–6)
 
 The goal of this phase is to build the Polars transformation logic that normalizes both sources into a consistent schema ready for Snowflake.
 
-### Weekend 5: Kaggle Transformation Logic
+### Step 5: Kaggle Transformation Logic
 
 **Objective:** Transform raw Kaggle data into cleaned, normalized tables.
 
@@ -143,7 +149,7 @@ The goal of this phase is to build the Polars transformation logic that normaliz
 
 **Checkpoint:** Staging zone has clean, well-typed Parquet files with a consistent schema. You can load a sample into a notebook and verify the data looks correct.
 
-### Weekend 6: RentCast Transformation & Schema Alignment
+### Step 6: RentCast Transformation & Schema Alignment
 
 **Objective:** Transform RentCast JSON and align both sources to shared dimensions.
 
@@ -155,7 +161,7 @@ The goal of this phase is to build the Polars transformation logic that normaliz
     - Market statistics: extract time-series data points
   - **Cleaning steps:**
     - Normalize address fields (standardize abbreviations: St/Street, Ave/Avenue)
-    - Normalize `state` to match the Kaggle convention (same format chosen in Weekend 5)
+    - Normalize `state` to match the Kaggle convention (same format chosen in Step 5)
     - Validate lat/long ranges (within continental US bounds)
     - Handle null valuations gracefully
   - **Build fact tables:**
@@ -177,11 +183,11 @@ The goal of this phase is to build the Polars transformation logic that normaliz
 
 ---
 
-## Phase 4: Loading & Warehousing (Weekends 7–8)
+## Phase 4: Loading & Warehousing (Steps 7–8)
 
 The goal of this phase is to set up Snowflake, load the staged data, and validate the end-to-end data flow.
 
-### Weekend 7: Snowflake Setup & Data Loading
+### Step 7: Snowflake Setup & Data Loading
 
 **Objective:** Create the Snowflake schema and load staged data.
 
@@ -210,7 +216,7 @@ The goal of this phase is to set up Snowflake, load the staged data, and validat
 
 **Checkpoint:** You can query `SELECT * FROM analytics.fact_listings LIMIT 10` in Snowflake and see clean, properly typed rows.
 
-### Weekend 8: Snowflake Polish & Analytical Queries
+### Step 8: Snowflake Polish & Analytical Queries
 
 **Objective:** Incremental loading, data quality checks, and sample analytics.
 
@@ -234,11 +240,11 @@ The goal of this phase is to set up Snowflake, load the staged data, and validat
 
 ---
 
-## Phase 5: Orchestration (Weekends 9–10)
+## Phase 5: Orchestration (Steps 9–10)
 
 The goal of this phase is to wire everything together with Airflow so the entire pipeline runs as a single, observable unit.
 
-### Weekend 9: MWAA Setup & DAG
+### Step 9: MWAA Setup & DAG
 
 **Objective:** AWS MWAA environment running the full pipeline DAG.
 
@@ -295,7 +301,7 @@ The goal of this phase is to wire everything together with Airflow so the entire
 
 **Checkpoint:** You can trigger the DAG from the MWAA Airflow UI and watch all tasks go green.
 
-### Weekend 10: MWAA Polish & Error Handling
+### Step 10: MWAA Polish & Error Handling
 
 **Objective:** Make the orchestration production-ready.
 
@@ -319,11 +325,11 @@ The goal of this phase is to wire everything together with Airflow so the entire
 
 ---
 
-## Phase 6: Polish & Documentation (Weekends 11–12)
+## Phase 6: Polish & Documentation (Steps 11–12)
 
 The goal of this phase is to make the project portfolio-ready: clean code, comprehensive docs, and a compelling presentation.
 
-### Weekend 11: Testing, CI, and Code Quality
+### Step 11: Testing, CI, and Code Quality
 
 **Objective:** Add tests, linting, and optional CI/CD.
 
@@ -342,7 +348,7 @@ The goal of this phase is to make the project portfolio-ready: clean code, compr
 - [ ] Clean up all TODO comments, dead code, and hardcoded values
 - [ ] Commit: _"feat: test suite, linting, and CI pipeline"_
 
-### Weekend 12: Final Documentation & README Polish
+### Step 12: Final Documentation & README Polish
 
 **Objective:** Make the repo shine for portfolio purposes.
 
@@ -380,6 +386,6 @@ The goal of this phase is to make the project portfolio-ready: clean code, compr
 
 - **Don't gold-plate early.** Get a working end-to-end pipeline first, then polish. A rough but complete pipeline is infinitely more impressive than a perfect extraction layer with nothing downstream.
 - **Commit often with meaningful messages.** The commit history tells a story to anyone reviewing the repo.
-- **If a weekend takes longer than expected, that's fine.** Shift the plan. The milestone boundaries are suggestions, not deadlines.
+- **If a step takes longer than expected, that's fine.** Shift the plan. The milestone boundaries are suggestions, not deadlines.
 - **Test with small data first.** Don't try to load all 2.2M Kaggle rows until you've verified the pipeline works with 1,000 rows.
 - **Keep a running list of "future improvements"** rather than getting sidetracked implementing them. These make great interview talking points ("I would add X next because...").
