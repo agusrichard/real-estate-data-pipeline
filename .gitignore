@@ -47,3 +47,4 @@ lambdas/**/*.zip
 
 # OS + more
 .DS_Stores
+/plans
