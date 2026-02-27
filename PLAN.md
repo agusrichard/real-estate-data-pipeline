@@ -16,7 +16,7 @@ The goal of this phase is to set up the project skeleton, provision core AWS inf
 - [ ] Create `.gitignore` (Python, Terraform, IDE files, `.env`, data files)
 - [ ] Set up `pyproject.toml` with project dependencies (polars, boto3, requests, etc.)
 - [ ] Write Terraform configuration for foundational resources:
-  - S3 bucket with folder structure (`raw/kaggle/`, `raw/rentcast/`, `staging/`, `errors/`)
+  - S3 bucket with folder structure (`raw/kaggle/`, `raw/rentcast/`, `staging/kaggle/`, `staging/rentcast/`, `errors/`)
   - S3 bucket versioning and lifecycle rules (expire old raw files after 90 days)
   - IAM roles and policies for Lambda execution (S3 read/write, CloudWatch logs)
   - AWS provider configuration and backend state (use S3 + DynamoDB for remote state)
@@ -85,13 +85,10 @@ The goal of this phase is to complete the extraction layer by adding the RentCas
 
 **Checkpoint:** Both Lambdas work independently. You have Parquet files from Kaggle and JSON files from RentCast sitting in separate S3 prefixes.
 
-### Weekend 4: EventBridge Scheduling & Extraction Polish
+### Weekend 4: Extraction Polish & Testing
 
-**Objective:** Automate the extraction schedule and add operational polish.
+**Objective:** Add operational polish, idempotency, and tests to both ingestion Lambdas.
 
-- [ ] Add Terraform for EventBridge rules:
-  - Kaggle Lambda: triggered monthly (or on-demand, since the source is static)
-  - RentCast Lambda: triggered weekly with a payload rotating through zip codes
 - [ ] Add CloudWatch alarms:
   - Lambda error rate > 0 → SNS notification
   - Lambda duration approaching timeout → warning
@@ -102,9 +99,11 @@ The goal of this phase is to complete the extraction layer by adding the RentCas
 - [ ] Write unit tests for the extraction logic:
   - `tests/test_ingest.py`: mock the API responses and S3 writes
   - Test error handling paths (API timeout, malformed response, S3 write failure)
-- [ ] Commit: _"feat: scheduled extraction with EventBridge, monitoring, and tests"_
+- [ ] Commit: _"feat: extraction monitoring, idempotency, and tests"_
 
-**Checkpoint:** The extraction layer runs on a schedule without manual intervention. CloudWatch shows execution logs and you'd get notified on failures.
+**Note:** Scheduling is handled by MWAA (Phase 5), not EventBridge. During this phase, Lambdas are tested via manual invocation.
+
+**Checkpoint:** Both Lambdas are robust, idempotent, and well-tested. CloudWatch shows structured execution logs.
 
 ---
 
@@ -199,13 +198,13 @@ The goal of this phase is to set up Snowflake, load the staged data, and validat
   - Use the `Snowflake-Labs/snowflake` Terraform provider
   - Define database, schemas, warehouse, roles, and grants
   - Store Snowflake credentials in AWS Secrets Manager
-- [ ] Build the loading logic:
-  - Option A: Use Snowflake's S3 external stage + COPY INTO (simpler, recommended)
-  - Option B: Use the Snowflake Python connector with Polars DataFrames
-  - Implement upsert logic for dimensions (MERGE statement)
+- [ ] Build the loading logic using Snowflake's S3 external stage + COPY INTO:
+  - Create an external stage pointing to `s3://bucket/staging/`
+  - Use COPY INTO to load staged Parquet files into Snowflake staging tables
+  - Implement upsert logic for dimensions (MERGE from staging tables into analytics tables)
   - Implement incremental append for fact tables (with deduplication on batch_id)
 - [ ] Run a manual end-to-end test:
-  - Trigger Kaggle Lambda → verify raw S3 → run transform → verify staging S3 → load Snowflake
+  - Trigger Kaggle Lambda → verify raw S3 → run transform → verify staging S3 → COPY INTO Snowflake
   - Query Snowflake to verify row counts and data integrity
 - [ ] Commit: _"feat: Snowflake schema, Terraform resources, and data loading"_
 
@@ -259,27 +258,29 @@ The goal of this phase is to wire everything together with Airflow so the entire
 - [ ] Write the main DAG (`airflow/dags/real_estate_pipeline.py`):
   ```
   start
+    │
     ├── ingest_kaggle_task (LambdaInvokeFunctionOperator)
     ├── ingest_rentcast_task (LambdaInvokeFunctionOperator)
-    └── (both) ──► s3_sensor_raw (S3KeySensor — wait for new files)
-                      │
-                      ▼
-                  transform_task (LambdaInvokeFunctionOperator or EcsRunTaskOperator)
-                      │
-                      ▼
-                  s3_sensor_staging (S3KeySensor — wait for staged files)
-                      │
-                      ▼
-                  load_dimensions_task (SnowflakeOperator — MERGE dimensions)
-                      │
-                      ▼
-                  load_facts_task (SnowflakeOperator — COPY INTO facts)
-                      │
-                      ▼
-                  data_quality_task (SnowflakeOperator — run validation queries)
-                      │
-                      ▼
-                  end
+    │
+    └── (both complete) ──► s3_sensor_raw (S3KeySensor — wait for raw files)
+                                │
+                                ▼
+                            transform_task (LambdaInvokeFunctionOperator)
+                                │
+                                ▼
+                            s3_sensor_staging (S3KeySensor — wait for staged files)
+                                │
+                                ▼
+                            load_dimensions_task (SnowflakeOperator — COPY INTO staging + MERGE dims)
+                                │
+                                ▼
+                            load_facts_task (SnowflakeOperator — COPY INTO facts from S3 stage)
+                                │
+                                ▼
+                            data_quality_task (SnowflakeOperator — run validation queries)
+                                │
+                                ▼
+                            end
   ```
 - [ ] Configure DAG settings:
   - Schedule: weekly (matching the RentCast call budget)
@@ -368,7 +369,7 @@ The goal of this phase is to make the project portfolio-ready: clean code, compr
 
 | Resource | Free Tier | Action Needed |
 |---|---|---|
-| AWS Account | 12-month free tier covers Lambda, S3, EventBridge | Sign up, configure CLI |
+| AWS Account | 12-month free tier covers Lambda, S3 | Sign up, configure CLI |
 | Snowflake | 30-day free trial ($400 credit) | Sign up, note the account URL |
 | RentCast | 50 API calls/month | Sign up, generate API key |
 | Kaggle | Free download | Download USA Real Estate Dataset |
