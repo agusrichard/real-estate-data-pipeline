@@ -9,57 +9,70 @@ This project demonstrates a production-style ELT pipeline that combines two comp
 - **Kaggle USA Real Estate Dataset** (~2.2M historical listings scraped from Realtor.com) — ingested as bulk CSV files, simulating a file-based data feed.
 - **RentCast API** (live property records, valuations, and market statistics) — ingested via scheduled API calls, simulating a real-time data feed.
 
+AWS MWAA (Managed Apache Airflow) orchestrates the entire flow: it triggers ingestion Lambdas on schedule, waits for raw data to land in S3, triggers transformation Lambdas that clean and normalize the data using Polars and write to an S3 staging zone, then loads the staged data into Snowflake via COPY INTO.
+
 The two sources are normalized independently, loaded into a star schema in Snowflake, and joined at the **aggregate geographic level** (zip code, city, state) — not at the individual property level, since the Kaggle dataset has anonymized street addresses. This is a deliberate design choice that mirrors real-world scenarios where data sources don't share clean primary keys.
 
 ## Architecture
 
 ```
-┌─────────────────┐     ┌─────────────────┐
-│  Kaggle CSV     │     │  RentCast API   │
-│  (Historical)   │     │  (Live)         │
-└────────┬────────┘     └────────┬────────┘
-         │                       │
-         ▼                       ▼
-┌─────────────────┐     ┌─────────────────┐
-│  AWS Lambda     │     │  AWS Lambda     │
-│  (Bulk Ingest)  │     │  (API Ingest)   │
-└────────┬────────┘     └────────┬────────┘
-         │                       │
-         ▼                       ▼
-┌──────────────────────────────────────────┐
-│          Amazon S3 (Raw Zone)            │
-│  s3://bucket/raw/kaggle/                 │
-│  s3://bucket/raw/rentcast/               │
-└────────────────────┬─────────────────────┘
-                     │
-                     ▼
-┌──────────────────────────────────────────┐
-│         Transformation Layer             │
-│         (Polars on Lambda/ECS)           │
-│                                          │
-│  • Clean & deduplicate                   │
-│  • Normalize schemas                     │
-│  • Build dimension conformity            │
-│  • Output to S3 staging zone             │
-└────────────────────┬─────────────────────┘
-                     │
-                     ▼
-┌──────────────────────────────────────────┐
-│              Snowflake                   │
-│                                          │
-│  dim_location  dim_property_type         │
-│  fact_listings  fact_property_details    │
-│  fact_market_stats                       │
-└──────────────────────────────────────────┘
-                     │
-                     ▼
-┌──────────────────────────────────────────┐
-│          AWS MWAA                        │
-│  (Managed Apache Airflow)                │
-│                                          │
-│  Triggers extraction → waits for S3 →    │
-│  kicks off transforms → loads Snowflake  │
-└──────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────────┐
+│                           AWS MWAA                                │
+│                    (Managed Apache Airflow)                       │
+│                                                                   │
+│  Orchestrates the entire pipeline: schedules runs, triggers       │
+│  Lambdas, monitors progress, loads Snowflake, handles retries     │
+└───┬───────────────┬───────────────┬───────────────────┬───────────┘
+    │ 1. Trigger    │ 1. Trigger    │ 3. Trigger        │ 5. Load into
+    │    ingestion  │    ingestion  │    transformation │    Snowflake
+    ▼               ▼               │                   │
+┌─────────┐  ┌──────────┐           │                   │
+│ Kaggle  │  │ RentCast │           │                   │
+│ CSV     │  │ API      │           │                   │
+└────┬────┘  └────┬─────┘           │                   │
+     │            │                 │                   │
+     ▼            ▼                 │                   │
+┌─────────┐  ┌──────────┐           │                   │
+│ Lambda  │  │ Lambda   │           │                   │
+│ (Bulk   │  │ (API     │           │                   │
+│ Ingest) │  │ Ingest)  │           │                   │
+└────┬────┘  └────┬─────┘           │                   │
+     │            │                 │                   │
+     ▼            ▼                 │                   │
+┌─────────────────────────┐         │                   │
+│  Amazon S3 (Raw Zone)   │         │                   │
+│  s3://bucket/raw/       │         │                   │
+└────────────┬────────────┘         │                   │
+             │ 2. Raw data          │                   │
+             │    lands in S3       │                   │
+             ▼                      ▼                   │
+┌──────────────────────────────────────┐                │
+│      Transformation Layer            │                │
+│      (Polars on Lambda)              │                │
+│                                      │                │
+│  • Read raw data from S3             │                │
+│  • Clean & deduplicate               │                │
+│  • Normalize schemas                 │                │
+│  • Build dimension conformity        │                │
+│  • Write to S3 staging zone          │                │
+└──────────────┬───────────────────────┘                │
+               │ 4. Cleaned data                        │
+               │    lands in S3                         │
+               ▼                                        │
+┌──────────────────────────────┐                        │
+│  Amazon S3 (Staging Zone)    │                        │
+│  s3://bucket/staging/        │                        │
+└──────────────┬───────────────┘                        │
+               │                                        │
+               ▼                                        ▼
+┌──────────────────────────────────────────────────────────┐
+│                      Snowflake                           │
+│                (COPY INTO from S3 stage)                 │
+│                                                          │
+│  dim_location  dim_property_type                         │
+│  fact_listings  fact_property_details                    │
+│  fact_market_stats                                       │
+└──────────────────────────────────────────────────────────┘
 ```
 
 ## Data Sources
@@ -172,13 +185,13 @@ ORDER BY price_appreciation DESC;
 
 | Tool | Role | Why This Tool |
 |---|---|---|
-| **AWS Lambda** | Compute for extraction and lightweight transforms | Serverless, cost-effective for scheduled batch jobs. Polars runs well within Lambda's memory limits. |
-| **Amazon S3** | Data lake (raw and staging zones) | Standard landing zone for ELT pipelines. Decouples extraction from transformation. |
+| **AWS Lambda** | Compute for ingestion and transformation | Serverless, cost-effective for scheduled batch jobs. Polars runs well within Lambda's memory limits. |
+| **Amazon S3** | Data lake (raw and staging zones) | Raw zone for ingested data, staging zone for cleaned/transformed data. Decouples each pipeline step and enables independent re-runs. |
 | **Polars** | Data transformation | Faster and more memory-efficient than Pandas — critical inside Lambda's constraints. Lazy evaluation enables handling larger-than-memory datasets. |
 | **Snowflake** | Cloud data warehouse | Separates compute from storage, handles semi-structured data natively, easy to demo with a free trial. |
 | **AWS MWAA** | Orchestration and scheduling | Managed Apache Airflow service — no infrastructure to maintain, integrates natively with AWS IAM, S3, and CloudWatch. DAGs provide visibility, retry logic, and dependency management. |
 | **Terraform** | Infrastructure as Code | Reproducible deployments, version-controlled infrastructure, demonstrates production-readiness. |
-| **AWS (S3, Lambda, IAM, EventBridge, CloudWatch, MWAA)** | Cloud infrastructure | Full deployment story from code to running pipeline. |
+| **AWS (S3, Lambda, IAM, CloudWatch, MWAA)** | Cloud infrastructure | Full deployment story from code to running pipeline. |
 
 ## Repository Structure
 
@@ -193,7 +206,6 @@ real-estate-data-pipeline/
 │   │   ├── s3/
 │   │   ├── lambda/
 │   │   ├── iam/
-│   │   ├── eventbridge/
 │   │   ├── mwaa/
 │   │   └── snowflake/
 │   └── environments/
@@ -286,6 +298,8 @@ aws s3 cp airflow/requirements.txt s3://<mwaa-bucket>/requirements.txt
 - **Why Polars over Pandas?** Lambda has a 10GB memory ceiling. Polars uses Apache Arrow under the hood, giving 2-5x better memory efficiency and significantly faster execution for the transform step.
 - **Why two ingestion Lambdas?** Each source has a fundamentally different extraction pattern (file download vs. paginated API). Separate Lambdas keep the code focused, independently deployable, and easier to debug.
 - **Why aggregate-level joins?** The Kaggle dataset anonymizes street addresses, making property-level joins impossible. Joining on zip code mirrors real-world data enrichment where sources don't share clean foreign keys.
+- **Why MWAA as the orchestrator?** MWAA triggers all pipeline steps (ingestion, transformation, loading) on a schedule via Airflow DAGs, replacing the need for EventBridge rules. This centralizes scheduling, retry logic, and monitoring in one place. MWAA is managed, so there's no infrastructure to maintain, and it integrates natively with AWS IAM and CloudWatch.
+- **Why an S3 staging zone?** The transform Lambda writes cleaned Parquet to `s3://staging/` rather than loading directly into Snowflake. This provides a checkpoint between transform and load — if the Snowflake load fails, you can re-load from staging without re-transforming. It also makes debugging easier: you can inspect the staged data independently to determine whether an issue is in the transform or load step.
 - **Why not dbt?** dbt would be a natural addition for the Snowflake transformation layer. It was intentionally omitted to keep the project scope manageable for a solo weekend project. It's a logical next step.
 
 ## Future Improvements
