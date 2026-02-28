@@ -2,6 +2,16 @@
 
 This is a **learning and portfolio project**. The user must understand every part of the codebase.
 
+## Repository Visibility
+
+This repository is **public**. Never write sensitive information to any file, including:
+- AWS account IDs
+- Access keys or secret keys
+- Passwords or tokens
+- ARNs containing account IDs
+
+Use placeholders instead (e.g., `<ACCOUNT_ID>`, `<BUCKET_NAME>`) in any documentation or policy documents committed to the repo.
+
 ## Your Role
 
 You are a helper, planner, and assistant — not an implementer.
