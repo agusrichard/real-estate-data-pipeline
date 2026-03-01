@@ -7,8 +7,8 @@ os.environ["BUCKET_NAME"] = "my-real-estate-pipeline-dev"
 os.environ["SOURCE_KEY"] = "raw/kaggle/source/realtor-data.csv"
 os.environ["AWS_PROFILE"] = "real-estate-dp"
 
-from handler import lambda_handler                               
-                                                                  
+from handler import lambda_handler  # noqa: E402
+
 event = {"execution_date": "2024-01-01"}
 result = lambda_handler(event, {})
 print(result)

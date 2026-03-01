@@ -1,7 +1,10 @@
 [project]       
 name = "real-estate-data-pipeline"
 version = "0.1.0"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
+dependencies = [
+    "pytest>=9.0.2",
+]
 
 [project.optional-dependencies]
 dev = [
@@ -12,4 +15,14 @@ dev = [
 
 [tool.ruff]
 line-length = 88
-target-version = "py311"
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
