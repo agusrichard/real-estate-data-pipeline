@@ -1,10 +1,14 @@
-import io       
+import io
+import logging
 import os
 import uuid
 from datetime import datetime, timezone
 
 import boto3
 import polars as pl
+
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
 
 s3 = boto3.client("s3")
 
@@ -15,10 +19,16 @@ def lambda_handler(event, context):
 	batch_id = str(uuid.uuid4())
 	ingested_at = datetime.now(timezone.utc).isoformat()
 
+	logger.info(f"Starting ingestion | batch_id={batch_id} execution_date={execution_date} source={source_key}")
+
 	response = s3.get_object(Bucket=bucket, Key=source_key)
 	csv_buffer = io.BytesIO(response["Body"].read())
 	df = pl.read_csv(csv_buffer, infer_schema_length=10_000)
+	logger.info(f"CSV loaded | rows={df.shape[0]} columns={df.shape[1]}")
+
 	partitions = df.partition_by("state", maintain_order=False)
+	total = len(partitions)
+	logger.info(f"Partitioning complete | partitions={total}")
 
 	chunks_written = 0
 	for partition in partitions:
@@ -34,9 +44,11 @@ def lambda_handler(event, context):
 		partition.write_parquet(parquet_buffer)
 
 		output_key = f"raw/kaggle/{execution_date}/{state}.parquet"
-		s3.put_object(Bucket=bucket, Key=output_key,
-	Body=parquet_buffer.getvalue())
+		s3.put_object(Bucket=bucket, Key=output_key, Body=parquet_buffer.getvalue())
 		chunks_written += 1
+		logger.info(f"Uploaded partition {chunks_written}/{total} | state={state} rows={len(partition)} key={output_key}")
+
+	logger.info(f"Ingestion complete | chunks_written={chunks_written} batch_id={batch_id}")
 
 	return {
 		"statusCode": 200,
