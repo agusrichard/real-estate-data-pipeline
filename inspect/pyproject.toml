@@ -1,0 +1,11 @@
+[project]
+name = "inspect"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ipykernel>=7.2.0",
+    "jupyter>=1.1.1",
+    "polars>=1.38.1",
+]
