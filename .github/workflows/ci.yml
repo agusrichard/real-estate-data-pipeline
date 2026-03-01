@@ -36,7 +36,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install pytest
-      - run: pytest
+      - run: pytest || [ $? -eq 5 ]
 
   terraform:
     runs-on: ubuntu-latest
