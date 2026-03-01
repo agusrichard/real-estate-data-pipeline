@@ -15,7 +15,7 @@ module "ingest_kaggle_lambda" {
   role_arn      = module.iam.lambda_role_arn
   zip_path      = "../lambdas/ingest_kaggle/lambda.zip"
   timeout       = 300
-  memory_size   = 512
+  memory_size   = 2048
   environment_variables = {
     BUCKET_NAME = module.s3.bucket_name
     SOURCE_KEY  = "raw/kaggle/source/realtor-data.csv"
