@@ -32,6 +32,11 @@ resource "aws_iam_policy" "lambda_policy" {
       },
       {
         Effect   = "Allow"
+        Action   = ["secretsmanager:GetSecretValue"]
+        Resource = var.secret_arn
+      },
+      {
+        Effect   = "Allow"
         Action   = [
           "logs:CreateLogGroup",
           "logs:CreateLogStream",
