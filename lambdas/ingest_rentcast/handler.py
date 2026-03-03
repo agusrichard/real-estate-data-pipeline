@@ -156,7 +156,7 @@ def lambda_handler(event: dict, context) -> dict:
         f"execution_date={execution_date} states={states}"
     )
 
-    max_pages = event.get("max_pages", 0)
+    max_pages = event.get("max_pages", 1)
     api_key = get_api_key()
     results = []
 
