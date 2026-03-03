@@ -49,4 +49,3 @@ lambdas/**/*.zip
 .DS_Stores
 /plans
 policy*.json
-rentcast*.json
