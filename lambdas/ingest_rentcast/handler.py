@@ -57,7 +57,9 @@ def fetch_listings(api_key: str, state: str, max_pages: int = 1) -> list[dict]:
 
         if total_count is None:
             total_count = int(response.headers.get("x-total-count", 0))
-            logger.info(f"Total records available | state={state} total_count={total_count}")
+            logger.info(
+                f"Total records available | state={state} total_count={total_count}"
+            )
 
         records = response.json()
         all_records.extend(records)
@@ -91,12 +93,14 @@ def _get_with_retry(
             if response.status_code == 429:
                 if attempt < REQUEST_RETRY - 1:
                     logger.warning(
-                        f"Rate limited | state={state} offset={offset} — retrying in {REQUEST_WAIT_SECOND}s"
+                        f"Rate limited | state={state} offset={offset}"
+                        f" — retrying in {REQUEST_WAIT_SECOND}s"
                     )
                     time.sleep(REQUEST_WAIT_SECOND)
                     continue
                 logger.error(
-                    f"Rate limited on final attempt | state={state} offset={offset} — skipping"
+                    f"Rate limited on final attempt | state={state}"
+                    f" offset={offset} — skipping"
                 )
                 return None
 
@@ -105,24 +109,25 @@ def _get_with_retry(
 
         except requests.exceptions.Timeout:
             logger.warning(
-                f"Request timed out | state={state} offset={offset} attempt={attempt + 1}"
+                f"Request timed out | state={state} offset={offset}"
+                f" attempt={attempt + 1}"
             )
         except requests.exceptions.ConnectionError:
             logger.warning(
-                f"Connection error | state={state} offset={offset} attempt={attempt + 1}"
+                f"Connection error | state={state} offset={offset}"
+                f" attempt={attempt + 1}"
             )
         except requests.exceptions.HTTPError as e:
             logger.error(
-                f"HTTP error | state={state} offset={offset} status={e.response.status_code}"
+                f"HTTP error | state={state} offset={offset}"
+                f" status={e.response.status_code}"
             )
             return None
 
         if attempt < REQUEST_RETRY - 1:
             time.sleep(REQUEST_WAIT_SECOND)
 
-    logger.error(
-        f"All {REQUEST_RETRY} attempts failed | state={state} offset={offset}"
-    )
+    logger.error(f"All {REQUEST_RETRY} attempts failed | state={state} offset={offset}")
     return None
 
 
@@ -139,7 +144,8 @@ def lambda_handler(event: dict, context) -> dict:
 
     if not states:
         raise ValueError(
-            "No states configured. Set TARGET_STATES env var or pass 'states' in the event payload."
+            "No states configured. Set TARGET_STATES env var"
+            " or pass 'states' in the event payload."
         )
 
     batch_id = str(uuid.uuid4())
@@ -177,9 +183,7 @@ def lambda_handler(event: dict, context) -> dict:
             ContentType="application/json",
         )
 
-        logger.info(
-            f"Uploaded | state={state} records={len(records)} key={output_key}"
-        )
+        logger.info(f"Uploaded | state={state} records={len(records)} key={output_key}")
         results.append(
             {"state": state, "record_count": len(records), "s3_key": output_key}
         )
