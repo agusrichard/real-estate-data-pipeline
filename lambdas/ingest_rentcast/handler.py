@@ -27,7 +27,7 @@ def get_api_key() -> str:
     return json.loads(response["SecretString"])["api_key"]
 
 
-def fetch_listings(api_key: str, state: str, max_pages: int = 0) -> list[dict]:
+def fetch_listings(api_key: str, state: str, max_pages: int = 1) -> list[dict]:
     """Fetch active sale listings for a state, handling pagination.
 
     Args:
