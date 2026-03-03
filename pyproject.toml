@@ -11,6 +11,7 @@ dev = [
     "pytest",
     "ruff",
     "mypy",
+    "types-requests",
 ]
 
 [tool.ruff]
@@ -23,6 +24,8 @@ select = ["E", "F", "I"]
 [tool.mypy]
 python_version = "3.12"
 ignore_missing_imports = true
+explicit_package_bases = true
+exclude = ["lambdas/.*/package/"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
