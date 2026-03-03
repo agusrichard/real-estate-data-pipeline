@@ -1,0 +1,5008 @@
+[
+    {
+        "id": "465-Portofino-Loop,-Lot-80,-Foley,-AL-36535",
+        "formattedAddress": "465 Portofino Loop, Lot 80, Foley, AL 36535",
+        "addressLine1": "465 Portofino Loop",
+        "addressLine2": "Lot 80",
+        "city": "Foley",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36535",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.345893,
+        "longitude": -87.661014,
+        "propertyType": "Land",
+        "lotSize": 4356,
+        "hoa": {
+            "fee": 380
+        },
+        "status": "Active",
+        "price": 127500,
+        "listingType": "Standard",
+        "listedDate": "2021-12-13T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-12-14T12:18:27.952Z",
+        "lastSeenDate": "2026-03-02T10:45:26.642Z",
+        "daysOnMarket": 1541,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "323764",
+        "listingAgent": {
+            "name": "Denise Peoples",
+            "email": "dpeoples@bellaterrarvresort.com"
+        },
+        "listingOffice": {
+            "name": "Bella Terra Realty, Llc",
+            "phone": "2519702370",
+            "email": "cmiller@craighomesinc.com",
+            "website": "www.bellaterrarvresort.com"
+        },
+        "history": {
+            "2021-12-13": {
+                "event": "Sale Listing",
+                "price": 127500,
+                "listingType": "Standard",
+                "listedDate": "2021-12-13T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1541
+            }
+        }
+    },
+    {
+        "id": "469-Portofino-Loop,-Lot-81,-Foley,-AL-36535",
+        "formattedAddress": "469 Portofino Loop, Lot 81, Foley, AL 36535",
+        "addressLine1": "469 Portofino Loop",
+        "addressLine2": "Lot 81",
+        "city": "Foley",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36535",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.345893,
+        "longitude": -87.661014,
+        "propertyType": "Land",
+        "lotSize": 4356,
+        "hoa": {
+            "fee": 380
+        },
+        "status": "Active",
+        "price": 127500,
+        "listingType": "Standard",
+        "listedDate": "2021-12-13T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-12-14T12:18:27.952Z",
+        "lastSeenDate": "2026-03-02T10:45:26.641Z",
+        "daysOnMarket": 1541,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "323760",
+        "listingAgent": {
+            "name": "Denise Peoples",
+            "email": "dpeoples@bellaterrarvresort.com"
+        },
+        "listingOffice": {
+            "name": "Bella Terra Realty, Llc",
+            "phone": "2519702370",
+            "email": "cmiller@craighomesinc.com",
+            "website": "www.bellaterrarvresort.com"
+        },
+        "history": {
+            "2021-12-13": {
+                "event": "Sale Listing",
+                "price": 127500,
+                "listingType": "Standard",
+                "listedDate": "2021-12-13T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1541
+            }
+        }
+    },
+    {
+        "id": "Foley-Expy,-Foley,-AL-36535",
+        "formattedAddress": "Foley Expy, Foley, AL 36535",
+        "addressLine1": "Foley Expy",
+        "addressLine2": null,
+        "city": "Foley",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36535",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.366747,
+        "longitude": -87.658476,
+        "propertyType": "Land",
+        "lotSize": 566280,
+        "status": "Active",
+        "price": 3900000,
+        "listingType": "Standard",
+        "listedDate": "2019-10-25T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-12-21T14:47:14.984Z",
+        "lastSeenDate": "2026-03-02T10:45:26.640Z",
+        "daysOnMarket": 2321,
+        "mlsName": "Pensacola",
+        "mlsNumber": "562800",
+        "listingAgent": {
+            "name": "Peter Howard",
+            "phone": "8504921808",
+            "email": "pjatthebeach@me.com",
+            "website": "www.pjatthebeach.com"
+        },
+        "listingOffice": {
+            "name": "Re/Max Gulf Properties",
+            "phone": "8504921808",
+            "email": "maxcat@gulftel.com",
+            "website": "steve-shannon.com"
+        },
+        "history": {
+            "2019-10-25": {
+                "event": "Sale Listing",
+                "price": 3900000,
+                "listingType": "Standard",
+                "listedDate": "2019-10-25T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 2321
+            }
+        }
+    },
+    {
+        "id": "County-87-Ac-Rd,-Lot-651,-Robertsdale,-AL-36567",
+        "formattedAddress": "County 87 Ac Rd, Lot 651, Robertsdale, AL 36567",
+        "addressLine1": "County 87 Ac Rd",
+        "addressLine2": "Lot 651",
+        "city": "Robertsdale",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36567",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.647301494,
+        "longitude": -87.52693715,
+        "propertyType": "Land",
+        "lotSize": 28226880,
+        "status": "Active",
+        "price": 6460000,
+        "listingType": "Standard",
+        "listedDate": "2022-08-29T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-01-26T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.640Z",
+        "daysOnMarket": 1282,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "335846",
+        "listingAgent": {
+            "name": "Alla Nikitina",
+            "phone": "2519236475",
+            "email": "allanikitina@ryalsrealty.com",
+            "website": "https://ryalsrealty.com"
+        },
+        "listingOffice": {
+            "name": "Ryals Realty, Inc",
+            "phone": "2517470097",
+            "email": "staceyryals@gmail.com"
+        },
+        "history": {
+            "2022-08-29": {
+                "event": "Sale Listing",
+                "price": 6460000,
+                "listingType": "Standard",
+                "listedDate": "2022-08-29T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1282
+            }
+        }
+    },
+    {
+        "id": "Ono-Blvd,-Lots-42-&-14,-Orange-Beach,-AL-36561",
+        "formattedAddress": "Ono Blvd, Lots 42 & 14, Orange Beach, AL 36561",
+        "addressLine1": "Ono Blvd",
+        "addressLine2": "Lots 42 & 14",
+        "city": "Orange Beach",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36561",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.286182,
+        "longitude": -87.520865,
+        "propertyType": "Land",
+        "hoa": {
+            "fee": 71
+        },
+        "status": "Active",
+        "price": 449000,
+        "listingType": "Standard",
+        "listedDate": "2021-10-17T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-10-18T14:29:51.063Z",
+        "lastSeenDate": "2026-03-02T10:45:26.638Z",
+        "daysOnMarket": 1598,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "321581",
+        "listingAgent": {
+            "name": "Scott Janik",
+            "phone": "2515541440",
+            "email": "scottpjanik@aol.com"
+        },
+        "listingOffice": {
+            "name": "J & J Realty, LLC",
+            "phone": "2515541440",
+            "email": "scottpjanik@aol.com",
+            "website": "http://www.gulfcoastmls.com/jandjrealty"
+        },
+        "history": {
+            "2021-10-17": {
+                "event": "Sale Listing",
+                "price": 449000,
+                "listingType": "Standard",
+                "listedDate": "2021-10-17T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1598
+            }
+        }
+    },
+    {
+        "id": "County-Road-64-Riv,-Lot-Grand,-Robertsdale,-AL-36567",
+        "formattedAddress": "County Road 64 Riv, Lot Grand, Robertsdale, AL 36567",
+        "addressLine1": "County Road 64 Riv",
+        "addressLine2": "Lot Grand",
+        "city": "Robertsdale",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36567",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.645035807,
+        "longitude": -87.61032521,
+        "propertyType": "Land",
+        "lotSize": 2265120,
+        "status": "Active",
+        "price": 1790000,
+        "listingType": "Standard",
+        "listedDate": "2021-10-25T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-01-26T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.636Z",
+        "daysOnMarket": 1590,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "321959",
+        "listingAgent": {
+            "name": "Alla Nikitina",
+            "phone": "2519236475",
+            "email": "allanikitina@ryalsrealty.com",
+            "website": "https://ryalsrealty.com"
+        },
+        "listingOffice": {
+            "name": "Ryals Realty, Inc",
+            "phone": "2517470097",
+            "email": "staceyryals@gmail.com"
+        },
+        "history": {
+            "2021-10-25": {
+                "event": "Sale Listing",
+                "price": 1790000,
+                "listingType": "Standard",
+                "listedDate": "2021-10-25T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1590
+            }
+        }
+    },
+    {
+        "id": "541-Portofino-Loop,-Lot-170,-Foley,-AL-36535",
+        "formattedAddress": "541 Portofino Loop, Lot 170, Foley, AL 36535",
+        "addressLine1": "541 Portofino Loop",
+        "addressLine2": "Lot 170",
+        "city": "Foley",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36535",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.345893,
+        "longitude": -87.661014,
+        "propertyType": "Land",
+        "lotSize": 3485,
+        "hoa": {
+            "fee": 380
+        },
+        "status": "Active",
+        "price": 151500,
+        "listingType": "Standard",
+        "listedDate": "2021-12-13T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-12-14T13:08:50.358Z",
+        "lastSeenDate": "2026-03-02T10:45:26.636Z",
+        "daysOnMarket": 1541,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "323766",
+        "listingAgent": {
+            "name": "Denise Peoples",
+            "email": "dpeoples@bellaterrarvresort.com"
+        },
+        "listingOffice": {
+            "name": "Bella Terra Realty, Llc",
+            "phone": "2519702370",
+            "email": "cmiller@craighomesinc.com",
+            "website": "www.bellaterrarvresort.com"
+        },
+        "history": {
+            "2021-12-13": {
+                "event": "Sale Listing",
+                "price": 151500,
+                "listingType": "Standard",
+                "listedDate": "2021-12-13T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1541
+            }
+        }
+    },
+    {
+        "id": "S-Poplar-St,-Foley,-AL-36535",
+        "formattedAddress": "S Poplar St, Foley, AL 36535",
+        "addressLine1": "S Poplar St",
+        "addressLine2": null,
+        "city": "Foley",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36535",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.3915,
+        "longitude": -87.6955,
+        "propertyType": "Single Family",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "squareFootage": 1500,
+        "lotSize": 27112,
+        "yearBuilt": 2023,
+        "status": "Active",
+        "price": 749000,
+        "listingType": "New Construction",
+        "listedDate": "2022-12-30T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2022-12-03T10:58:12.180Z",
+        "lastSeenDate": "2026-03-02T10:45:26.635Z",
+        "daysOnMarket": 1159,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "340047",
+        "listingAgent": {
+            "name": "Rick Carruth",
+            "phone": "2519812400",
+            "email": "ricky_carruth@yahoo.com"
+        },
+        "listingOffice": {
+            "name": "eXp Realty, LLC-Gulf Shores Br",
+            "phone": "2514241238",
+            "email": "ricky_carruth@yahoo.com",
+            "website": "http://www.exprealty.com"
+        },
+        "history": {
+            "2022-12-30": {
+                "event": "Sale Listing",
+                "price": 749000,
+                "listingType": "New Construction",
+                "listedDate": "2022-12-30T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1159
+            }
+        }
+    },
+    {
+        "id": "Pensacola-Ave,-Lot-9,-Fairhope,-AL-36532",
+        "formattedAddress": "Pensacola Ave, Lot 9, Fairhope, AL 36532",
+        "addressLine1": "Pensacola Ave",
+        "addressLine2": "Lot 9",
+        "city": "Fairhope",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36532",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.537313671,
+        "longitude": -87.9018025,
+        "propertyType": "Land",
+        "lotSize": 16020,
+        "hoa": {
+            "fee": 99
+        },
+        "status": "Active",
+        "price": 213000,
+        "listingType": "Standard",
+        "listedDate": "2019-02-12T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2022-02-24T12:31:17.785Z",
+        "lastSeenDate": "2026-03-02T10:45:26.634Z",
+        "daysOnMarket": 2576,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "279608",
+        "listingAgent": {
+            "name": "Barry Parker",
+            "phone": "2512859987",
+            "email": "barryjparker@gmail.com"
+        },
+        "listingOffice": {
+            "name": "Courtney & Morris, Inc.",
+            "phone": "2512707149",
+            "email": "barryjparker@gmail.com"
+        },
+        "history": {
+            "2019-02-12": {
+                "event": "Sale Listing",
+                "price": 213000,
+                "listingType": "Standard",
+                "listedDate": "2019-02-12T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 2576
+            }
+        }
+    },
+    {
+        "id": "246-Mount-Pleasant-Blvd,-Phs-2-&-69,-Fairhope,-AL-36532",
+        "formattedAddress": "246 Mount Pleasant Blvd, Phs 2 & 69, Fairhope, AL 36532",
+        "addressLine1": "246 Mount Pleasant Blvd",
+        "addressLine2": "Phs 2 & 69",
+        "city": "Fairhope",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36532",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.551861,
+        "longitude": -87.86221,
+        "propertyType": "Land",
+        "lotSize": 17424,
+        "hoa": {
+            "fee": 104
+        },
+        "status": "Active",
+        "price": 179500,
+        "listingType": "Standard",
+        "listedDate": "2023-02-17T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-02-18T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.634Z",
+        "daysOnMarket": 1110,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "341983",
+        "listingAgent": {
+            "name": "Rance Reehl",
+            "phone": "2519906622",
+            "email": "rance@reehltor.com",
+            "website": "http://www.rancereehl.com/"
+        },
+        "listingOffice": {
+            "name": "Coldwell Banker Reehl Properties - Fairhope Office",
+            "phone": "2519906622",
+            "email": "info@reehlproeprties.com",
+            "website": "http://www.reehlproperties.com"
+        },
+        "history": {
+            "2023-02-17": {
+                "event": "Sale Listing",
+                "price": 179500,
+                "listingType": "Standard",
+                "listedDate": "2023-02-17T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1110
+            }
+        }
+    },
+    {
+        "id": "2062-Clubhouse-Dr,-Lot-2062,-Lillian,-AL-36549",
+        "formattedAddress": "2062 Clubhouse Dr, Lot 2062, Lillian, AL 36549",
+        "addressLine1": "2062 Clubhouse Dr",
+        "addressLine2": "Lot 2062",
+        "city": "Lillian",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36549",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.391213,
+        "longitude": -87.454691,
+        "propertyType": "Land",
+        "lotSize": 11080,
+        "hoa": {
+            "fee": 71
+        },
+        "status": "Active",
+        "price": 59000,
+        "listingType": "Standard",
+        "listedDate": "2022-12-20T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-01-15T06:28:37.681Z",
+        "lastSeenDate": "2026-03-02T10:45:26.633Z",
+        "daysOnMarket": 1169,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "339865",
+        "listingAgent": {
+            "name": "Sandi Gauthier",
+            "phone": "9073559132",
+            "email": "sandi@rightprice-realestate.com",
+            "website": "http://rightprice-realestate.com"
+        },
+        "listingOffice": {
+            "name": "Right Price Real Estate, LLC",
+            "phone": "2519620061",
+            "email": "sandi@rightprice-realestate.com"
+        },
+        "history": {
+            "2022-12-20": {
+                "event": "Sale Listing",
+                "price": 59000,
+                "listingType": "Standard",
+                "listedDate": "2022-12-20T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1169
+            }
+        }
+    },
+    {
+        "id": "Old-Federal-Rd,-Unit-35,-Magnolia-Springs,-AL-36555",
+        "formattedAddress": "Old Federal Rd, Unit 35, Magnolia Springs, AL 36555",
+        "addressLine1": "Old Federal Rd",
+        "addressLine2": "Unit 35",
+        "city": "Magnolia Springs",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36555",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.401031,
+        "longitude": -87.76605,
+        "propertyType": "Land",
+        "lotSize": 3681,
+        "hoa": {
+            "fee": 167
+        },
+        "status": "Active",
+        "price": 85900,
+        "listingType": "Standard",
+        "listedDate": "2022-09-20T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2022-02-03T09:38:33.046Z",
+        "lastSeenDate": "2026-03-02T10:45:26.632Z",
+        "daysOnMarket": 1260,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "336748",
+        "listingAgent": {
+            "name": "Lacie Maynard",
+            "phone": "2519781431",
+            "email": "realtor.lacie@gmail.com",
+            "website": "http://www.laciemaynard.com"
+        },
+        "listingOffice": {
+            "name": "Bellator Real Estate & Development - Gulf Shores",
+            "phone": "2519485000",
+            "email": "contact@gobellator.com",
+            "website": "http://gobellator.com"
+        },
+        "history": {
+            "2022-09-20": {
+                "event": "Sale Listing",
+                "price": 85900,
+                "listingType": "Standard",
+                "listedDate": "2022-09-20T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1260
+            }
+        }
+    },
+    {
+        "id": "Holly-Grove-Rd,-Bay-Minette,-AL-36507",
+        "formattedAddress": "Holly Grove Rd, Bay Minette, AL 36507",
+        "addressLine1": "Holly Grove Rd",
+        "addressLine2": null,
+        "city": "Bay Minette",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36507",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.803467634,
+        "longitude": -87.57886832,
+        "propertyType": "Land",
+        "lotSize": 4878720,
+        "status": "Active",
+        "price": 795000,
+        "listingType": "Standard",
+        "listedDate": "2022-07-29T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-02-11T14:30:39.779Z",
+        "lastSeenDate": "2026-03-02T10:45:26.631Z",
+        "daysOnMarket": 1313,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "334513",
+        "listingAgent": {
+            "name": "Mike Reynolds",
+            "email": "mikereynolds@robertsbrothers.com",
+            "website": "http://reynoldsatthebeach.com"
+        },
+        "listingOffice": {
+            "name": "Roberts Brothers Inc. Gulf Coa",
+            "phone": "2519745625",
+            "email": "katelynnjones@robertsbrothers.com",
+            "website": "http://www.robertsbrothers.com"
+        },
+        "history": {
+            "2022-07-29": {
+                "event": "Sale Listing",
+                "price": 795000,
+                "listingType": "Standard",
+                "listedDate": "2022-07-29T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1313
+            }
+        }
+    },
+    {
+        "id": "222-Mount-Pleasant-Blvd,-Phs-2-&-75,-Fairhope,-AL-36532",
+        "formattedAddress": "222 Mount Pleasant Blvd, Phs 2 & 75, Fairhope, AL 36532",
+        "addressLine1": "222 Mount Pleasant Blvd",
+        "addressLine2": "Phs 2 & 75",
+        "city": "Fairhope",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36532",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.551861,
+        "longitude": -87.86221,
+        "propertyType": "Land",
+        "lotSize": 22216,
+        "hoa": {
+            "fee": 79
+        },
+        "status": "Active",
+        "price": 175000,
+        "listingType": "Standard",
+        "listedDate": "2023-02-17T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-02-18T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.631Z",
+        "daysOnMarket": 1110,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "342004",
+        "listingAgent": {
+            "name": "Rance Reehl",
+            "phone": "2519906622",
+            "email": "rance@reehltor.com",
+            "website": "http://www.rancereehl.com/"
+        },
+        "listingOffice": {
+            "name": "Coldwell Banker Reehl Properties - Fairhope Office",
+            "phone": "2519906622",
+            "email": "info@reehlproeprties.com",
+            "website": "http://www.reehlproperties.com"
+        },
+        "history": {
+            "2023-02-17": {
+                "event": "Sale Listing",
+                "price": 175000,
+                "listingType": "Standard",
+                "listedDate": "2023-02-17T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1110
+            }
+        }
+    },
+    {
+        "id": "Old-Federal-Rd,-Unit-22,-Magnolia-Springs,-AL-36555",
+        "formattedAddress": "Old Federal Rd, Unit 22, Magnolia Springs, AL 36555",
+        "addressLine1": "Old Federal Rd",
+        "addressLine2": "Unit 22",
+        "city": "Magnolia Springs",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36555",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.401031,
+        "longitude": -87.76605,
+        "propertyType": "Land",
+        "lotSize": 12240,
+        "hoa": {
+            "fee": 167
+        },
+        "status": "Active",
+        "price": 85900,
+        "listingType": "Standard",
+        "listedDate": "2022-09-20T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-01-15T10:25:20.579Z",
+        "lastSeenDate": "2026-03-02T10:45:26.630Z",
+        "daysOnMarket": 1260,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "336740",
+        "listingAgent": {
+            "name": "Lacie Maynard",
+            "phone": "2519781431",
+            "email": "realtor.lacie@gmail.com",
+            "website": "http://www.laciemaynard.com"
+        },
+        "listingOffice": {
+            "name": "Bellator Real Estate & Development - Gulf Shores",
+            "phone": "2519485000",
+            "email": "contact@gobellator.com",
+            "website": "http://gobellator.com"
+        },
+        "history": {
+            "2022-09-20": {
+                "event": "Sale Listing",
+                "price": 85900,
+                "listingType": "Standard",
+                "listedDate": "2022-09-20T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1260
+            }
+        }
+    },
+    {
+        "id": "Cleyera-Dr,-Unit-29,-Magnolia-Springs,-AL-36555",
+        "formattedAddress": "Cleyera Dr, Unit 29, Magnolia Springs, AL 36555",
+        "addressLine1": "Cleyera Dr",
+        "addressLine2": "Unit 29",
+        "city": "Magnolia Springs",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36555",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.401031,
+        "longitude": -87.76605,
+        "propertyType": "Land",
+        "lotSize": 20230,
+        "hoa": {
+            "fee": 167
+        },
+        "status": "Active",
+        "price": 159900,
+        "listingType": "Standard",
+        "listedDate": "2022-09-20T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-05-04T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.630Z",
+        "daysOnMarket": 1260,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "336742",
+        "listingAgent": {
+            "name": "Lacie Maynard",
+            "phone": "2519781431",
+            "email": "realtor.lacie@gmail.com",
+            "website": "http://www.laciemaynard.com"
+        },
+        "listingOffice": {
+            "name": "Bellator Real Estate & Development - Gulf Shores",
+            "phone": "2519485000",
+            "email": "contact@gobellator.com",
+            "website": "http://gobellator.com"
+        },
+        "history": {
+            "2022-09-20": {
+                "event": "Sale Listing",
+                "price": 159900,
+                "listingType": "Standard",
+                "listedDate": "2022-09-20T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1260
+            }
+        }
+    },
+    {
+        "id": "County-Road,-64,-Robertsdale,-AL-36507",
+        "formattedAddress": "County Road, 64, Robertsdale, AL 36507",
+        "addressLine1": "County Road",
+        "addressLine2": "64",
+        "city": "Robertsdale",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36507",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.641819387,
+        "longitude": -87.61907417,
+        "propertyType": "Land",
+        "lotSize": 3005640,
+        "status": "Active",
+        "price": 549900,
+        "listingType": "Standard",
+        "listedDate": "2021-07-28T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-08-19T18:44:01.753Z",
+        "lastSeenDate": "2026-03-02T10:45:26.629Z",
+        "daysOnMarket": 1679,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "317762",
+        "listingAgent": {
+            "name": "Clint Flowers",
+            "phone": "2513870787",
+            "email": "clintflowers@forestryland.com",
+            "website": "http://www.forestryland.com"
+        },
+        "listingOffice": {
+            "name": "National Land Realty",
+            "phone": "2512818733",
+            "email": "clintflowers@forestryland.com",
+            "website": "http://nationalland.com"
+        },
+        "history": {
+            "2021-07-28": {
+                "event": "Sale Listing",
+                "price": 549900,
+                "listingType": "Standard",
+                "listedDate": "2021-07-28T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1679
+            }
+        }
+    },
+    {
+        "id": "Cleyera-Dr,-Unit-30,-Magnolia-Springs,-AL-36555",
+        "formattedAddress": "Cleyera Dr, Unit 30, Magnolia Springs, AL 36555",
+        "addressLine1": "Cleyera Dr",
+        "addressLine2": "Unit 30",
+        "city": "Magnolia Springs",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36555",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.401031,
+        "longitude": -87.76605,
+        "propertyType": "Land",
+        "lotSize": 7734,
+        "hoa": {
+            "fee": 167
+        },
+        "status": "Active",
+        "price": 159900,
+        "listingType": "Standard",
+        "listedDate": "2022-09-20T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-05-04T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.629Z",
+        "daysOnMarket": 1260,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "336743",
+        "listingAgent": {
+            "name": "Lacie Maynard",
+            "phone": "2519781431",
+            "email": "realtor.lacie@gmail.com",
+            "website": "http://www.laciemaynard.com"
+        },
+        "listingOffice": {
+            "name": "Bellator Real Estate & Development - Gulf Shores",
+            "phone": "2519485000",
+            "email": "contact@gobellator.com",
+            "website": "http://gobellator.com"
+        },
+        "history": {
+            "2022-09-20": {
+                "event": "Sale Listing",
+                "price": 159900,
+                "listingType": "Standard",
+                "listedDate": "2022-09-20T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1260
+            }
+        }
+    },
+    {
+        "id": "Old-Federal-Rd,-Unit-23,-Magnolia-Springs,-AL-36555",
+        "formattedAddress": "Old Federal Rd, Unit 23, Magnolia Springs, AL 36555",
+        "addressLine1": "Old Federal Rd",
+        "addressLine2": "Unit 23",
+        "city": "Magnolia Springs",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36555",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.401031,
+        "longitude": -87.76605,
+        "propertyType": "Land",
+        "lotSize": 12240,
+        "hoa": {
+            "fee": 167
+        },
+        "status": "Active",
+        "price": 85900,
+        "listingType": "Standard",
+        "listedDate": "2022-09-20T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-01-15T10:25:20.577Z",
+        "lastSeenDate": "2026-03-02T10:45:26.628Z",
+        "daysOnMarket": 1260,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "336741",
+        "listingAgent": {
+            "name": "Lacie Maynard",
+            "phone": "2519781431",
+            "email": "realtor.lacie@gmail.com",
+            "website": "http://www.laciemaynard.com"
+        },
+        "listingOffice": {
+            "name": "Bellator Real Estate & Development - Gulf Shores",
+            "phone": "2519485000",
+            "email": "contact@gobellator.com",
+            "website": "http://gobellator.com"
+        },
+        "history": {
+            "2022-09-20": {
+                "event": "Sale Listing",
+                "price": 85900,
+                "listingType": "Standard",
+                "listedDate": "2022-09-20T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1260
+            }
+        }
+    },
+    {
+        "id": "Cleyera-Dr,-Unit-31,-Magnolia-Springs,-AL-36555",
+        "formattedAddress": "Cleyera Dr, Unit 31, Magnolia Springs, AL 36555",
+        "addressLine1": "Cleyera Dr",
+        "addressLine2": "Unit 31",
+        "city": "Magnolia Springs",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36555",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.401031,
+        "longitude": -87.76605,
+        "propertyType": "Land",
+        "lotSize": 13939,
+        "hoa": {
+            "fee": 167
+        },
+        "status": "Active",
+        "price": 159900,
+        "listingType": "Standard",
+        "listedDate": "2022-09-20T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-05-04T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.628Z",
+        "daysOnMarket": 1260,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "336745",
+        "listingAgent": {
+            "name": "Lacie Maynard",
+            "phone": "2519781431",
+            "email": "realtor.lacie@gmail.com",
+            "website": "http://www.laciemaynard.com"
+        },
+        "listingOffice": {
+            "name": "Bellator Real Estate & Development - Gulf Shores",
+            "phone": "2519485000",
+            "email": "contact@gobellator.com",
+            "website": "http://gobellator.com"
+        },
+        "history": {
+            "2022-09-20": {
+                "event": "Sale Listing",
+                "price": 159900,
+                "listingType": "Standard",
+                "listedDate": "2022-09-20T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1260
+            }
+        }
+    },
+    {
+        "id": "Old-Federal-Rd,-Unit-D1,-Magnolia-Springs,-AL-36555",
+        "formattedAddress": "Old Federal Rd, Unit D1, Magnolia Springs, AL 36555",
+        "addressLine1": "Old Federal Rd",
+        "addressLine2": "Unit D1",
+        "city": "Magnolia Springs",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36555",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.401031,
+        "longitude": -87.76605,
+        "propertyType": "Land",
+        "lotSize": 15012,
+        "hoa": {
+            "fee": 167
+        },
+        "status": "Active",
+        "price": 105900,
+        "listingType": "Standard",
+        "listedDate": "2022-09-20T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-01-15T10:46:22.857Z",
+        "lastSeenDate": "2026-03-02T10:45:26.627Z",
+        "daysOnMarket": 1260,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "336752",
+        "listingAgent": {
+            "name": "Lacie Maynard",
+            "phone": "2519781431",
+            "email": "realtor.lacie@gmail.com",
+            "website": "http://www.laciemaynard.com"
+        },
+        "listingOffice": {
+            "name": "Bellator Real Estate & Development - Gulf Shores",
+            "phone": "2519485000",
+            "email": "contact@gobellator.com",
+            "website": "http://gobellator.com"
+        },
+        "history": {
+            "2022-09-20": {
+                "event": "Sale Listing",
+                "price": 105900,
+                "listingType": "Standard",
+                "listedDate": "2022-09-20T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1260
+            }
+        }
+    },
+    {
+        "id": "222-Mount-Pleasant-Blvd,-Fairhope,-AL-36532",
+        "formattedAddress": "222 Mount Pleasant Blvd, Fairhope, AL 36532",
+        "addressLine1": "222 Mount Pleasant Blvd",
+        "addressLine2": null,
+        "city": "Fairhope",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36532",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.482854,
+        "longitude": -87.863548,
+        "propertyType": "Land",
+        "bedrooms": 0,
+        "lotSize": 22216,
+        "hoa": {
+            "fee": 79
+        },
+        "status": "Active",
+        "price": 175000,
+        "listingType": "Standard",
+        "listedDate": "2023-02-21T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-02-22T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.627Z",
+        "daysOnMarket": 1106,
+        "mlsName": "MobileAL",
+        "mlsNumber": "7179014",
+        "listingAgent": {
+            "name": "Rance Reehl",
+            "phone": "2519906622",
+            "email": "rance@reehltor.com",
+            "website": "http://www.rancereehl.com/"
+        },
+        "listingOffice": {
+            "name": "Coldwell Banker/Reehl Properties-Fairhope",
+            "phone": "2519906622",
+            "email": "info@reehlproperties.com"
+        },
+        "history": {
+            "2023-02-21": {
+                "event": "Sale Listing",
+                "price": 175000,
+                "listingType": "Standard",
+                "listedDate": "2023-02-21T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1106
+            }
+        }
+    },
+    {
+        "id": "7330-Spanish-Fort-Blvd,-Spanish-Fort,-AL-36527",
+        "formattedAddress": "7330 Spanish Fort Blvd, Spanish Fort, AL 36527",
+        "addressLine1": "7330 Spanish Fort Blvd",
+        "addressLine2": null,
+        "city": "Spanish Fort",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36527",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.670051,
+        "longitude": -87.896851,
+        "propertyType": "Land",
+        "bedrooms": 0,
+        "lotSize": 104531,
+        "status": "Active",
+        "price": 899900,
+        "listingType": "Standard",
+        "listedDate": "2023-03-15T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-03-15T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.567Z",
+        "daysOnMarket": 1084,
+        "mlsName": "MobileAL",
+        "mlsNumber": "7178200",
+        "listingAgent": {
+            "name": "Cynthia Byrd",
+            "phone": "2514022143",
+            "email": "cynthia@tyirbyrealty.com"
+        },
+        "listingOffice": {
+            "name": "TY IRBY REALTY & DEVELOPMENT",
+            "phone": "2516491000",
+            "email": "cynthia@tyirbyrealty.com",
+            "website": "www.tyirbyrealty.com"
+        },
+        "history": {
+            "2023-03-15": {
+                "event": "Sale Listing",
+                "price": 899900,
+                "listingType": "Standard",
+                "listedDate": "2023-03-15T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1084
+            }
+        }
+    },
+    {
+        "id": "Pensacola-Ave,-Lot-8,-Fairhope,-AL-36532",
+        "formattedAddress": "Pensacola Ave, Lot 8, Fairhope, AL 36532",
+        "addressLine1": "Pensacola Ave",
+        "addressLine2": "Lot 8",
+        "city": "Fairhope",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36532",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.536791037,
+        "longitude": -87.9015937,
+        "propertyType": "Land",
+        "lotSize": 15840,
+        "hoa": {
+            "fee": 99
+        },
+        "status": "Active",
+        "price": 210000,
+        "listingType": "Standard",
+        "listedDate": "2023-04-04T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-06-16T12:55:01.508Z",
+        "lastSeenDate": "2026-03-02T10:45:26.566Z",
+        "daysOnMarket": 1064,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "343996",
+        "listingAgent": {
+            "name": "Mary Cane",
+            "phone": "2516268882",
+            "email": "mary.cane@courtneyandmorris.com"
+        },
+        "listingOffice": {
+            "name": "Courtney & Morris, Inc.",
+            "phone": "2512707149",
+            "email": "barryjparker@gmail.com"
+        },
+        "history": {
+            "2023-04-04": {
+                "event": "Sale Listing",
+                "price": 210000,
+                "listingType": "Standard",
+                "listedDate": "2023-04-04T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1064
+            }
+        }
+    },
+    {
+        "id": "930-West-Beach-Blvd,-Unit-207,-Gulf-Shores,-AL-36542",
+        "formattedAddress": "930 West Beach Blvd, Unit 207, Gulf Shores, AL 36542",
+        "addressLine1": "930 West Beach Blvd",
+        "addressLine2": "Unit 207",
+        "city": "Gulf Shores",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36542",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.245813,
+        "longitude": -87.705657,
+        "propertyType": "Condo",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "squareFootage": 643,
+        "yearBuilt": 1983,
+        "hoa": {
+            "fee": 375
+        },
+        "status": "Active",
+        "price": 297900,
+        "listingType": "Standard",
+        "listedDate": "2023-09-01T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2022-11-15T08:04:55.302Z",
+        "lastSeenDate": "2026-03-02T10:45:26.565Z",
+        "daysOnMarket": 914,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "351215",
+        "listingAgent": {
+            "name": "Vida Yeager",
+            "phone": "2517528877",
+            "email": "vidasellsthebeach@gmail.com"
+        },
+        "listingOffice": {
+            "name": "RE/MAX of Orange Beach",
+            "phone": "2519812400",
+            "email": "shane.willis75@fivestreet.me",
+            "website": "www.remax-orangebeach-al.com"
+        },
+        "history": {
+            "2023-09-01": {
+                "event": "Sale Listing",
+                "price": 297900,
+                "listingType": "Standard",
+                "listedDate": "2023-09-01T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 914
+            }
+        }
+    },
+    {
+        "id": "Back-Forty-Ln,-Foley,-AL-36535",
+        "formattedAddress": "Back Forty Ln, Foley, AL 36535",
+        "addressLine1": "Back Forty Ln",
+        "addressLine2": null,
+        "city": "Foley",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36535",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.350197369,
+        "longitude": -87.71712933,
+        "propertyType": "Land",
+        "lotSize": 417305,
+        "status": "Active",
+        "price": 345299,
+        "listingType": "Standard",
+        "listedDate": "2023-05-05T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-05-06T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.564Z",
+        "daysOnMarket": 1033,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "345528",
+        "listingAgent": {
+            "name": "Lisa Johnson",
+            "phone": "2516091861",
+            "email": "realtorlisajohnson@gmail.com",
+            "website": "http://realtorlisajohnson.com"
+        },
+        "listingOffice": {
+            "name": "World Impact Real Estate",
+            "phone": "2516970005",
+            "email": "paulvangulf@gmail.com"
+        },
+        "history": {
+            "2023-05-05": {
+                "event": "Sale Listing",
+                "price": 345299,
+                "listingType": "Standard",
+                "listedDate": "2023-05-05T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1033
+            }
+        }
+    },
+    {
+        "id": "820-Carrozza-Ln,-Unit-151,-Foley,-AL-36535",
+        "formattedAddress": "820 Carrozza Ln, Unit 151, Foley, AL 36535",
+        "addressLine1": "820 Carrozza Ln",
+        "addressLine2": "Unit 151",
+        "city": "Foley",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36535",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.345893,
+        "longitude": -87.661014,
+        "propertyType": "Single Family",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "squareFootage": 283,
+        "lotSize": 2176,
+        "yearBuilt": 2019,
+        "hoa": {
+            "fee": 300
+        },
+        "status": "Active",
+        "price": 269000,
+        "listingType": "Standard",
+        "listedDate": "2023-11-29T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-07-04T13:58:27.852Z",
+        "lastSeenDate": "2026-03-02T10:45:26.564Z",
+        "daysOnMarket": 825,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "354782",
+        "listingAgent": {
+            "name": "Mike Mccaleb",
+            "phone": "2569909666",
+            "email": "mikemccaleb@aol.com",
+            "website": "http://www.thesunriseteam.com"
+        },
+        "listingOffice": {
+            "name": "World Impact Real Estate",
+            "phone": "2516970005",
+            "email": "paulvangulf@gmail.com"
+        },
+        "history": {
+            "2023-11-29": {
+                "event": "Sale Listing",
+                "price": 269000,
+                "listingType": "Standard",
+                "listedDate": "2023-11-29T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 825
+            }
+        }
+    },
+    {
+        "id": "22988-Perdido-Beach-Blvd,-Apt-704,-Orange-Beach,-AL-36561",
+        "formattedAddress": "22988 Perdido Beach Blvd, Apt 704, Orange Beach, AL 36561",
+        "addressLine1": "22988 Perdido Beach Blvd",
+        "addressLine2": "Apt 704",
+        "city": "Orange Beach",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36561",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.256819,
+        "longitude": -87.632858,
+        "propertyType": "Condo",
+        "bedrooms": 4,
+        "bathrooms": 4,
+        "squareFootage": 2091,
+        "yearBuilt": 2023,
+        "hoa": {
+            "fee": 1439
+        },
+        "status": "Active",
+        "price": 1850000,
+        "listingType": "Standard",
+        "listedDate": "2023-08-04T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-08-05T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.563Z",
+        "daysOnMarket": 942,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "349765",
+        "listingAgent": {
+            "name": "Brian Pugh",
+            "phone": "2517521380",
+            "email": "gulfshorescondofinder@gmail.com",
+            "website": "http://www.brettrobinson.com"
+        },
+        "listingOffice": {
+            "name": "Brett/Robinson",
+            "phone": "2519816180",
+            "email": "brsales@brettrobinson.com",
+            "website": "https://orangebeach.brettrobinsonrealestate.com"
+        },
+        "history": {
+            "2023-08-04": {
+                "event": "Sale Listing",
+                "price": 1850000,
+                "listingType": "Standard",
+                "listedDate": "2023-08-04T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 942
+            }
+        }
+    },
+    {
+        "id": "Atlanta-Cir,-Lot-26,-Spanish-Fort,-AL-36527",
+        "formattedAddress": "Atlanta Cir, Lot 26, Spanish Fort, AL 36527",
+        "addressLine1": "Atlanta Cir",
+        "addressLine2": "Lot 26",
+        "city": "Spanish Fort",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36527",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.68962,
+        "longitude": -87.898975,
+        "propertyType": "Land",
+        "lotSize": 26572,
+        "hoa": {
+            "fee": 19
+        },
+        "status": "Active",
+        "price": 89000,
+        "listingType": "Standard",
+        "listedDate": "2023-06-07T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-06-08T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.562Z",
+        "daysOnMarket": 1000,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "347055",
+        "listingAgent": {
+            "name": "Cindy Zebryk",
+            "phone": "2516807964",
+            "email": "cindyzebryk@gmail.com",
+            "website": "http://realtorcindyz.com"
+        },
+        "listingOffice": {
+            "name": "Coldwell Banker Reehl Properties - Fairhope Office",
+            "phone": "2519906622",
+            "email": "info@reehlproeprties.com",
+            "website": "http://www.reehlproperties.com"
+        },
+        "history": {
+            "2023-06-07": {
+                "event": "Sale Listing",
+                "price": 89000,
+                "listingType": "Standard",
+                "listedDate": "2023-06-07T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1000
+            }
+        }
+    },
+    {
+        "id": "24230-Perdido-Beach-Blvd,-Unit-14C2,-Orange-Beach,-AL-36561",
+        "formattedAddress": "24230 Perdido Beach Blvd, Unit 14C2, Orange Beach, AL 36561",
+        "addressLine1": "24230 Perdido Beach Blvd",
+        "addressLine2": "Unit 14C2",
+        "city": "Orange Beach",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36561",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.262276,
+        "longitude": -87.611236,
+        "propertyType": "Condo",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "squareFootage": 691,
+        "yearBuilt": 1993,
+        "hoa": {
+            "fee": 501
+        },
+        "status": "Active",
+        "price": 488000,
+        "listingType": "Standard",
+        "listedDate": "2023-09-19T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-10-27T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.562Z",
+        "daysOnMarket": 896,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "351927",
+        "listingAgent": {
+            "name": "Ted Hughes",
+            "phone": "2519795663",
+            "email": "tedncharge515@gmail.com",
+            "website": "http://www.roderick.hughes.exprealty.com"
+        },
+        "listingOffice": {
+            "name": "Ted Hughes Real Estate Group",
+            "phone": "2519795663",
+            "email": "tedncharge515@gmail.com"
+        },
+        "history": {
+            "2023-09-19": {
+                "event": "Sale Listing",
+                "price": 488000,
+                "listingType": "Standard",
+                "listedDate": "2023-09-19T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 896
+            }
+        }
+    },
+    {
+        "id": "Pensacola-Ave,-Lot-4,-Fairhope,-AL-36532",
+        "formattedAddress": "Pensacola Ave, Lot 4, Fairhope, AL 36532",
+        "addressLine1": "Pensacola Ave",
+        "addressLine2": "Lot 4",
+        "city": "Fairhope",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36532",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.537896104,
+        "longitude": -87.90186064,
+        "propertyType": "Land",
+        "hoa": {
+            "fee": 99
+        },
+        "status": "Active",
+        "price": 189000,
+        "listingType": "Standard",
+        "listedDate": "2023-04-04T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-01-15T11:41:04.482Z",
+        "lastSeenDate": "2026-03-02T10:45:26.561Z",
+        "daysOnMarket": 1064,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "343994",
+        "listingAgent": {
+            "name": "Mary Cane",
+            "phone": "2516268882",
+            "email": "mary.cane@courtneyandmorris.com"
+        },
+        "listingOffice": {
+            "name": "COURTNEY & MORRIS DAPHNE",
+            "phone": "2516268882",
+            "email": "lillian@courtneyandmorris.com"
+        },
+        "history": {
+            "2023-04-04": {
+                "event": "Sale Listing",
+                "price": 189000,
+                "listingType": "Standard",
+                "listedDate": "2023-04-04T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1064
+            }
+        }
+    },
+    {
+        "id": "Pensacola-Ave,-Lot-6,-Fairhope,-AL-36532",
+        "formattedAddress": "Pensacola Ave, Lot 6, Fairhope, AL 36532",
+        "addressLine1": "Pensacola Ave",
+        "addressLine2": "Lot 6",
+        "city": "Fairhope",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36532",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.537511815,
+        "longitude": -87.90167953,
+        "propertyType": "Land",
+        "lotSize": 14400,
+        "hoa": {
+            "fee": 99
+        },
+        "status": "Active",
+        "price": 198000,
+        "listingType": "Standard",
+        "listedDate": "2023-04-04T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-06-16T12:35:02.687Z",
+        "lastSeenDate": "2026-03-02T10:45:26.560Z",
+        "daysOnMarket": 1064,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "343993",
+        "listingAgent": {
+            "name": "Mary Cane",
+            "phone": "2516268882",
+            "email": "mary.cane@courtneyandmorris.com"
+        },
+        "listingOffice": {
+            "name": "Courtney & Morris, Inc.",
+            "phone": "2512707149",
+            "email": "barryjparker@gmail.com"
+        },
+        "history": {
+            "2023-04-04": {
+                "event": "Sale Listing",
+                "price": 198000,
+                "listingType": "Standard",
+                "listedDate": "2023-04-04T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1064
+            }
+        }
+    },
+    {
+        "id": "32438-River-Rd,-Lot-31,-Orange-Beach,-AL-36561",
+        "formattedAddress": "32438 River Rd, Lot 31, Orange Beach, AL 36561",
+        "addressLine1": "32438 River Rd",
+        "addressLine2": "Lot 31",
+        "city": "Orange Beach",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36561",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.298801,
+        "longitude": -87.473268,
+        "propertyType": "Land",
+        "lotSize": 16466,
+        "hoa": {
+            "fee": 100
+        },
+        "status": "Active",
+        "price": 1900000,
+        "listingType": "Standard",
+        "listedDate": "2024-01-02T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-01-05T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.559Z",
+        "daysOnMarket": 791,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "355724",
+        "listingAgent": {
+            "name": "Scott Janik",
+            "phone": "2515541440",
+            "email": "scottpjanik@aol.com"
+        },
+        "listingOffice": {
+            "name": "J & J Realty, LLC",
+            "phone": "2515541440",
+            "email": "scottpjanik@aol.com",
+            "website": "http://www.gulfcoastmls.com/jandjrealty"
+        },
+        "history": {
+            "2024-01-02": {
+                "event": "Sale Listing",
+                "price": 1900000,
+                "listingType": "Standard",
+                "listedDate": "2024-01-02T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 791
+            }
+        }
+    },
+    {
+        "id": "33202-River-Rd,-Orange-Beach,-AL-36561",
+        "formattedAddress": "33202 River Rd, Orange Beach, AL 36561",
+        "addressLine1": "33202 River Rd",
+        "addressLine2": null,
+        "city": "Orange Beach",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36561",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.302778,
+        "longitude": -87.460627,
+        "propertyType": "Single Family",
+        "bedrooms": 4,
+        "bathrooms": 4.5,
+        "squareFootage": 4943,
+        "lotSize": 20865,
+        "yearBuilt": 2001,
+        "hoa": {
+            "fee": 175
+        },
+        "status": "Active",
+        "price": 4200000,
+        "listingType": "Standard",
+        "listedDate": "2023-09-14T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-09-15T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.558Z",
+        "daysOnMarket": 901,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "351716",
+        "listingAgent": {
+            "name": "Tika Policelli",
+            "phone": "8504266239",
+            "email": "tikapolicelli@gmail.com",
+            "website": "http://orangebeachpropertyguide.com/"
+        },
+        "listingOffice": {
+            "name": "RE MAX Paradise",
+            "phone": "2519488000",
+            "email": "remaxparadise@alabamaparadise.com",
+            "website": "http://www.alabamaparadise.com"
+        },
+        "history": {
+            "2023-09-14": {
+                "event": "Sale Listing",
+                "price": 4200000,
+                "listingType": "Standard",
+                "listedDate": "2023-09-14T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 901
+            }
+        }
+    },
+    {
+        "id": "24230-Perdido-Beach-Blvd,-Apt-3144,-Orange-Beach,-AL-36561",
+        "formattedAddress": "24230 Perdido Beach Blvd, Apt 3144, Orange Beach, AL 36561",
+        "addressLine1": "24230 Perdido Beach Blvd",
+        "addressLine2": "Apt 3144",
+        "city": "Orange Beach",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36561",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.262276,
+        "longitude": -87.611237,
+        "propertyType": "Condo",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "squareFootage": 926,
+        "yearBuilt": 1993,
+        "hoa": {
+            "fee": 671
+        },
+        "status": "Active",
+        "price": 595000,
+        "listingType": "Standard",
+        "listedDate": "2023-09-19T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-09-20T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.557Z",
+        "daysOnMarket": 896,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "351926",
+        "listingAgent": {
+            "name": "Ted Hughes",
+            "phone": "2519795663",
+            "email": "tedncharge515@gmail.com",
+            "website": "http://www.roderick.hughes.exprealty.com"
+        },
+        "listingOffice": {
+            "name": "Ted Hughes Real Estate Group",
+            "phone": "2519795663",
+            "email": "tedncharge515@gmail.com"
+        },
+        "history": {
+            "2023-09-19": {
+                "event": "Sale Listing",
+                "price": 595000,
+                "listingType": "Standard",
+                "listedDate": "2023-09-19T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 896
+            }
+        }
+    },
+    {
+        "id": "27501-Perdido-Beach-Blvd,-Unit-511,-Orange-Beach,-AL-36561",
+        "formattedAddress": "27501 Perdido Beach Blvd, Unit 511, Orange Beach, AL 36561",
+        "addressLine1": "27501 Perdido Beach Blvd",
+        "addressLine2": "Unit 511",
+        "city": "Orange Beach",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36561",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.278057,
+        "longitude": -87.556381,
+        "propertyType": "Condo",
+        "bedrooms": 3,
+        "bathrooms": 2.5,
+        "squareFootage": 1940,
+        "yearBuilt": 2002,
+        "hoa": {
+            "fee": 809
+        },
+        "status": "Active",
+        "price": 1100000,
+        "listingType": "Standard",
+        "listedDate": "2023-09-29T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-10-28T15:26:09.943Z",
+        "lastSeenDate": "2026-03-02T10:45:26.555Z",
+        "daysOnMarket": 886,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "352404",
+        "listingAgent": {
+            "name": "Brant Bengtson",
+            "phone": "2519794523",
+            "email": "brantb@brettrobinson.com"
+        },
+        "listingOffice": {
+            "name": "Brett/Robinson",
+            "phone": "2519816180",
+            "email": "brsales@brettrobinson.com",
+            "website": "https://orangebeach.brettrobinsonrealestate.com"
+        },
+        "history": {
+            "2023-09-29": {
+                "event": "Sale Listing",
+                "price": 1100000,
+                "listingType": "Standard",
+                "listedDate": "2023-09-29T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 886
+            }
+        }
+    },
+    {
+        "id": "20-Farrington-Ln,-Spanish-Fort,-AL-36527",
+        "formattedAddress": "20 Farrington Ln, Spanish Fort, AL 36527",
+        "addressLine1": "20 Farrington Ln",
+        "addressLine2": null,
+        "city": "Spanish Fort",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36527",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.720686,
+        "longitude": -87.896279,
+        "propertyType": "Land",
+        "bedrooms": 0,
+        "lotSize": 29272,
+        "hoa": {
+            "fee": 79
+        },
+        "status": "Active",
+        "price": 35000,
+        "listingType": "Standard",
+        "listedDate": "2024-01-03T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-01-05T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.544Z",
+        "daysOnMarket": 790,
+        "mlsName": "MobileAL",
+        "mlsNumber": "7319016",
+        "listingAgent": {
+            "name": "Kate Irvine",
+            "phone": "2514553677",
+            "email": "kirvine@gobellator.com",
+            "website": "https://kateirvine.gobellator.com/"
+        },
+        "listingOffice": {
+            "name": "Bellator Eastern Shore",
+            "phone": "2519280031",
+            "email": "contact@gobellator.com",
+            "website": "http://gobellator.com"
+        },
+        "history": {
+            "2024-01-03": {
+                "event": "Sale Listing",
+                "price": 35000,
+                "listingType": "Standard",
+                "listedDate": "2024-01-03T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 790
+            }
+        }
+    },
+    {
+        "id": "28760-Perdido-Beach-Blvd,-Unit-404S,-Orange-Beach,-AL-36561",
+        "formattedAddress": "28760 Perdido Beach Blvd, Unit 404S, Orange Beach, AL 36561",
+        "addressLine1": "28760 Perdido Beach Blvd",
+        "addressLine2": "Unit 404S",
+        "city": "Orange Beach",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36561",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.277516,
+        "longitude": -87.534586,
+        "propertyType": "Condo",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "squareFootage": 1158,
+        "yearBuilt": 1984,
+        "hoa": {
+            "fee": 700
+        },
+        "status": "Active",
+        "price": 674800,
+        "listingType": "Standard",
+        "listedDate": "2023-12-06T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-12-07T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.543Z",
+        "daysOnMarket": 818,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "355035",
+        "listingAgent": {
+            "name": "Heather W Harp",
+            "phone": "2515336677",
+            "email": "heather@harpsells.com"
+        },
+        "listingOffice": {
+            "name": "RE/MAX of Orange Beach",
+            "phone": "2519812400",
+            "email": "shane.willis75@fivestreet.me",
+            "website": "www.remax-orangebeach-al.com"
+        },
+        "history": {
+            "2023-12-06": {
+                "event": "Sale Listing",
+                "price": 674800,
+                "listingType": "Standard",
+                "listedDate": "2023-12-06T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 818
+            }
+        }
+    },
+    {
+        "id": "7419-Frith-Rd,-Foley,-AL-36535",
+        "formattedAddress": "7419 Frith Rd, Foley, AL 36535",
+        "addressLine1": "7419 Frith Rd",
+        "addressLine2": null,
+        "city": "Foley",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36535",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.332103,
+        "longitude": -87.72266,
+        "propertyType": "Single Family",
+        "bedrooms": 4,
+        "bathrooms": 2,
+        "squareFootage": 2438,
+        "lotSize": 261360,
+        "yearBuilt": 1920,
+        "status": "Active",
+        "price": 850000,
+        "listingType": "Standard",
+        "listedDate": "2023-03-01T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-03-02T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.542Z",
+        "daysOnMarket": 1098,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "342411",
+        "listingAgent": {
+            "name": "Jeremy Sullivan",
+            "phone": "2512699385",
+            "email": "jeremy@goodtimesbeach.com",
+            "website": "www.goodtimesbeach.com"
+        },
+        "listingOffice": {
+            "name": "RE MAX Paradise",
+            "phone": "2519488000",
+            "email": "remaxparadise@alabamaparadise.com",
+            "website": "http://www.alabamaparadise.com"
+        },
+        "history": {
+            "2023-03-01": {
+                "event": "Sale Listing",
+                "price": 850000,
+                "listingType": "Standard",
+                "listedDate": "2023-03-01T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1098
+            }
+        }
+    },
+    {
+        "id": "663-Nichols-Ave,-Lot-1,-Fairhope,-AL-36532",
+        "formattedAddress": "663 Nichols Ave, Lot 1, Fairhope, AL 36532",
+        "addressLine1": "663 Nichols Ave",
+        "addressLine2": "Lot 1",
+        "city": "Fairhope",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36532",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.516415,
+        "longitude": -87.892929,
+        "propertyType": "Land",
+        "lotSize": 3171,
+        "status": "Active",
+        "price": 290000,
+        "listingType": "Standard",
+        "listedDate": "2023-07-01T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-07-02T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.541Z",
+        "daysOnMarket": 976,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "348265",
+        "listingAgent": {
+            "name": "Kim Ward",
+            "phone": "2519797101",
+            "email": "kimward@kimwardrealty.com",
+            "website": "http://www.kimwardrealty.com/"
+        },
+        "listingOffice": {
+            "name": "Kim Ward Realty, Llc",
+            "phone": "2519797101",
+            "email": "kimward@kimwardrealty.com"
+        },
+        "history": {
+            "2023-07-01": {
+                "event": "Sale Listing",
+                "price": 290000,
+                "listingType": "Standard",
+                "listedDate": "2023-07-01T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 976
+            }
+        }
+    },
+    {
+        "id": "25545-Cabinet-Shop-Rd,-Loxley,-AL-36551",
+        "formattedAddress": "25545 Cabinet Shop Rd, Loxley, AL 36551",
+        "addressLine1": "25545 Cabinet Shop Rd",
+        "addressLine2": null,
+        "city": "Loxley",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36551",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.596824,
+        "longitude": -87.733938,
+        "propertyType": "Land",
+        "lotSize": 36155,
+        "status": "Active",
+        "price": 290000,
+        "listingType": "Standard",
+        "listedDate": "2023-10-16T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-10-17T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.540Z",
+        "daysOnMarket": 869,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "353096",
+        "listingAgent": {
+            "name": "John G Foley",
+            "phone": "2519797773",
+            "email": "gfoley19@gmail.com"
+        },
+        "listingOffice": {
+            "name": "Foley & Company",
+            "phone": "2519797773",
+            "email": "john@foleycom.com",
+            "website": "http://www.foleycom.com"
+        },
+        "history": {
+            "2023-10-16": {
+                "event": "Sale Listing",
+                "price": 290000,
+                "listingType": "Standard",
+                "listedDate": "2023-10-16T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 869
+            }
+        }
+    },
+    {
+        "id": "501-Portofino-Loop,-Lot-143,-Foley,-AL-36535",
+        "formattedAddress": "501 Portofino Loop, Lot 143, Foley, AL 36535",
+        "addressLine1": "501 Portofino Loop",
+        "addressLine2": "Lot 143",
+        "city": "Foley",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36535",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.345893,
+        "longitude": -87.661014,
+        "propertyType": "Land",
+        "lotSize": 3049,
+        "hoa": {
+            "fee": 380
+        },
+        "status": "Active",
+        "price": 122000,
+        "listingType": "Standard",
+        "listedDate": "2023-07-21T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-07-22T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.539Z",
+        "daysOnMarket": 956,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "349086",
+        "listingAgent": {
+            "name": "Denise Peoples",
+            "email": "dpeoples@bellaterrarvresort.com"
+        },
+        "listingOffice": {
+            "name": "Bella Terra Realty, Llc",
+            "phone": "2519702370",
+            "email": "cmiller@craighomesinc.com",
+            "website": "www.bellaterrarvresort.com"
+        },
+        "history": {
+            "2023-07-21": {
+                "event": "Sale Listing",
+                "price": 122000,
+                "listingType": "Standard",
+                "listedDate": "2023-07-21T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 956
+            }
+        }
+    },
+    {
+        "id": "Mount-Pleasant-Blvd,-Fairhope,-AL-36532",
+        "formattedAddress": "Mount Pleasant Blvd, Fairhope, AL 36532",
+        "addressLine1": "Mount Pleasant Blvd",
+        "addressLine2": null,
+        "city": "Fairhope",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36532",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.523499,
+        "longitude": -87.887464,
+        "propertyType": "Land",
+        "bedrooms": 0,
+        "lotSize": 23958,
+        "hoa": {
+            "fee": 79
+        },
+        "status": "Active",
+        "price": 197600,
+        "listingType": "Standard",
+        "listedDate": "2023-11-03T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2020-09-15T20:30:47.554Z",
+        "lastSeenDate": "2026-03-02T10:45:26.537Z",
+        "daysOnMarket": 851,
+        "mlsName": "MobileAL",
+        "mlsNumber": "7299228",
+        "listingAgent": {
+            "name": "Barbara Rogers",
+            "phone": "2513918412",
+            "email": "barbararogersrealtor@gmail.com",
+            "website": "http://barbararogers.remax-alabama.com"
+        },
+        "listingOffice": {
+            "name": "RE/MAX By The Bay Daphne",
+            "phone": "2519287474",
+            "email": "kristy@bythebayal.com"
+        },
+        "history": {
+            "2023-11-03": {
+                "event": "Sale Listing",
+                "price": 197600,
+                "listingType": "Standard",
+                "listedDate": "2023-11-03T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 851
+            }
+        }
+    },
+    {
+        "id": "River-Rd,-Lot-11,-Orange-Beach,-AL-36561",
+        "formattedAddress": "River Rd, Lot 11, Orange Beach, AL 36561",
+        "addressLine1": "River Rd",
+        "addressLine2": "Lot 11",
+        "city": "Orange Beach",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36561",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.290919,
+        "longitude": -87.498531,
+        "propertyType": "Land",
+        "lotSize": 51401,
+        "hoa": {
+            "fee": 142
+        },
+        "status": "Active",
+        "price": 1299000,
+        "listingType": "Standard",
+        "listedDate": "2023-03-01T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-03-02T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.536Z",
+        "daysOnMarket": 1098,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "342415",
+        "listingAgent": {
+            "name": "J Tucker Shaver",
+            "phone": "2516099292",
+            "email": "tuckershaver@gmail.com"
+        },
+        "listingOffice": {
+            "name": "Signature Properties",
+            "phone": "2516099292",
+            "email": "tuckershaver@gmail.com"
+        },
+        "history": {
+            "2023-03-01": {
+                "event": "Sale Listing",
+                "price": 1299000,
+                "listingType": "Standard",
+                "listedDate": "2023-03-01T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1098
+            }
+        }
+    },
+    {
+        "id": "23094-Perdido-Beach-Blvd,-Apt-510,-Orange-Beach,-AL-36561",
+        "formattedAddress": "23094 Perdido Beach Blvd, Apt 510, Orange Beach, AL 36561",
+        "addressLine1": "23094 Perdido Beach Blvd",
+        "addressLine2": "Apt 510",
+        "city": "Orange Beach",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36561",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.257593,
+        "longitude": -87.630062,
+        "propertyType": "Condo",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "squareFootage": 908,
+        "yearBuilt": 1996,
+        "hoa": {
+            "fee": 566
+        },
+        "status": "Active",
+        "price": 429900,
+        "listingType": "Standard",
+        "listedDate": "2024-02-05T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-04-18T14:16:30.509Z",
+        "lastSeenDate": "2026-03-02T10:45:26.536Z",
+        "daysOnMarket": 757,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "357243",
+        "listingAgent": {
+            "name": "Connie Carlisle",
+            "phone": "2512237155",
+            "email": "c.carlisle@alabamaparadise.com"
+        },
+        "listingOffice": {
+            "name": "RE MAX Paradise",
+            "phone": "2519488000",
+            "email": "remaxparadise@alabamaparadise.com",
+            "website": "http://www.alabamaparadise.com"
+        },
+        "history": {
+            "2024-02-05": {
+                "event": "Sale Listing",
+                "price": 429900,
+                "listingType": "Standard",
+                "listedDate": "2024-02-05T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 757
+            }
+        }
+    },
+    {
+        "id": "County-Road,-13,-Fairhope,-AL-36532",
+        "formattedAddress": "County Road, 13, Fairhope, AL 36532",
+        "addressLine1": "County Road",
+        "addressLine2": "13",
+        "city": "Fairhope",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36532",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.495441,
+        "longitude": -87.865015,
+        "propertyType": "Land",
+        "lotSize": 6054840,
+        "status": "Active",
+        "price": 3900000,
+        "listingType": "Standard",
+        "listedDate": "2023-06-21T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2020-12-12T15:55:47.698Z",
+        "lastSeenDate": "2026-03-02T10:45:26.535Z",
+        "daysOnMarket": 986,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "347759",
+        "listingAgent": {
+            "name": "Mary Cane",
+            "phone": "2516268882",
+            "email": "mary.cane@courtneyandmorris.com"
+        },
+        "listingOffice": {
+            "name": "COURTNEY & MORRIS DAPHNE",
+            "phone": "2516268882",
+            "email": "lillian@courtneyandmorris.com"
+        },
+        "history": {
+            "2023-06-21": {
+                "event": "Sale Listing",
+                "price": 3900000,
+                "listingType": "Standard",
+                "listedDate": "2023-06-21T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 986
+            }
+        }
+    },
+    {
+        "id": "17747-Scenic-Hwy,-98,-Fairhope,-AL-36532",
+        "formattedAddress": "17747 Scenic Hwy, 98, Fairhope, AL 36532",
+        "addressLine1": "17747 Scenic Hwy",
+        "addressLine2": "98",
+        "city": "Fairhope",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36532",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.48244,
+        "longitude": -87.932148,
+        "propertyType": "Single Family",
+        "bedrooms": 5,
+        "bathrooms": 6,
+        "squareFootage": 8283,
+        "lotSize": 43473,
+        "yearBuilt": 2002,
+        "status": "Active",
+        "price": 7495000,
+        "listingType": "Standard",
+        "listedDate": "2024-02-20T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2020-09-21T23:11:21.573Z",
+        "lastSeenDate": "2026-03-02T10:45:26.534Z",
+        "daysOnMarket": 742,
+        "mlsName": "MobileAL",
+        "mlsNumber": "7340597",
+        "listingAgent": {
+            "name": "Mary Cane",
+            "phone": "2516268882",
+            "email": "mary.cane@courtneyandmorris.com"
+        },
+        "listingOffice": {
+            "name": "COURTNEY & MORRIS DAPHNE",
+            "phone": "2516268882",
+            "email": "lillian@courtneyandmorris.com"
+        },
+        "history": {
+            "2024-02-20": {
+                "event": "Sale Listing",
+                "price": 7495000,
+                "listingType": "Standard",
+                "listedDate": "2024-02-20T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 742
+            }
+        }
+    },
+    {
+        "id": "18795-Pondview-Dr,-Foley,-AL-36535",
+        "formattedAddress": "18795 Pondview Dr, Foley, AL 36535",
+        "addressLine1": "18795 Pondview Dr",
+        "addressLine2": null,
+        "city": "Foley",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36535",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.350006,
+        "longitude": -87.711342,
+        "propertyType": "Manufactured",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "squareFootage": 1600,
+        "yearBuilt": 2022,
+        "status": "Active",
+        "price": 265000,
+        "listingType": "Standard",
+        "listedDate": "2023-10-06T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-10-07T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.533Z",
+        "daysOnMarket": 879,
+        "mlsName": "MyStateMLS",
+        "mlsNumber": "11213712",
+        "listingAgent": {
+            "name": "Patrick Etheridge",
+            "phone": "2515501209",
+            "email": "patrick@thefoleygrove.com"
+        },
+        "listingOffice": {
+            "name": "Suncrest Sales Corp",
+            "phone": "7278426255",
+            "email": "corporate@floridacommunities.com"
+        },
+        "history": {
+            "2023-10-06": {
+                "event": "Sale Listing",
+                "price": 265000,
+                "listingType": "Standard",
+                "listedDate": "2023-10-06T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 879
+            }
+        }
+    },
+    {
+        "id": "341-Boykin-Ct-S,-Gulf-Shores,-AL-36542",
+        "formattedAddress": "341 Boykin Ct S, Gulf Shores, AL 36542",
+        "addressLine1": "341 Boykin Ct S",
+        "addressLine2": null,
+        "city": "Gulf Shores",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36542",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.228684,
+        "longitude": -87.989995,
+        "propertyType": "Single Family",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "squareFootage": 1800,
+        "lotSize": 8276,
+        "yearBuilt": 2003,
+        "status": "Active",
+        "price": 1050000,
+        "listingType": "Standard",
+        "listedDate": "2023-11-09T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2022-05-09T15:02:21.004Z",
+        "lastSeenDate": "2026-03-02T10:45:26.533Z",
+        "daysOnMarket": 845,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "354155",
+        "listingAgent": {
+            "name": "Pamela Hurst",
+            "phone": "2514557339",
+            "email": "pamhurstrealtor@att.net"
+        },
+        "listingOffice": {
+            "name": "RE/MAX REALTY PROFESSIONALS",
+            "phone": "2516611471",
+            "email": "mattavinger@remax.net",
+            "website": "www.mobilebaldwinproperties.com"
+        },
+        "history": {
+            "2023-11-09": {
+                "event": "Sale Listing",
+                "price": 1050000,
+                "listingType": "Standard",
+                "listedDate": "2023-11-09T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 845
+            }
+        }
+    },
+    {
+        "id": "228-Ridgewood-Dr,-Daphne,-AL-36526",
+        "formattedAddress": "228 Ridgewood Dr, Daphne, AL 36526",
+        "addressLine1": "228 Ridgewood Dr",
+        "addressLine2": null,
+        "city": "Daphne",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36526",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.63819,
+        "longitude": -87.892228,
+        "propertyType": "Land",
+        "lotSize": 12756,
+        "hoa": {
+            "fee": 60
+        },
+        "status": "Active",
+        "price": 6500,
+        "listingType": "Standard",
+        "listedDate": "2023-03-21T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2022-03-03T05:58:39.592Z",
+        "lastSeenDate": "2026-03-02T10:45:26.532Z",
+        "daysOnMarket": 1078,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "343359",
+        "listingAgent": {
+            "name": "Roderick Baker",
+            "phone": "2512027339",
+            "email": "transactionbrokerage@gmail.com",
+            "website": "http://tbrecompany.com"
+        },
+        "listingOffice": {
+            "name": "Transaction Brokerage RE Compa",
+            "phone": "2512027339",
+            "email": "transactionbrokerage@gmail.com"
+        },
+        "history": {
+            "2023-03-21": {
+                "event": "Sale Listing",
+                "price": 6500,
+                "listingType": "Standard",
+                "listedDate": "2023-03-21T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1078
+            }
+        }
+    },
+    {
+        "id": "Mount-Pleasant-Blvd,-Lot-11,-Fairhope,-AL-36532",
+        "formattedAddress": "Mount Pleasant Blvd, Lot 11, Fairhope, AL 36532",
+        "addressLine1": "Mount Pleasant Blvd",
+        "addressLine2": "Lot 11",
+        "city": "Fairhope",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36532",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.546054,
+        "longitude": -87.861835,
+        "propertyType": "Land",
+        "lotSize": 31058,
+        "hoa": {
+            "fee": 79
+        },
+        "status": "Active",
+        "price": 162000,
+        "listingType": "Standard",
+        "listedDate": "2023-12-28T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-01-15T11:34:12.736Z",
+        "lastSeenDate": "2026-03-02T10:45:26.531Z",
+        "daysOnMarket": 796,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "355583",
+        "listingAgent": {
+            "name": "Autumn Gann",
+            "phone": "2516542100",
+            "email": "autumn@autumngann.com"
+        },
+        "listingOffice": {
+            "name": "Mobile Bay Realty",
+            "phone": "2512307555",
+            "email": "alison@mobilebayrealty.com"
+        },
+        "history": {
+            "2023-12-28": {
+                "event": "Sale Listing",
+                "price": 162000,
+                "listingType": "Standard",
+                "listedDate": "2023-12-28T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 796
+            }
+        }
+    },
+    {
+        "id": "23-Farringdon-Ln,-Spanish-Fort,-AL-36527",
+        "formattedAddress": "23 Farringdon Ln, Spanish Fort, AL 36527",
+        "addressLine1": "23 Farringdon Ln",
+        "addressLine2": null,
+        "city": "Spanish Fort",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36527",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.720686,
+        "longitude": -87.896279,
+        "propertyType": "Land",
+        "bedrooms": 0,
+        "lotSize": 15594,
+        "hoa": {
+            "fee": 79
+        },
+        "status": "Active",
+        "price": 25000,
+        "listingType": "Standard",
+        "listedDate": "2024-01-03T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-01-05T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.530Z",
+        "daysOnMarket": 790,
+        "mlsName": "MobileAL",
+        "mlsNumber": "7319020",
+        "listingAgent": {
+            "name": "Kate Irvine",
+            "phone": "2514553677",
+            "email": "kirvine@gobellator.com",
+            "website": "https://kateirvine.gobellator.com/"
+        },
+        "listingOffice": {
+            "name": "Bellator Eastern Shore",
+            "phone": "2519280031",
+            "email": "contact@gobellator.com",
+            "website": "http://gobellator.com"
+        },
+        "history": {
+            "2024-01-03": {
+                "event": "Sale Listing",
+                "price": 25000,
+                "listingType": "Standard",
+                "listedDate": "2024-01-03T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 790
+            }
+        }
+    },
+    {
+        "id": "26302-Perdido-Beach-Blvd,-Unit-C2203,-Orange-Beach,-AL-36561",
+        "formattedAddress": "26302 Perdido Beach Blvd, Unit C2203, Orange Beach, AL 36561",
+        "addressLine1": "26302 Perdido Beach Blvd",
+        "addressLine2": "Unit C2203",
+        "city": "Orange Beach",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36561",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.271499,
+        "longitude": -87.573525,
+        "propertyType": "Condo",
+        "bedrooms": 3,
+        "bathrooms": 3.5,
+        "squareFootage": 2301,
+        "yearBuilt": 2009,
+        "hoa": {
+            "fee": 1534
+        },
+        "status": "Active",
+        "price": 1560000,
+        "listingType": "Standard",
+        "listedDate": "2024-01-10T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-06-08T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.529Z",
+        "daysOnMarket": 783,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "356093",
+        "listingAgent": {
+            "name": "Robert Shallow",
+            "phone": "2519790500",
+            "email": "bob@bobshallow.com",
+            "website": "https://www.bobshallow.com"
+        },
+        "listingOffice": {
+            "name": "RE MAX Paradise",
+            "phone": "2519488000",
+            "email": "remaxparadise@alabamaparadise.com",
+            "website": "http://www.alabamaparadise.com"
+        },
+        "history": {
+            "2024-01-10": {
+                "event": "Sale Listing",
+                "price": 1560000,
+                "listingType": "Standard",
+                "listedDate": "2024-01-10T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 783
+            }
+        }
+    },
+    {
+        "id": "11850-Gateway-Dr,-Lot-75,-Elberta,-AL-36530",
+        "formattedAddress": "11850 Gateway Dr, Lot 75, Elberta, AL 36530",
+        "addressLine1": "11850 Gateway Dr",
+        "addressLine2": "Lot 75",
+        "city": "Elberta",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36530",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.400922,
+        "longitude": -87.542715,
+        "propertyType": "Land",
+        "lotSize": 4792,
+        "hoa": {
+            "fee": 320
+        },
+        "status": "Active",
+        "price": 179000,
+        "listingType": "Standard",
+        "listedDate": "2024-01-05T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2022-12-13T08:00:05.609Z",
+        "lastSeenDate": "2026-03-02T10:45:26.527Z",
+        "daysOnMarket": 788,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "355894",
+        "listingAgent": {
+            "name": "Deanna C. Auner",
+            "phone": "2519789797",
+            "email": "deanna@aunerrealty.com"
+        },
+        "listingOffice": {
+            "name": "Auner And Associates Realty",
+            "phone": "2519892141",
+            "email": "austinauner@gmail.com",
+            "website": "https://aunerrealty.com/"
+        },
+        "history": {
+            "2024-01-05": {
+                "event": "Sale Listing",
+                "price": 179000,
+                "listingType": "Standard",
+                "listedDate": "2024-01-05T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 788
+            }
+        }
+    },
+    {
+        "id": "22-Farrington-Ln,-Spanish-Fort,-AL-36527",
+        "formattedAddress": "22 Farrington Ln, Spanish Fort, AL 36527",
+        "addressLine1": "22 Farrington Ln",
+        "addressLine2": null,
+        "city": "Spanish Fort",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36527",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.721058,
+        "longitude": -87.895293,
+        "propertyType": "Land",
+        "bedrooms": 0,
+        "lotSize": 19166,
+        "hoa": {
+            "fee": 79
+        },
+        "status": "Active",
+        "price": 25000,
+        "listingType": "Standard",
+        "listedDate": "2024-01-03T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-01-05T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.526Z",
+        "daysOnMarket": 790,
+        "mlsName": "MobileAL",
+        "mlsNumber": "7319018",
+        "listingAgent": {
+            "name": "Kate Irvine",
+            "phone": "2514553677",
+            "email": "kirvine@gobellator.com",
+            "website": "https://kateirvine.gobellator.com/"
+        },
+        "listingOffice": {
+            "name": "Bellator Eastern Shore",
+            "phone": "2519280031",
+            "email": "contact@gobellator.com",
+            "website": "http://gobellator.com"
+        },
+        "history": {
+            "2024-01-03": {
+                "event": "Sale Listing",
+                "price": 25000,
+                "listingType": "Standard",
+                "listedDate": "2024-01-03T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 790
+            }
+        }
+    },
+    {
+        "id": "15-Farrington-Ln,-Spanish-Fort,-AL-36527",
+        "formattedAddress": "15 Farrington Ln, Spanish Fort, AL 36527",
+        "addressLine1": "15 Farrington Ln",
+        "addressLine2": null,
+        "city": "Spanish Fort",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36527",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.720313,
+        "longitude": -87.892823,
+        "propertyType": "Land",
+        "bedrooms": 0,
+        "lotSize": 31537,
+        "hoa": {
+            "fee": 79
+        },
+        "status": "Active",
+        "price": 35000,
+        "listingType": "Standard",
+        "listedDate": "2024-01-03T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-01-05T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.525Z",
+        "daysOnMarket": 790,
+        "mlsName": "MobileAL",
+        "mlsNumber": "7319015",
+        "listingAgent": {
+            "name": "Kate Irvine",
+            "phone": "2514553677",
+            "email": "kirvine@gobellator.com",
+            "website": "https://kateirvine.gobellator.com/"
+        },
+        "listingOffice": {
+            "name": "Bellator Eastern Shore",
+            "phone": "2519280031",
+            "email": "contact@gobellator.com",
+            "website": "http://gobellator.com"
+        },
+        "history": {
+            "2024-01-03": {
+                "event": "Sale Listing",
+                "price": 35000,
+                "listingType": "Standard",
+                "listedDate": "2024-01-03T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 790
+            }
+        }
+    },
+    {
+        "id": "48980-Rabun-Rd,-Bay-Minette,-AL-36507",
+        "formattedAddress": "48980 Rabun Rd, Bay Minette, AL 36507",
+        "addressLine1": "48980 Rabun Rd",
+        "addressLine2": null,
+        "city": "Bay Minette",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36507",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.939343,
+        "longitude": -87.765562,
+        "propertyType": "Land",
+        "lotSize": 32234,
+        "status": "Active",
+        "price": 500000,
+        "listingType": "Standard",
+        "listedDate": "2023-09-21T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-09-22T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.524Z",
+        "daysOnMarket": 894,
+        "mlsName": "Pensacola",
+        "mlsNumber": "633730",
+        "listingAgent": {
+            "name": "Patty Helton Davis",
+            "phone": "2512942057",
+            "email": "patty@phdrealty.com",
+            "website": "http://www.patty.phdrealty.com"
+        },
+        "listingOffice": {
+            "name": "PHD Realty, LLC.",
+            "phone": "2513681063",
+            "email": "info@phdrealty.com",
+            "website": "http://www.phdrealty.com"
+        },
+        "history": {
+            "2023-09-21": {
+                "event": "Sale Listing",
+                "price": 500000,
+                "listingType": "Standard",
+                "listedDate": "2023-09-21T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 894
+            }
+        }
+    },
+    {
+        "id": "8485-Carriage-Way,-Foley,-AL-36535",
+        "formattedAddress": "8485 Carriage Way, Foley, AL 36535",
+        "addressLine1": "8485 Carriage Way",
+        "addressLine2": null,
+        "city": "Foley",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36535",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.348129,
+        "longitude": -87.71666,
+        "propertyType": "Manufactured",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "squareFootage": 1352,
+        "status": "Active",
+        "price": 245000,
+        "listingType": "Standard",
+        "listedDate": "2023-10-09T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-11-06T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.523Z",
+        "daysOnMarket": 876,
+        "mlsName": "MyStateMLS",
+        "mlsNumber": "11214331",
+        "listingAgent": {
+            "name": "Patrick Etheridge",
+            "phone": "2515501209",
+            "email": "patrick@thefoleygrove.com"
+        },
+        "listingOffice": {
+            "name": "Suncrest Sales Corp",
+            "phone": "7278426255",
+            "email": "corporate@floridacommunities.com"
+        },
+        "history": {
+            "2023-10-09": {
+                "event": "Sale Listing",
+                "price": 245000,
+                "listingType": "Standard",
+                "listedDate": "2023-10-09T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 876
+            }
+        }
+    },
+    {
+        "id": "427-Portofino-Loop,-Lot-73,-Foley,-AL-36535",
+        "formattedAddress": "427 Portofino Loop, Lot 73, Foley, AL 36535",
+        "addressLine1": "427 Portofino Loop",
+        "addressLine2": "Lot 73",
+        "city": "Foley",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36535",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.346639,
+        "longitude": -87.658976,
+        "propertyType": "Land",
+        "lotSize": 4499,
+        "hoa": {
+            "fee": 380
+        },
+        "status": "Active",
+        "price": 97500,
+        "listingType": "Standard",
+        "listedDate": "2023-12-03T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-12-04T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.522Z",
+        "daysOnMarket": 821,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "354920",
+        "listingAgent": {
+            "name": "Denise Peoples",
+            "email": "dpeoples@bellaterrarvresort.com"
+        },
+        "listingOffice": {
+            "name": "Bella Terra Realty, Llc",
+            "phone": "2519702370",
+            "email": "cmiller@craighomesinc.com",
+            "website": "www.bellaterrarvresort.com"
+        },
+        "history": {
+            "2023-12-03": {
+                "event": "Sale Listing",
+                "price": 97500,
+                "listingType": "Standard",
+                "listedDate": "2023-12-03T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 821
+            }
+        }
+    },
+    {
+        "id": "Bryants-Landing-Rd,-Stockton,-AL-36579",
+        "formattedAddress": "Bryants Landing Rd, Stockton, AL 36579",
+        "addressLine1": "Bryants Landing Rd",
+        "addressLine2": null,
+        "city": "Stockton",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36579",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 31.042801829,
+        "longitude": -87.88225518,
+        "propertyType": "Land",
+        "lotSize": 1056330,
+        "status": "Active",
+        "price": 75000,
+        "listingType": "Standard",
+        "listedDate": "2024-01-16T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-01-15T09:09:19.726Z",
+        "lastSeenDate": "2026-03-02T10:45:26.521Z",
+        "daysOnMarket": 777,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "356356",
+        "listingAgent": {
+            "name": "Karen Taylor",
+            "phone": "2512329998",
+            "email": "ktre@bellsouth.net",
+            "website": "http://www.deltarealty.net"
+        },
+        "listingOffice": {
+            "name": "Bailey Realty Group, Llc",
+            "phone": "2512398137",
+            "email": "patty.bailey@bellsouth.net"
+        },
+        "history": {
+            "2024-01-16": {
+                "event": "Sale Listing",
+                "price": 75000,
+                "listingType": "Standard",
+                "listedDate": "2024-01-16T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 777
+            }
+        }
+    },
+    {
+        "id": "24-Old-Federal-Rd,-Lot-24,-Magnolia-Springs,-AL-36555",
+        "formattedAddress": "24 Old Federal Rd, Lot 24, Magnolia Springs, AL 36555",
+        "addressLine1": "24 Old Federal Rd",
+        "addressLine2": "Lot 24",
+        "city": "Magnolia Springs",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36555",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.401031,
+        "longitude": -87.76605,
+        "propertyType": "Land",
+        "lotSize": 12197,
+        "hoa": {
+            "fee": 167
+        },
+        "status": "Active",
+        "price": 54900,
+        "listingType": "Standard",
+        "listedDate": "2024-02-26T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-02-27T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.521Z",
+        "daysOnMarket": 736,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "358297",
+        "listingAgent": {
+            "name": "Doug Jacobs",
+            "phone": "2517523040",
+            "email": "beachboy@gulftel.com",
+            "website": "http://www.dougjacobs.com"
+        },
+        "listingOffice": {
+            "name": "Doug Jacobs Real Estate, Inc.",
+            "phone": "2517523040",
+            "email": "beachboy@gulftel.com",
+            "website": "http://www.dougjacobs.com"
+        },
+        "history": {
+            "2024-02-26": {
+                "event": "Sale Listing",
+                "price": 54900,
+                "listingType": "Standard",
+                "listedDate": "2024-02-26T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 736
+            }
+        }
+    },
+    {
+        "id": "County-1-Rd,-Lot-44,-Fairhope,-AL-36532",
+        "formattedAddress": "County 1 Rd, Lot 44, Fairhope, AL 36532",
+        "addressLine1": "County 1 Rd",
+        "addressLine2": "Lot 44",
+        "city": "Fairhope",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36532",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.383347,
+        "longitude": -87.863156,
+        "propertyType": "Land",
+        "lotSize": 13765,
+        "status": "Active",
+        "price": 199900,
+        "listingType": "Standard",
+        "listedDate": "2024-01-16T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-01-17T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.520Z",
+        "daysOnMarket": 777,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "356344",
+        "listingAgent": {
+            "name": "Mary Cane",
+            "phone": "2516268882",
+            "email": "mary.cane@courtneyandmorris.com"
+        },
+        "listingOffice": {
+            "name": "COURTNEY & MORRIS DAPHNE",
+            "phone": "2516268882",
+            "email": "lillian@courtneyandmorris.com"
+        },
+        "history": {
+            "2024-01-16": {
+                "event": "Sale Listing",
+                "price": 199900,
+                "listingType": "Standard",
+                "listedDate": "2024-01-16T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 777
+            }
+        }
+    },
+    {
+        "id": "29550-St-John-Dr,-Orange-Beach,-AL-36561",
+        "formattedAddress": "29550 St John Dr, Orange Beach, AL 36561",
+        "addressLine1": "29550 St John Dr",
+        "addressLine2": null,
+        "city": "Orange Beach",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36561",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.28605,
+        "longitude": -87.5212,
+        "propertyType": "Single Family",
+        "bedrooms": 5,
+        "bathrooms": 4.5,
+        "squareFootage": 5064,
+        "lotSize": 26180,
+        "yearBuilt": 1974,
+        "hoa": {
+            "fee": 133
+        },
+        "status": "Active",
+        "price": 2050000,
+        "listingType": "Standard",
+        "listedDate": "2024-02-06T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-04-18T14:56:09.307Z",
+        "lastSeenDate": "2026-03-02T10:45:26.520Z",
+        "daysOnMarket": 756,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "357347",
+        "listingAgent": {
+            "name": "Scott Janik",
+            "phone": "2515541440",
+            "email": "scottpjanik@aol.com"
+        },
+        "listingOffice": {
+            "name": "J & J Realty, LLC",
+            "phone": "2515541440",
+            "email": "scottpjanik@aol.com",
+            "website": "http://www.gulfcoastmls.com/jandjrealty"
+        },
+        "history": {
+            "2024-02-06": {
+                "event": "Sale Listing",
+                "price": 2050000,
+                "listingType": "Standard",
+                "listedDate": "2024-02-06T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 756
+            }
+        }
+    },
+    {
+        "id": "County-Road,-64,-Daphne,-AL-36526",
+        "formattedAddress": "County Road, 64, Daphne, AL 36526",
+        "addressLine1": "County Road",
+        "addressLine2": "64",
+        "city": "Daphne",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36526",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.605807,
+        "longitude": -87.836661,
+        "propertyType": "Land",
+        "bedrooms": 0,
+        "lotSize": 1089000,
+        "status": "Active",
+        "price": 5000000,
+        "listingType": "Standard",
+        "listedDate": "2024-02-23T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-02-11T13:02:23.882Z",
+        "lastSeenDate": "2026-03-02T10:45:26.519Z",
+        "daysOnMarket": 739,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "358198",
+        "listingAgent": {
+            "name": "Joe Courtney",
+            "phone": "2516047189",
+            "email": "joecourtney@bellsouth.net"
+        },
+        "listingOffice": {
+            "name": "COURTNEY & MORRIS",
+            "phone": "2514768545",
+            "email": "courtmor@bellsouth.net",
+            "website": "www.courtneyandmorris.com"
+        },
+        "history": {
+            "2022-11-16": {
+                "event": "Sale Listing",
+                "price": 8029000,
+                "listingType": "Standard",
+                "listedDate": "2022-11-16T00:00:00.000Z",
+                "removedDate": "2024-02-23T00:00:00.000Z",
+                "daysOnMarket": 464
+            },
+            "2024-02-23": {
+                "event": "Sale Listing",
+                "price": 5000000,
+                "listingType": "Standard",
+                "listedDate": "2024-02-23T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 739
+            }
+        }
+    },
+    {
+        "id": "12040-Raptor-Ct,-Lot-62,-Elberta,-AL-36530",
+        "formattedAddress": "12040 Raptor Ct, Lot 62, Elberta, AL 36530",
+        "addressLine1": "12040 Raptor Ct",
+        "addressLine2": "Lot 62",
+        "city": "Elberta",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36530",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.401523,
+        "longitude": -87.543181,
+        "propertyType": "Land",
+        "lotSize": 5663,
+        "hoa": {
+            "fee": 320
+        },
+        "status": "Active",
+        "price": 179000,
+        "listingType": "Standard",
+        "listedDate": "2024-01-11T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2022-10-20T09:02:42.323Z",
+        "lastSeenDate": "2026-03-02T10:45:26.518Z",
+        "daysOnMarket": 782,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "356155",
+        "listingAgent": {
+            "name": "Deanna C. Auner",
+            "phone": "2519789797",
+            "email": "deanna@aunerrealty.com"
+        },
+        "listingOffice": {
+            "name": "Auner And Associates Realty",
+            "phone": "2519892141",
+            "email": "austinauner@gmail.com",
+            "website": "https://aunerrealty.com/"
+        },
+        "history": {
+            "2024-01-11": {
+                "event": "Sale Listing",
+                "price": 179000,
+                "listingType": "Standard",
+                "listedDate": "2024-01-11T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 782
+            }
+        }
+    },
+    {
+        "id": "Stanton-Rd,-Daphne,-AL-36526",
+        "formattedAddress": "Stanton Rd, Daphne, AL 36526",
+        "addressLine1": "Stanton Rd",
+        "addressLine2": null,
+        "city": "Daphne",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36526",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.594984836,
+        "longitude": -87.89208352,
+        "propertyType": "Land",
+        "lotSize": 112385,
+        "status": "Active",
+        "price": 349900,
+        "listingType": "Standard",
+        "listedDate": "2023-11-27T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-11-28T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.517Z",
+        "daysOnMarket": 827,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "354705",
+        "listingAgent": {
+            "name": "Mickey Skipper",
+            "phone": "2519522109",
+            "email": "mickey@skipperland.com",
+            "website": "http://www.skipperland.com"
+        },
+        "listingOffice": {
+            "name": "Skipper Land Company",
+            "phone": "2519477700",
+            "email": "mickey@skipperland.com",
+            "website": "www.skipperland.com"
+        },
+        "history": {
+            "2023-11-27": {
+                "event": "Sale Listing",
+                "price": 349900,
+                "listingType": "Standard",
+                "listedDate": "2023-11-27T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 827
+            }
+        }
+    },
+    {
+        "id": "23-Farrington-Ln,-Lot-23,-Spanish-Fort,-AL-36527",
+        "formattedAddress": "23 Farrington Ln, Lot 23, Spanish Fort, AL 36527",
+        "addressLine1": "23 Farrington Ln",
+        "addressLine2": "Lot 23",
+        "city": "Spanish Fort",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36527",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.72109,
+        "longitude": -87.895629,
+        "propertyType": "Land",
+        "lotSize": 15594,
+        "hoa": {
+            "fee": 79
+        },
+        "status": "Active",
+        "price": 25000,
+        "listingType": "Standard",
+        "listedDate": "2024-01-03T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-03-01T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.517Z",
+        "daysOnMarket": 790,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "355754",
+        "listingAgent": {
+            "name": "Kate Irvine",
+            "phone": "2514553677",
+            "email": "kirvine@gobellator.com",
+            "website": "https://kateirvine.gobellator.com/"
+        },
+        "listingOffice": {
+            "name": "Bellator RE & Dev-Eastern Shor",
+            "phone": "2519280031",
+            "email": "twilson@bellatoral.com",
+            "website": "http://gobellator.com"
+        },
+        "history": {
+            "2024-01-03": {
+                "event": "Sale Listing",
+                "price": 25000,
+                "listingType": "Standard",
+                "listedDate": "2024-01-03T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 790
+            }
+        }
+    },
+    {
+        "id": "New-Era-Rd,-Fairhope,-AL-36532",
+        "formattedAddress": "New Era Rd, Fairhope, AL 36532",
+        "addressLine1": "New Era Rd",
+        "addressLine2": null,
+        "city": "Fairhope",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36532",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.508208,
+        "longitude": -87.897062,
+        "propertyType": "Land",
+        "lotSize": 42602,
+        "status": "Active",
+        "price": 57000,
+        "listingType": "Standard",
+        "listedDate": "2023-11-19T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-11-20T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.516Z",
+        "daysOnMarket": 835,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "354539",
+        "listingAgent": {
+            "name": "Beverley Valrie",
+            "phone": "2516448201",
+            "email": "beverley@valpointerealestate.com",
+            "website": "https://www.valpointerealestate.com/beverley-valrie"
+        },
+        "listingOffice": {
+            "name": "Valpointe Real Estate & Dev",
+            "phone": "2512104481",
+            "email": "beverleyvalrie@gmail.com"
+        },
+        "history": {
+            "2023-11-19": {
+                "event": "Sale Listing",
+                "price": 57000,
+                "listingType": "Standard",
+                "listedDate": "2023-11-19T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 835
+            }
+        }
+    },
+    {
+        "id": "608-Sereno-St,-Lot-119,-Foley,-AL-36535",
+        "formattedAddress": "608 Sereno St, Lot 119, Foley, AL 36535",
+        "addressLine1": "608 Sereno St",
+        "addressLine2": "Lot 119",
+        "city": "Foley",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36535",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.346639,
+        "longitude": -87.658976,
+        "propertyType": "Land",
+        "lotSize": 3464,
+        "hoa": {
+            "fee": 380
+        },
+        "status": "Active",
+        "price": 134900,
+        "listingType": "Standard",
+        "listedDate": "2024-05-07T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-02-11T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.516Z",
+        "daysOnMarket": 665,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "362021",
+        "listingAgent": {
+            "name": "Denise Peoples",
+            "email": "dpeoples@bellaterrarvresort.com"
+        },
+        "listingOffice": {
+            "name": "Bella Terra Realty, Llc",
+            "phone": "2519702370",
+            "email": "cmiller@craighomesinc.com",
+            "website": "www.bellaterrarvresort.com"
+        },
+        "history": {
+            "2024-05-07": {
+                "event": "Sale Listing",
+                "price": 134900,
+                "listingType": "Standard",
+                "listedDate": "2024-05-07T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 665
+            }
+        }
+    },
+    {
+        "id": "833-Carrozza-Ln,-Lot-158,-Foley,-AL-36535",
+        "formattedAddress": "833 Carrozza Ln, Lot 158, Foley, AL 36535",
+        "addressLine1": "833 Carrozza Ln",
+        "addressLine2": "Lot 158",
+        "city": "Foley",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36535",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.345893,
+        "longitude": -87.661014,
+        "propertyType": "Land",
+        "lotSize": 3834,
+        "hoa": {
+            "fee": 380
+        },
+        "status": "Active",
+        "price": 279999,
+        "listingType": "Standard",
+        "listedDate": "2023-11-06T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-11-07T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.515Z",
+        "daysOnMarket": 848,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "354013",
+        "listingAgent": {
+            "name": "Denise Peoples",
+            "email": "dpeoples@bellaterrarvresort.com"
+        },
+        "listingOffice": {
+            "name": "Bella Terra Realty, Llc",
+            "phone": "2519702370",
+            "email": "cmiller@craighomesinc.com",
+            "website": "www.bellaterrarvresort.com"
+        },
+        "history": {
+            "2023-11-06": {
+                "event": "Sale Listing",
+                "price": 279999,
+                "listingType": "Standard",
+                "listedDate": "2023-11-06T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 848
+            }
+        }
+    },
+    {
+        "id": "Cleyera-Dr,-Unit-32,-Magnolia-Springs,-AL-36555",
+        "formattedAddress": "Cleyera Dr, Unit 32, Magnolia Springs, AL 36555",
+        "addressLine1": "Cleyera Dr",
+        "addressLine2": "Unit 32",
+        "city": "Magnolia Springs",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36555",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.401031,
+        "longitude": -87.76605,
+        "propertyType": "Land",
+        "lotSize": 5422,
+        "hoa": {
+            "fee": 167
+        },
+        "status": "Active",
+        "price": 159900,
+        "listingType": "Standard",
+        "listedDate": "2022-09-20T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-05-04T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.514Z",
+        "daysOnMarket": 1260,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "336747",
+        "listingAgent": {
+            "name": "Lacie Maynard",
+            "phone": "2519781431",
+            "email": "realtor.lacie@gmail.com",
+            "website": "http://www.laciemaynard.com"
+        },
+        "listingOffice": {
+            "name": "Bellator Real Estate & Development - Gulf Shores",
+            "phone": "2519485000",
+            "email": "contact@gobellator.com",
+            "website": "http://gobellator.com"
+        },
+        "history": {
+            "2022-09-20": {
+                "event": "Sale Listing",
+                "price": 159900,
+                "listingType": "Standard",
+                "listedDate": "2022-09-20T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1260
+            }
+        }
+    },
+    {
+        "id": "Old-Federal-Rd,-Unit-D2,-Magnolia-Springs,-AL-36555",
+        "formattedAddress": "Old Federal Rd, Unit D2, Magnolia Springs, AL 36555",
+        "addressLine1": "Old Federal Rd",
+        "addressLine2": "Unit D2",
+        "city": "Magnolia Springs",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36555",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.401031,
+        "longitude": -87.76605,
+        "propertyType": "Land",
+        "lotSize": 16740,
+        "hoa": {
+            "fee": 167
+        },
+        "status": "Active",
+        "price": 122900,
+        "listingType": "Standard",
+        "listedDate": "2022-09-20T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-01-15T10:46:22.873Z",
+        "lastSeenDate": "2026-03-02T10:45:26.513Z",
+        "daysOnMarket": 1260,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "336753",
+        "listingAgent": {
+            "name": "Lacie Maynard",
+            "phone": "2519781431",
+            "email": "realtor.lacie@gmail.com",
+            "website": "http://www.laciemaynard.com"
+        },
+        "listingOffice": {
+            "name": "Bellator Real Estate & Development - Gulf Shores",
+            "phone": "2519485000",
+            "email": "contact@gobellator.com",
+            "website": "http://gobellator.com"
+        },
+        "history": {
+            "2022-09-20": {
+                "event": "Sale Listing",
+                "price": 122900,
+                "listingType": "Standard",
+                "listedDate": "2022-09-20T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1260
+            }
+        }
+    },
+    {
+        "id": "24875-Miflin-Rd,-Lot-12,-Elberta,-AL-36530",
+        "formattedAddress": "24875 Miflin Rd, Lot 12, Elberta, AL 36530",
+        "addressLine1": "24875 Miflin Rd",
+        "addressLine2": "Lot 12",
+        "city": "Elberta",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36530",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.363386262,
+        "longitude": -87.60038999,
+        "propertyType": "Land",
+        "lotSize": 12750,
+        "status": "Active",
+        "price": 60000,
+        "listingType": "Standard",
+        "listedDate": "2022-10-03T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2022-10-04T09:54:55.011Z",
+        "lastSeenDate": "2026-03-02T10:45:26.512Z",
+        "daysOnMarket": 1247,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "337172",
+        "listingAgent": {
+            "name": "Roddy Burkle",
+            "phone": "2519423395",
+            "email": "roddyburkle@gmail.com",
+            "website": "http://www.livingmybestliferealty.com/"
+        },
+        "listingOffice": {
+            "name": "Living My Best Life Realty",
+            "phone": "2519485335",
+            "email": "morgan@livingmybestliferealty.com"
+        },
+        "history": {
+            "2022-10-03": {
+                "event": "Sale Listing",
+                "price": 60000,
+                "listingType": "Standard",
+                "listedDate": "2022-10-03T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1247
+            }
+        }
+    },
+    {
+        "id": "626-Teton-Ridge-Rd,-Phs-2-&-77,-Fairhope,-AL-36532",
+        "formattedAddress": "626 Teton Ridge Rd, Phs 2 & 77, Fairhope, AL 36532",
+        "addressLine1": "626 Teton Ridge Rd",
+        "addressLine2": "Phs 2 & 77",
+        "city": "Fairhope",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36532",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.551861,
+        "longitude": -87.86221,
+        "propertyType": "Land",
+        "lotSize": 26572,
+        "hoa": {
+            "fee": 79
+        },
+        "status": "Active",
+        "price": 175000,
+        "listingType": "Standard",
+        "listedDate": "2023-02-17T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-02-18T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.510Z",
+        "daysOnMarket": 1110,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "342007",
+        "listingAgent": {
+            "name": "Rance Reehl",
+            "phone": "2519906622",
+            "email": "rance@reehltor.com",
+            "website": "http://www.rancereehl.com/"
+        },
+        "listingOffice": {
+            "name": "Coldwell Banker Reehl Properties - Fairhope Office",
+            "phone": "2519906622",
+            "email": "info@reehlproeprties.com",
+            "website": "http://www.reehlproperties.com"
+        },
+        "history": {
+            "2023-02-17": {
+                "event": "Sale Listing",
+                "price": 175000,
+                "listingType": "Standard",
+                "listedDate": "2023-02-17T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1110
+            }
+        }
+    },
+    {
+        "id": "246-Mount-Pleasant-Blvd,-Fairhope,-AL-36532",
+        "formattedAddress": "246 Mount Pleasant Blvd, Fairhope, AL 36532",
+        "addressLine1": "246 Mount Pleasant Blvd",
+        "addressLine2": null,
+        "city": "Fairhope",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36532",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.482854,
+        "longitude": -87.863548,
+        "propertyType": "Land",
+        "bedrooms": 0,
+        "lotSize": 17424,
+        "hoa": {
+            "fee": 104
+        },
+        "status": "Active",
+        "price": 179500,
+        "listingType": "Standard",
+        "listedDate": "2023-02-21T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-02-22T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.509Z",
+        "daysOnMarket": 1106,
+        "mlsName": "MobileAL",
+        "mlsNumber": "7178983",
+        "listingAgent": {
+            "name": "Rance Reehl",
+            "phone": "2519906622",
+            "email": "rance@reehltor.com",
+            "website": "http://www.rancereehl.com/"
+        },
+        "listingOffice": {
+            "name": "Coldwell Banker/Reehl Properties-Fairhope",
+            "phone": "2519906622",
+            "email": "info@reehlproperties.com"
+        },
+        "history": {
+            "2023-02-21": {
+                "event": "Sale Listing",
+                "price": 179500,
+                "listingType": "Standard",
+                "listedDate": "2023-02-21T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1106
+            }
+        }
+    },
+    {
+        "id": "626-Teton-Ridge-Rd,-Fairhope,-AL-36532",
+        "formattedAddress": "626 Teton Ridge Rd, Fairhope, AL 36532",
+        "addressLine1": "626 Teton Ridge Rd",
+        "addressLine2": null,
+        "city": "Fairhope",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36532",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.482854,
+        "longitude": -87.863548,
+        "propertyType": "Land",
+        "bedrooms": 0,
+        "lotSize": 26572,
+        "hoa": {
+            "fee": 79
+        },
+        "status": "Active",
+        "price": 175000,
+        "listingType": "Standard",
+        "listedDate": "2023-02-21T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-02-22T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.508Z",
+        "daysOnMarket": 1106,
+        "mlsName": "MobileAL",
+        "mlsNumber": "7179023",
+        "listingAgent": {
+            "name": "Rance Reehl",
+            "phone": "2519906622",
+            "email": "rance@reehltor.com",
+            "website": "http://www.rancereehl.com/"
+        },
+        "listingOffice": {
+            "name": "Coldwell Banker/Reehl Properties-Fairhope",
+            "phone": "2519906622",
+            "email": "info@reehlproperties.com"
+        },
+        "history": {
+            "2023-02-21": {
+                "event": "Sale Listing",
+                "price": 175000,
+                "listingType": "Standard",
+                "listedDate": "2023-02-21T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 1106
+            }
+        }
+    },
+    {
+        "id": "12025-Raptor-Ct,-Lot-53,-Elberta,-AL-36530",
+        "formattedAddress": "12025 Raptor Ct, Lot 53, Elberta, AL 36530",
+        "addressLine1": "12025 Raptor Ct",
+        "addressLine2": "Lot 53",
+        "city": "Elberta",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36530",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.401646,
+        "longitude": -87.543861,
+        "propertyType": "Land",
+        "lotSize": 5663,
+        "hoa": {
+            "fee": 320
+        },
+        "status": "Active",
+        "price": 229000,
+        "listingType": "Standard",
+        "listedDate": "2024-01-27T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-01-08T08:00:06.109Z",
+        "lastSeenDate": "2026-03-02T10:45:26.505Z",
+        "daysOnMarket": 766,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "356874",
+        "listingAgent": {
+            "name": "Deanna C. Auner",
+            "phone": "2519789797",
+            "email": "deanna@aunerrealty.com"
+        },
+        "listingOffice": {
+            "name": "Auner And Associates Realty",
+            "phone": "2519892141",
+            "email": "austinauner@gmail.com",
+            "website": "https://aunerrealty.com/"
+        },
+        "history": {
+            "2024-01-27": {
+                "event": "Sale Listing",
+                "price": 229000,
+                "listingType": "Standard",
+                "listedDate": "2024-01-27T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 766
+            }
+        }
+    },
+    {
+        "id": "15-Farrington-Ln,-Lot-15,-Spanish-Fort,-AL-36527",
+        "formattedAddress": "15 Farrington Ln, Lot 15, Spanish Fort, AL 36527",
+        "addressLine1": "15 Farrington Ln",
+        "addressLine2": "Lot 15",
+        "city": "Spanish Fort",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36527",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.720313,
+        "longitude": -87.892823,
+        "propertyType": "Land",
+        "lotSize": 31537,
+        "hoa": {
+            "fee": 79
+        },
+        "status": "Active",
+        "price": 35000,
+        "listingType": "Standard",
+        "listedDate": "2024-01-03T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-02-06T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.504Z",
+        "daysOnMarket": 790,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "355750",
+        "listingAgent": {
+            "name": "Kate Irvine",
+            "phone": "2514553677",
+            "email": "kirvine@gobellator.com",
+            "website": "https://kateirvine.gobellator.com/"
+        },
+        "listingOffice": {
+            "name": "Bellator RE & Dev-Eastern Shor",
+            "phone": "2519280031",
+            "email": "twilson@bellatoral.com",
+            "website": "http://gobellator.com"
+        },
+        "history": {
+            "2024-01-03": {
+                "event": "Sale Listing",
+                "price": 35000,
+                "listingType": "Standard",
+                "listedDate": "2024-01-03T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 790
+            }
+        }
+    },
+    {
+        "id": "20-Farrington-Ln,-Lot-20,-Spanish-Fort,-AL-36527",
+        "formattedAddress": "20 Farrington Ln, Lot 20, Spanish Fort, AL 36527",
+        "addressLine1": "20 Farrington Ln",
+        "addressLine2": "Lot 20",
+        "city": "Spanish Fort",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36527",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.720686,
+        "longitude": -87.896279,
+        "propertyType": "Land",
+        "lotSize": 29272,
+        "hoa": {
+            "fee": 79
+        },
+        "status": "Active",
+        "price": 35000,
+        "listingType": "Standard",
+        "listedDate": "2024-01-03T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-02-06T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.504Z",
+        "daysOnMarket": 790,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "355751",
+        "listingAgent": {
+            "name": "Kate Irvine",
+            "phone": "2514553677",
+            "email": "kirvine@gobellator.com",
+            "website": "https://kateirvine.gobellator.com/"
+        },
+        "listingOffice": {
+            "name": "Bellator RE & Dev-Eastern Shor",
+            "phone": "2519280031",
+            "email": "twilson@bellatoral.com",
+            "website": "http://gobellator.com"
+        },
+        "history": {
+            "2024-01-03": {
+                "event": "Sale Listing",
+                "price": 35000,
+                "listingType": "Standard",
+                "listedDate": "2024-01-03T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 790
+            }
+        }
+    },
+    {
+        "id": "County-16-Rd,-Lot-8,-Foley,-AL-36535",
+        "formattedAddress": "County 16 Rd, Lot 8, Foley, AL 36535",
+        "addressLine1": "County 16 Rd",
+        "addressLine2": "Lot 8",
+        "city": "Foley",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36535",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.34107914,
+        "longitude": -87.76154671,
+        "propertyType": "Land",
+        "lotSize": 297515,
+        "status": "Active",
+        "price": 254049,
+        "listingType": "Standard",
+        "listedDate": "2024-01-19T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-05-07T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.503Z",
+        "daysOnMarket": 774,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "345619",
+        "listingAgent": {
+            "name": "Lisa Johnson",
+            "phone": "2516091861",
+            "email": "realtorlisajohnson@gmail.com",
+            "website": "http://realtorlisajohnson.com"
+        },
+        "listingOffice": {
+            "name": "World Impact Real Estate",
+            "phone": "2516970005",
+            "email": "paulvangulf@gmail.com"
+        },
+        "history": {
+            "2024-01-19": {
+                "event": "Sale Listing",
+                "price": 254049,
+                "listingType": "Standard",
+                "listedDate": "2024-01-19T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 774
+            }
+        }
+    },
+    {
+        "id": "22207-Lot-23-Fairhope-Motorcoach-Loop,-Lot-23,-Fairhope,-AL-36532",
+        "formattedAddress": "22207 Lot 23 Fairhope Motorcoach Loop, Lot 23, Fairhope, AL 36532",
+        "addressLine1": "22207 Lot 23 Fairhope Motorcoach Loop",
+        "addressLine2": "Lot 23",
+        "city": "Fairhope",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36532",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.547396,
+        "longitude": -87.82917,
+        "propertyType": "Land",
+        "lotSize": 4185,
+        "hoa": {
+            "fee": 300
+        },
+        "status": "Active",
+        "price": 149000,
+        "listingType": "Standard",
+        "listedDate": "2024-02-03T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-02-03T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.502Z",
+        "daysOnMarket": 759,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "357207",
+        "listingAgent": {
+            "name": "Julie Stuart",
+            "phone": "2517523902",
+            "email": "juliestuartrealty@yahoo.com",
+            "website": "http://www.juliestuartrealty.com"
+        },
+        "listingOffice": {
+            "name": "Julie Stuart Realty, Inc",
+            "email": "juliestuartrealty@yahoo.com"
+        },
+        "history": {
+            "2024-02-03": {
+                "event": "Sale Listing",
+                "price": 149000,
+                "listingType": "Standard",
+                "listedDate": "2024-02-03T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 759
+            }
+        }
+    },
+    {
+        "id": "35868-Boykin-Blvd,-Lillian,-AL-36549",
+        "formattedAddress": "35868 Boykin Blvd, Lillian, AL 36549",
+        "addressLine1": "35868 Boykin Blvd",
+        "addressLine2": null,
+        "city": "Lillian",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36549",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.419142,
+        "longitude": -87.415438,
+        "propertyType": "Single Family",
+        "bedrooms": 3,
+        "bathrooms": 3.5,
+        "squareFootage": 2176,
+        "lotSize": 15464,
+        "yearBuilt": 1994,
+        "status": "Active",
+        "price": 1225000,
+        "listingType": "Standard",
+        "listedDate": "2024-02-28T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-02-29T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.502Z",
+        "daysOnMarket": 734,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "358403",
+        "listingAgent": {
+            "name": "Stacy Burgos",
+            "phone": "8504715000",
+            "email": "stacyburgos@kw.com"
+        },
+        "listingOffice": {
+            "name": "Keller Williams Gulf Coast",
+            "phone": "8504715000",
+            "email": "jhubbell@kw.com",
+            "website": "http://kwpensacolaflorida.com"
+        },
+        "history": {
+            "2024-02-28": {
+                "event": "Sale Listing",
+                "price": 1225000,
+                "listingType": "Standard",
+                "listedDate": "2024-02-28T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 734
+            }
+        }
+    },
+    {
+        "id": "22-Farrington-Ln,-Lot-22,-Spanish-Fort,-AL-36527",
+        "formattedAddress": "22 Farrington Ln, Lot 22, Spanish Fort, AL 36527",
+        "addressLine1": "22 Farrington Ln",
+        "addressLine2": "Lot 22",
+        "city": "Spanish Fort",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36527",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.721058,
+        "longitude": -87.895293,
+        "propertyType": "Land",
+        "lotSize": 19166,
+        "hoa": {
+            "fee": 79
+        },
+        "status": "Active",
+        "price": 25000,
+        "listingType": "Standard",
+        "listedDate": "2024-01-03T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-03-01T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.501Z",
+        "daysOnMarket": 790,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "355753",
+        "listingAgent": {
+            "name": "Kate Irvine",
+            "phone": "2514553677",
+            "email": "kirvine@gobellator.com",
+            "website": "https://kateirvine.gobellator.com/"
+        },
+        "listingOffice": {
+            "name": "Bellator RE & Dev-Eastern Shor",
+            "phone": "2519280031",
+            "email": "twilson@bellatoral.com",
+            "website": "http://gobellator.com"
+        },
+        "history": {
+            "2024-01-03": {
+                "event": "Sale Listing",
+                "price": 25000,
+                "listingType": "Standard",
+                "listedDate": "2024-01-03T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 790
+            }
+        }
+    },
+    {
+        "id": "507-West-Beach-Blvd,-Unit-115,-Gulf-Shores,-AL-36542",
+        "formattedAddress": "507 West Beach Blvd, Unit 115, Gulf Shores, AL 36542",
+        "addressLine1": "507 West Beach Blvd",
+        "addressLine2": "Unit 115",
+        "city": "Gulf Shores",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36542",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.246278,
+        "longitude": -87.697132,
+        "propertyType": "Condo",
+        "bedrooms": 2,
+        "bathrooms": 1.5,
+        "squareFootage": 964,
+        "lotSize": 87400,
+        "yearBuilt": 1982,
+        "hoa": {
+            "fee": 400
+        },
+        "status": "Active",
+        "price": 439000,
+        "listingType": "Standard",
+        "listedDate": "2024-03-05T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2022-10-20T14:01:27.663Z",
+        "lastSeenDate": "2026-03-02T10:45:26.500Z",
+        "daysOnMarket": 728,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "358765",
+        "listingAgent": {
+            "name": "Mitch Holliman",
+            "email": "mholliman@bellatoral.com"
+        },
+        "listingOffice": {
+            "name": "Dolphin Cove Realty LLC",
+            "phone": "2512280633",
+            "email": "pvidainvestments@gmail.com"
+        },
+        "history": {
+            "2024-03-05": {
+                "event": "Sale Listing",
+                "price": 439000,
+                "listingType": "Standard",
+                "listedDate": "2024-03-05T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 728
+            }
+        }
+    },
+    {
+        "id": "29348-Perdido-Beach-Blvd,-Apt-808,-Orange-Beach,-AL-36561",
+        "formattedAddress": "29348 Perdido Beach Blvd, Apt 808, Orange Beach, AL 36561",
+        "addressLine1": "29348 Perdido Beach Blvd",
+        "addressLine2": "Apt 808",
+        "city": "Orange Beach",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36561",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.279453,
+        "longitude": -87.524739,
+        "propertyType": "Condo",
+        "bedrooms": 2,
+        "bathrooms": 2.5,
+        "squareFootage": 1330,
+        "lotSize": 130680,
+        "yearBuilt": 2001,
+        "hoa": {
+            "fee": 873
+        },
+        "status": "Active",
+        "price": 825000,
+        "listingType": "Standard",
+        "listedDate": "2024-02-18T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-02-19T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.499Z",
+        "daysOnMarket": 744,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "357947",
+        "listingAgent": {
+            "name": "Kattrina Parsons",
+            "phone": "3345676800",
+            "email": "kattparsons1@gmail.com"
+        },
+        "listingOffice": {
+            "name": "Dream Home Realty, Llc",
+            "phone": "8502084308",
+            "email": "brokerevaherring@gmail.com"
+        },
+        "history": {
+            "2024-02-18": {
+                "event": "Sale Listing",
+                "price": 825000,
+                "listingType": "Standard",
+                "listedDate": "2024-02-18T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 744
+            }
+        }
+    },
+    {
+        "id": "Haber-Rd,-Elberta,-AL-36530",
+        "formattedAddress": "Haber Rd, Elberta, AL 36530",
+        "addressLine1": "Haber Rd",
+        "addressLine2": null,
+        "city": "Elberta",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36530",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.454912075,
+        "longitude": -87.62430375,
+        "propertyType": "Land",
+        "bedrooms": 0,
+        "lotSize": 1742400,
+        "status": "Active",
+        "price": 440000,
+        "listingType": "Standard",
+        "listedDate": "2024-03-04T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-03-05T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.498Z",
+        "daysOnMarket": 729,
+        "mlsName": "MobileAL",
+        "mlsNumber": "7347071",
+        "listingAgent": {
+            "name": "Clinton Flowers",
+            "phone": "8556575263",
+            "email": "cflowers@nationalland.com"
+        },
+        "listingOffice": {
+            "name": "National Land Realty",
+            "phone": "2512818733",
+            "email": "clintflowers@forestryland.com",
+            "website": "http://nationalland.com"
+        },
+        "history": {
+            "2024-03-04": {
+                "event": "Sale Listing",
+                "price": 440000,
+                "listingType": "Standard",
+                "listedDate": "2024-03-04T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 729
+            }
+        }
+    },
+    {
+        "id": "Whitehouse-Fork-Rd,-Bay-Minette,-AL-36507",
+        "formattedAddress": "Whitehouse Fork Rd, Bay Minette, AL 36507",
+        "addressLine1": "Whitehouse Fork Rd",
+        "addressLine2": null,
+        "city": "Bay Minette",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36507",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.821481,
+        "longitude": -87.822372,
+        "propertyType": "Land",
+        "bedrooms": 0,
+        "lotSize": 871200,
+        "status": "Active",
+        "price": 219900,
+        "listingType": "Standard",
+        "listedDate": "2024-03-01T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-01-15T09:20:29.483Z",
+        "lastSeenDate": "2026-03-02T10:45:26.497Z",
+        "daysOnMarket": 732,
+        "mlsName": "MyStateMLS",
+        "mlsNumber": "11254126",
+        "listingAgent": {
+            "name": "Charles Taylor",
+            "phone": "855",
+            "email": "charles.taylor1@followupboss.me"
+        },
+        "listingOffice": {
+            "name": "National Land Realty, Gulf Coast",
+            "phone": "855"
+        },
+        "history": {
+            "2022-12-05": {
+                "event": "Sale Listing",
+                "price": 219900,
+                "listingType": "Standard",
+                "listedDate": "2022-12-05T00:00:00.000Z",
+                "removedDate": "2024-01-17T00:00:00.000Z",
+                "daysOnMarket": 408
+            },
+            "2024-03-01": {
+                "event": "Sale Listing",
+                "price": 219900,
+                "listingType": "Standard",
+                "listedDate": "2024-03-01T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 732
+            }
+        }
+    },
+    {
+        "id": "26238-Highway,-181-Lot-2,-Daphne,-AL-36526",
+        "formattedAddress": "26238 Highway, 181 Lot 2, Daphne, AL 36526",
+        "addressLine1": "26238 Highway",
+        "addressLine2": "181 Lot 2",
+        "city": "Daphne",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36526",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.606868,
+        "longitude": -87.849903,
+        "propertyType": "Land",
+        "lotSize": 479160,
+        "status": "Active",
+        "price": 1450000,
+        "listingType": "Standard",
+        "listedDate": "2024-03-21T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-03-22T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.497Z",
+        "daysOnMarket": 712,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "359714",
+        "listingAgent": {
+            "name": "Rameh Khazen",
+            "email": "rkhazen@bellatoral.com"
+        },
+        "listingOffice": {
+            "name": "Bellator Real Estate & Development - Mobile",
+            "phone": "2513437777",
+            "email": "contact@gobellator.com",
+            "website": "www.bellatoral.com"
+        },
+        "history": {
+            "2024-03-21": {
+                "event": "Sale Listing",
+                "price": 1450000,
+                "listingType": "Standard",
+                "listedDate": "2024-03-21T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 712
+            }
+        }
+    },
+    {
+        "id": "32947-Boardwalk-Dr,-Spanish-Fort,-AL-36527",
+        "formattedAddress": "32947 Boardwalk Dr, Spanish Fort, AL 36527",
+        "addressLine1": "32947 Boardwalk Dr",
+        "addressLine2": null,
+        "city": "Spanish Fort",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36527",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.719506,
+        "longitude": -87.898396,
+        "propertyType": "Land",
+        "lotSize": 15246,
+        "status": "Active",
+        "price": 39900,
+        "listingType": "Standard",
+        "listedDate": "2024-03-01T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2020-09-15T09:25:51.256Z",
+        "lastSeenDate": "2026-03-02T10:45:26.496Z",
+        "daysOnMarket": 732,
+        "mlsName": "MyStateMLS",
+        "mlsNumber": "11254627",
+        "listingAgent": {
+            "name": "Matt Horton"
+        },
+        "listingOffice": {
+            "name": "National Land Realty, Gulf Coast",
+            "phone": "855"
+        },
+        "history": {
+            "2024-03-01": {
+                "event": "Sale Listing",
+                "price": 39900,
+                "listingType": "Standard",
+                "listedDate": "2024-03-01T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 732
+            }
+        }
+    },
+    {
+        "id": "Sedlack-Rd,-Lot-10,-Silverhill,-AL-36576",
+        "formattedAddress": "Sedlack Rd, Lot 10, Silverhill, AL 36576",
+        "addressLine1": "Sedlack Rd",
+        "addressLine2": "Lot 10",
+        "city": "Silverhill",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36576",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.544940443,
+        "longitude": -87.77684952,
+        "propertyType": "Land",
+        "lotSize": 42253,
+        "status": "Active",
+        "price": 80000,
+        "listingType": "Standard",
+        "listedDate": "2024-05-18T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-05-18T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.496Z",
+        "daysOnMarket": 654,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "362555",
+        "listingAgent": {
+            "name": "Donald Henry Wilkins",
+            "phone": "2514060720",
+            "email": "dhwil@aol.com"
+        },
+        "listingOffice": {
+            "name": "Power Real Estate, Inc.",
+            "phone": "2513420600",
+            "email": "paul@powerland.biz",
+            "website": "powerrealestate.biz"
+        },
+        "history": {
+            "2024-05-18": {
+                "event": "Sale Listing",
+                "price": 80000,
+                "listingType": "Standard",
+                "listedDate": "2024-05-18T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 654
+            }
+        }
+    },
+    {
+        "id": "11876-Gateway-Dr,-Lot-72,-Elberta,-AL-36530",
+        "formattedAddress": "11876 Gateway Dr, Lot 72, Elberta, AL 36530",
+        "addressLine1": "11876 Gateway Dr",
+        "addressLine2": "Lot 72",
+        "city": "Elberta",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36530",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.400633,
+        "longitude": -87.542938,
+        "propertyType": "Land",
+        "lotSize": 4356,
+        "hoa": {
+            "fee": 320
+        },
+        "status": "Active",
+        "price": 160000,
+        "listingType": "Standard",
+        "listedDate": "2024-01-31T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-02-01T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.495Z",
+        "daysOnMarket": 762,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "357032",
+        "listingAgent": {
+            "name": "Deanna C. Auner",
+            "phone": "2519789797",
+            "email": "deanna@aunerrealty.com"
+        },
+        "listingOffice": {
+            "name": "Auner And Associates Realty",
+            "phone": "2519892141",
+            "email": "austinauner@gmail.com",
+            "website": "https://aunerrealty.com/"
+        },
+        "history": {
+            "2024-01-31": {
+                "event": "Sale Listing",
+                "price": 160000,
+                "listingType": "Standard",
+                "listedDate": "2024-01-31T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 762
+            }
+        }
+    },
+    {
+        "id": "1027-West-Beach-Blvd,-Unit-108,-Gulf-Shores,-AL-36542",
+        "formattedAddress": "1027 West Beach Blvd, Unit 108, Gulf Shores, AL 36542",
+        "addressLine1": "1027 West Beach Blvd",
+        "addressLine2": "Unit 108",
+        "city": "Gulf Shores",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36542",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.244081,
+        "longitude": -87.710992,
+        "propertyType": "Condo",
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "squareFootage": 840,
+        "yearBuilt": 1984,
+        "hoa": {
+            "fee": 675
+        },
+        "status": "Active",
+        "price": 380000,
+        "listingType": "Standard",
+        "listedDate": "2024-04-19T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-04-20T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.495Z",
+        "daysOnMarket": 683,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "361172",
+        "listingAgent": {
+            "name": "Taura Domingue",
+            "phone": "2512338717",
+            "email": "taura.coastalrealty@gmail.com",
+            "website": "https://www.gulfcoastliving.us"
+        },
+        "listingOffice": {
+            "name": "NextHome Sunset Realty",
+            "phone": "2516151237",
+            "email": "christietheaux@gmail.com"
+        },
+        "history": {
+            "2024-04-19": {
+                "event": "Sale Listing",
+                "price": 380000,
+                "listingType": "Standard",
+                "listedDate": "2024-04-19T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 683
+            }
+        }
+    },
+    {
+        "id": "Nolte-Creek-Dr,-Foley,-AL-36535",
+        "formattedAddress": "Nolte Creek Dr, Foley, AL 36535",
+        "addressLine1": "Nolte Creek Dr",
+        "addressLine2": null,
+        "city": "Foley",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36535",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.379714,
+        "longitude": -87.789686,
+        "propertyType": "Land",
+        "lotSize": 435600,
+        "status": "Active",
+        "price": 299000,
+        "listingType": "Standard",
+        "listedDate": "2024-03-11T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-03-12T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.494Z",
+        "daysOnMarket": 722,
+        "mlsName": "Walker",
+        "mlsNumber": "24-524",
+        "listingAgent": {
+            "name": "Betty Ballard",
+            "phone": "2054121830",
+            "email": "bettyaballard@yahoo.com"
+        },
+        "listingOffice": {
+            "name": "Ballard Real Estate",
+            "phone": "2054876580",
+            "email": "margiegrayballard@yahoo.com"
+        },
+        "history": {
+            "2024-03-11": {
+                "event": "Sale Listing",
+                "price": 299000,
+                "listingType": "Standard",
+                "listedDate": "2024-03-11T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 722
+            }
+        }
+    },
+    {
+        "id": "8919-Diamond-Dr,-Gulf-Shores,-AL-36542",
+        "formattedAddress": "8919 Diamond Dr, Gulf Shores, AL 36542",
+        "addressLine1": "8919 Diamond Dr",
+        "addressLine2": null,
+        "city": "Gulf Shores",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36542",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.235376,
+        "longitude": -87.870604,
+        "propertyType": "Single Family",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "squareFootage": 2795,
+        "lotSize": 174240,
+        "yearBuilt": 2001,
+        "status": "Active",
+        "price": 1500000,
+        "listingType": "Standard",
+        "listedDate": "2024-05-04T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2020-09-21T23:01:34.312Z",
+        "lastSeenDate": "2026-03-02T10:45:26.494Z",
+        "daysOnMarket": 668,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "361922",
+        "listingAgent": {
+            "name": "Cam White",
+            "phone": "2519681777",
+            "email": "camwht2@gmail.com"
+        },
+        "listingOffice": {
+            "name": "Signature Properties",
+            "phone": "2516099292",
+            "email": "tuckershaver@gmail.com"
+        },
+        "history": {
+            "2024-05-04": {
+                "event": "Sale Listing",
+                "price": 1500000,
+                "listingType": "Standard",
+                "listedDate": "2024-05-04T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 668
+            }
+        }
+    },
+    {
+        "id": "23972-Perdido-Beach-Blvd,-Unit-2508,-Orange-Beach,-AL-36561",
+        "formattedAddress": "23972 Perdido Beach Blvd, Unit 2508, Orange Beach, AL 36561",
+        "addressLine1": "23972 Perdido Beach Blvd",
+        "addressLine2": "Unit 2508",
+        "city": "Orange Beach",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36561",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.261354,
+        "longitude": -87.615082,
+        "propertyType": "Condo",
+        "bedrooms": 3,
+        "bathrooms": 4,
+        "squareFootage": 1926,
+        "yearBuilt": 2005,
+        "hoa": {
+            "fee": 1479
+        },
+        "status": "Active",
+        "price": 950000,
+        "listingType": "Standard",
+        "listedDate": "2024-03-18T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-01-31T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.493Z",
+        "daysOnMarket": 715,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "359514",
+        "listingAgent": {
+            "name": "Brian Pugh",
+            "phone": "2517521380",
+            "email": "gulfshorescondofinder@gmail.com",
+            "website": "http://www.brettrobinson.com"
+        },
+        "listingOffice": {
+            "name": "Brett/Robinson",
+            "phone": "2519816180",
+            "email": "brsales@brettrobinson.com",
+            "website": "https://orangebeach.brettrobinsonrealestate.com"
+        },
+        "history": {
+            "2024-03-18": {
+                "event": "Sale Listing",
+                "price": 950000,
+                "listingType": "Standard",
+                "listedDate": "2024-03-18T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 715
+            }
+        }
+    },
+    {
+        "id": "1010-West-Beach-Blvd,-Apt-402,-Gulf-Shores,-AL-36542",
+        "formattedAddress": "1010 West Beach Blvd, Apt 402, Gulf Shores, AL 36542",
+        "addressLine1": "1010 West Beach Blvd",
+        "addressLine2": "Apt 402",
+        "city": "Gulf Shores",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36542",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.245509,
+        "longitude": -87.710427,
+        "propertyType": "Condo",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "squareFootage": 1042,
+        "yearBuilt": 2006,
+        "hoa": {
+            "fee": 700
+        },
+        "status": "Active",
+        "price": 449500,
+        "listingType": "Standard",
+        "listedDate": "2024-02-23T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-02-24T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.492Z",
+        "daysOnMarket": 739,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "358200",
+        "listingAgent": {
+            "name": "Robbie Jaeger",
+            "phone": "2519780432",
+            "email": "rjaeger@c21meyer.com"
+        },
+        "listingOffice": {
+            "name": "Young's Suncoast Realty on the",
+            "phone": "2514241219",
+            "email": "robbiejaegerproperties@gmail.com",
+            "website": "http://www.youngssuncoastrealty.com"
+        },
+        "history": {
+            "2024-02-23": {
+                "event": "Sale Listing",
+                "price": 449500,
+                "listingType": "Standard",
+                "listedDate": "2024-02-23T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 739
+            }
+        }
+    },
+    {
+        "id": "County-16-Rd,-Lot-10,-Foley,-AL-36535",
+        "formattedAddress": "County 16 Rd, Lot 10, Foley, AL 36535",
+        "addressLine1": "County 16 Rd",
+        "addressLine2": "Lot 10",
+        "city": "Foley",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36535",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.341142154,
+        "longitude": -87.76150379,
+        "propertyType": "Land",
+        "lotSize": 297950,
+        "status": "Active",
+        "price": 254399,
+        "listingType": "Standard",
+        "listedDate": "2024-04-10T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2023-05-07T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.491Z",
+        "daysOnMarket": 692,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "345621",
+        "listingAgent": {
+            "name": "Lisa Johnson",
+            "phone": "2516091861",
+            "email": "realtorlisajohnson@gmail.com",
+            "website": "http://realtorlisajohnson.com"
+        },
+        "listingOffice": {
+            "name": "World Impact Real Estate",
+            "phone": "2516970005",
+            "email": "paulvangulf@gmail.com"
+        },
+        "history": {
+            "2024-04-10": {
+                "event": "Sale Listing",
+                "price": 254399,
+                "listingType": "Standard",
+                "listedDate": "2024-04-10T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 692
+            }
+        }
+    },
+    {
+        "id": "26238-State-Hwy,-181,-Daphne,-AL-36526",
+        "formattedAddress": "26238 State Hwy, 181, Daphne, AL 36526",
+        "addressLine1": "26238 State Hwy",
+        "addressLine2": "181",
+        "city": "Daphne",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36526",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.606868,
+        "longitude": -87.849903,
+        "propertyType": "Land",
+        "bedrooms": 0,
+        "lotSize": 479160,
+        "status": "Active",
+        "price": 1450000,
+        "listingType": "Standard",
+        "listedDate": "2024-03-21T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2024-03-22T00:00:00.000Z",
+        "lastSeenDate": "2026-03-02T10:45:26.490Z",
+        "daysOnMarket": 712,
+        "mlsName": "MobileAL",
+        "mlsNumber": "7356514",
+        "listingAgent": {
+            "name": "Rameh Khazen",
+            "phone": "2517864673",
+            "email": "rkhazen@gobellator.com",
+            "website": "http://www.ramehkhazen.com"
+        },
+        "listingOffice": {
+            "name": "Bellator Real Estate & Development - Mobile",
+            "phone": "2513437777",
+            "email": "contact@gobellator.com",
+            "website": "http://gobellator.com"
+        },
+        "history": {
+            "2024-03-21": {
+                "event": "Sale Listing",
+                "price": 1450000,
+                "listingType": "Standard",
+                "listedDate": "2024-03-21T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 712
+            }
+        }
+    },
+    {
+        "id": "Boardwalk-Dr,-Lot-28,-Spanish-Fort,-AL-36527",
+        "formattedAddress": "Boardwalk Dr, Lot 28, Spanish Fort, AL 36527",
+        "addressLine1": "Boardwalk Dr",
+        "addressLine2": "Lot 28",
+        "city": "Spanish Fort",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36527",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.719417,
+        "longitude": -87.898659,
+        "propertyType": "Land",
+        "lotSize": 14288,
+        "hoa": {
+            "fee": 79
+        },
+        "status": "Active",
+        "price": 39900,
+        "listingType": "Standard",
+        "listedDate": "2024-05-17T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2021-06-05T09:44:15.954Z",
+        "lastSeenDate": "2026-03-02T10:45:26.490Z",
+        "daysOnMarket": 655,
+        "mlsName": "BaldwinREALTORS",
+        "mlsNumber": "362525",
+        "listingAgent": {
+            "name": "Clint Flowers",
+            "phone": "2513870787",
+            "email": "clintflowers@forestryland.com",
+            "website": "http://www.forestryland.com"
+        },
+        "listingOffice": {
+            "name": "National Land Realty",
+            "phone": "2512818733",
+            "email": "clintflowers@forestryland.com",
+            "website": "http://nationalland.com"
+        },
+        "history": {
+            "2024-05-17": {
+                "event": "Sale Listing",
+                "price": 39900,
+                "listingType": "Standard",
+                "listedDate": "2024-05-17T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 655
+            }
+        }
+    },
+    {
+        "id": "Dogwood-Fork-Rd,-Bay-Minette,-AL-36507",
+        "formattedAddress": "Dogwood Fork Rd, Bay Minette, AL 36507",
+        "addressLine1": "Dogwood Fork Rd",
+        "addressLine2": null,
+        "city": "Bay Minette",
+        "state": "AL",
+        "stateFips": "01",
+        "zipCode": "36507",
+        "county": "Baldwin",
+        "countyFips": "003",
+        "latitude": 30.831744,
+        "longitude": -87.737119,
+        "propertyType": "Land",
+        "bedrooms": 0,
+        "lotSize": 5575680,
+        "status": "Active",
+        "price": 795000,
+        "listingType": "Standard",
+        "listedDate": "2024-03-05T00:00:00.000Z",
+        "removedDate": null,
+        "createdDate": "2022-09-15T08:53:18.365Z",
+        "lastSeenDate": "2026-03-02T10:45:26.489Z",
+        "daysOnMarket": 728,
+        "mlsName": "MobileAL",
+        "mlsNumber": "7347527",
+        "listingAgent": {
+            "name": "Devin Schaff",
+            "phone": "2514041669",
+            "email": "devin.schaff@kw.com"
+        },
+        "listingOffice": {
+            "name": "Keller Williams Mobile",
+            "phone": "2516625660",
+            "email": "melissababcockrealtor@gmail.com"
+        },
+        "history": {
+            "2024-03-05": {
+                "event": "Sale Listing",
+                "price": 795000,
+                "listingType": "Standard",
+                "listedDate": "2024-03-05T00:00:00.000Z",
+                "removedDate": null,
+                "daysOnMarket": 728
+            }
+        }
+    }
+]
