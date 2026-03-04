@@ -8,6 +8,9 @@ from datetime import datetime, timezone
 import boto3
 import requests
 
+from constant import STATE_CODES
+
+
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
@@ -38,17 +41,20 @@ def fetch_listings(api_key: str, state: str, max_pages: int = 1) -> list[dict]:
     offset = 0
     pages_fetched = 0
     total_count: int | None = None
+    state_code = STATE_CODES.get(state)
+    if state_code is None:
+        raise ValueError(f"Unknown state name: '{state}'. Must be a full state name (e.g. 'Texas').")
 
     while True:
         params = {
-            "state": state,
+            "state": state_code,
             "status": "Active",
             "limit": PAGE_SIZE,
             "offset": offset,
             "includeTotalCount": "true",
         }
 
-        response = _get_with_retry(headers, params, state, offset)
+        response = _get_with_retry(headers, params, state_code, offset)
         if response is None:
             logger.error(
                 f"Skipping remaining pages for state={state} after rate limit failure"
@@ -161,10 +167,19 @@ def lambda_handler(event: dict, context) -> dict:
     results = []
 
     for state in states:
+        output_key = f"raw/rentcast/{execution_date}/listings-sale/{state}.json"
+
+        try:
+            s3.head_object(Bucket=bucket, Key=output_key)
+            logger.info(f"File already exists | key={output_key} - skipping state={state}")
+            continue
+        except s3.exceptions.ClientError as e:
+            if e.response["Error"]["Code"] != "404":
+                raise
+
         logger.info(f"Processing state={state}")
         records = fetch_listings(api_key, state, max_pages=max_pages)
 
-        output_key = f"raw/rentcast/{execution_date}/listings-sale/{state}.json"
         payload = {
             "batch_id": batch_id,
             "ingested_at": ingested_at,
