@@ -2,6 +2,7 @@ import io
 import logging
 import os
 import uuid
+import json
 from datetime import datetime, timezone
 
 import boto3
@@ -64,16 +65,15 @@ def lambda_handler(event, context):
             f"state={state} rows={len(partition)} key={output_key}"
         )
 
-    logger.info(
-        f"Ingestion complete | chunks_written={chunks_written} batch_id={batch_id}"
-    )
-
-    return {
-        "statusCode": 200,
-        "body": {
-            "batch_id": batch_id,
-            "chunks_written": chunks_written,
-            "ingested_at": ingested_at,
-            "execution_date": execution_date,
-        },
+    summary = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "source": "kaggle",
+        "batch_id": batch_id,
+        "execution_date": execution_date,
+        "records_count": df.shape[0],
+        "chunks_written": chunks_written,
+        "status": "success",
     }
+    logger.info(json.dumps(summary))
+
+    return {"statusCode": 200, "body": summary}

@@ -208,10 +208,9 @@ def lambda_handler(event: dict, context) -> dict:
         "execution_date": execution_date,
         "ingested_at": ingested_at,
         "states_processed": len(results),
-        "total_records": sum(r["record_count"] for r in results),
-        "results": results,
+        "records_count": sum(r["record_count"] for r in results),
     }
 
-    logger.info(f"Ingestion complete | {json.dumps(summary)}")
+    logger.info(json.dumps(summary))
 
     return {"statusCode": 200, "body": summary}
