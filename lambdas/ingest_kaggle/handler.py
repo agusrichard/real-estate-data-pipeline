@@ -21,6 +21,11 @@ def lambda_handler(event, context):
     )
     batch_id = str(uuid.uuid4())
     ingested_at = datetime.now(timezone.utc).isoformat()
+    prefix = f"raw/kaggle/{execution_date}/"
+    response = s3.list_objects_v2(Bucket=bucket, Prefix=prefix, MaxKeys=1)
+    if response.get("KeyCount", 0) > 0:
+        logger.info(f"Partition already exists | prefix={prefix} - skipping")
+        return {"statusCode": 200, "body": {"status": "skipped", "prefix": prefix}}
 
     logger.info(
         f"Starting ingestion | batch_id={batch_id} "
