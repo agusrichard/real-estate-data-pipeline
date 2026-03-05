@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Usage: ./package_lambda.sh <path-to-lambda-folder>
-# Example: ./package_lambda.sh lambdas/ingest_rentcast
+# Usage: ./scripts/package_lambda.sh <path-to-lambda-folder>
+# Example: ./scripts/package_lambda.sh lambdas/ingest_rentcast
 
 if [ $# -ne 1 ]; then
   echo "Usage: $0 <path-to-lambda-folder>"

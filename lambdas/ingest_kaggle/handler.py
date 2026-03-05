@@ -1,4 +1,5 @@
 import io
+import json
 import logging
 import os
 import uuid
@@ -21,6 +22,11 @@ def lambda_handler(event, context):
     )
     batch_id = str(uuid.uuid4())
     ingested_at = datetime.now(timezone.utc).isoformat()
+    prefix = f"raw/kaggle/{execution_date}/"
+    response = s3.list_objects_v2(Bucket=bucket, Prefix=prefix, MaxKeys=1)
+    if response.get("KeyCount", 0) > 0:
+        logger.info(f"Partition already exists | prefix={prefix} - skipping")
+        return {"statusCode": 200, "body": {"status": "skipped", "prefix": prefix}}
 
     logger.info(
         f"Starting ingestion | batch_id={batch_id} "
@@ -59,16 +65,15 @@ def lambda_handler(event, context):
             f"state={state} rows={len(partition)} key={output_key}"
         )
 
-    logger.info(
-        f"Ingestion complete | chunks_written={chunks_written} batch_id={batch_id}"
-    )
-
-    return {
-        "statusCode": 200,
-        "body": {
-            "batch_id": batch_id,
-            "chunks_written": chunks_written,
-            "ingested_at": ingested_at,
-            "execution_date": execution_date,
-        },
+    summary = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "source": "kaggle",
+        "batch_id": batch_id,
+        "execution_date": execution_date,
+        "records_count": df.shape[0],
+        "chunks_written": chunks_written,
+        "status": "success",
     }
+    logger.info(json.dumps(summary))
+
+    return {"statusCode": 200, "body": summary}
