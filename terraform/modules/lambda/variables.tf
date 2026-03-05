@@ -34,3 +34,7 @@ variable "environment_variables" {
   type    = map(string)
   default = {}
 }
+
+variable "sns_topic_arn" {
+  type = string
+}

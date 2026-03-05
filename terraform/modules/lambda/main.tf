@@ -19,3 +19,31 @@ resource "aws_lambda_function" "this" {
 
   depends_on = [aws_cloudwatch_log_group.this]
 }
+
+resource "aws_cloudwatch_metric_alarm" "errors" {
+  alarm_name          = "${var.function_name}-errors"
+  namespace           = "AWS/Lambda"
+  metric_name         = "Errors"
+  dimensions          = { FunctionName = var.function_name }
+  statistic           = "Sum"
+  period              = 300
+  evaluation_periods  = 1
+  threshold           = 1
+  comparison_operator = "GreaterThanOrEqualToThreshold"
+  alarm_actions       = [var.sns_topic_arn]
+  treat_missing_data  = "notBreaching"
+}
+
+resource "aws_cloudwatch_metric_alarm" "duration" {
+  alarm_name          = "${var.function_name}-duration-warning"
+  namespace           = "AWS/Lambda"
+  metric_name         = "Duration"
+  dimensions          = { FunctionName = var.function_name }
+  statistic           = "Maximum"
+  period              = 300
+  evaluation_periods  = 1
+  threshold           = var.timeout * 1000 * 0.8
+  comparison_operator = "GreaterThanOrEqualToThreshold"
+  alarm_actions       = [var.sns_topic_arn]
+  treat_missing_data  = "notBreaching"
+}
