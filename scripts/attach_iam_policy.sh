@@ -1,13 +1,19 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Usage: ./scripts/attach_iam_policy.sh <policy-name> <path-to-policy-json>
-# Example: ./scripts/attach_iam_policy.sh real-estate-dp-sns iam-policies/policy-sns.json
+# Usage: ./scripts/attach_iam_policy.sh [--profile <profile>] <policy-name> <path-to-policy-json>
+# Example: ./scripts/attach_iam_policy.sh --profile my-profile real-estate-dp-tf-policy-sns iam-policies/policy-sns.json
 
 IAM_USER="real-estate-dp-tf"
 
+AWS_OPTS=()
+if [ "${1:-}" = "--profile" ]; then
+  AWS_OPTS=(--profile "$2")
+  shift 2
+fi
+
 if [ $# -ne 2 ]; then
-  echo "Usage: $0 <policy-name> <path-to-policy-json>"
+  echo "Usage: $0 [--profile <profile>] <policy-name> <path-to-policy-json>"
   exit 1
 fi
 
@@ -20,14 +26,14 @@ if [ ! -f "$POLICY_FILE" ]; then
 fi
 
 echo "Creating policy: $POLICY_NAME"
-POLICY_ARN=$(aws iam create-policy \
+POLICY_ARN=$(aws "${AWS_OPTS[@]}" iam create-policy \
   --policy-name "$POLICY_NAME" \
   --policy-document "file://$POLICY_FILE" \
   --query "Policy.Arn" \
   --output text)
 
 echo "Attaching policy to user: $IAM_USER"
-aws iam attach-user-policy \
+aws "${AWS_OPTS[@]}" iam attach-user-policy \
   --user-name "$IAM_USER" \
   --policy-arn "$POLICY_ARN"
 
