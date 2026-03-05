@@ -2,10 +2,10 @@ import importlib.util
 import json
 import os
 import sys
+from unittest.mock import MagicMock, patch
 
 import pytest
 from botocore.exceptions import ClientError
-from unittest.mock import MagicMock, patch
 
 # constant.py lives alongside handler.py — add the directory to sys.path so
 # the handler's "from constant import STATE_CODES" resolves correctly.
@@ -34,13 +34,16 @@ def make_api_response(records: list, total_count: int | None = None) -> MagicMoc
     resp = MagicMock()
     resp.status_code = 200
     resp.json.return_value = records
-    resp.headers.get.return_value = str(total_count if total_count is not None else len(records))
+    resp.headers.get.return_value = str(
+        total_count if total_count is not None else len(records)
+    )
     return resp
 
 
 # ---------------------------------------------------------------------------
 # fetch_listings tests
 # ---------------------------------------------------------------------------
+
 
 @patch("rentcast_handler.requests.get")
 def test_fetch_single_page(mock_get):
@@ -100,6 +103,7 @@ def test_rate_limit_exhausted(mock_get, mock_sleep):
 # ---------------------------------------------------------------------------
 # lambda_handler tests
 # ---------------------------------------------------------------------------
+
 
 def test_missing_states_raises():
     # TARGET_STATES is "" (from fixture) and event has no "states" key

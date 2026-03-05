@@ -2,11 +2,11 @@ import importlib.util
 import io
 import os
 import sys
+from unittest.mock import patch
 
 import polars as pl
 import pytest
 from botocore.exceptions import ClientError
-from unittest.mock import patch
 
 # Both lambda directories contain a file named handler.py. Loading them with
 # importlib under unique module names avoids a sys.modules collision when both

@@ -7,9 +7,7 @@ from datetime import datetime, timezone
 
 import boto3
 import requests
-
 from constant import STATE_CODES
-
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -43,7 +41,9 @@ def fetch_listings(api_key: str, state: str, max_pages: int = 1) -> list[dict]:
     total_count: int | None = None
     state_code = STATE_CODES.get(state)
     if state_code is None:
-        raise ValueError(f"Unknown state name: '{state}'. Must be a full state name (e.g. 'Texas').")
+        raise ValueError(
+            f"Unknown state name: '{state}'. Must be a full state name (e.g. 'Texas')."
+        )
 
     while True:
         params = {
@@ -171,7 +171,9 @@ def lambda_handler(event: dict, context) -> dict:
 
         try:
             s3.head_object(Bucket=bucket, Key=output_key)
-            logger.info(f"File already exists | key={output_key} - skipping state={state}")
+            logger.info(
+                f"File already exists | key={output_key} - skipping state={state}"
+            )
             continue
         except s3.exceptions.ClientError as e:
             if e.response["Error"]["Code"] != "404":
