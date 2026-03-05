@@ -43,6 +43,7 @@ lambdas/**/*.zip
 # IDE
 .idea/
 .vscode/
+.claude
 *.iml
 
 # OS + more
