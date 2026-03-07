@@ -1,23 +1,13 @@
-import importlib.util
 import io
-import os
-import sys
 from unittest.mock import patch
 
 import polars as pl
 import pytest
 from botocore.exceptions import ClientError
 
-# Both lambda directories contain a file named handler.py. Loading them with
-# importlib under unique module names avoids a sys.modules collision when both
-# test files run in the same pytest session.
-_handler_path = os.path.join(
-    os.path.dirname(__file__), "../lambdas/ingest_kaggle/handler.py"
-)
-_spec = importlib.util.spec_from_file_location("kaggle_handler", _handler_path)
-handler = importlib.util.module_from_spec(_spec)
-sys.modules["kaggle_handler"] = handler
-_spec.loader.exec_module(handler)
+from conftest import load_module
+
+handler = load_module("lambdas/ingest_kaggle/handler.py", "kaggle_handler")
 
 
 @pytest.fixture(autouse=True)

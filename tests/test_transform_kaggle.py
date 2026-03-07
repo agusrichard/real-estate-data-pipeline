@@ -1,16 +1,8 @@
-import importlib.util
-import os
-import sys
-
 import polars as pl
 
-_handler_path = os.path.join(
-    os.path.dirname(__file__), "../lambdas/transform/kaggle.py"
-)
-_spec = importlib.util.spec_from_file_location("kaggle", _handler_path)
-kaggle = importlib.util.module_from_spec(_spec)
-sys.modules["kaggle"] = kaggle
-_spec.loader.exec_module(kaggle)
+from conftest import load_module
+
+kaggle = load_module("lambdas/transform/kaggle.py", "kaggle")
 
 
 def make_df(**overrides) -> pl.DataFrame:

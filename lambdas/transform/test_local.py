@@ -1,12 +1,11 @@
 import logging
-
-logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
-
 import uuid
 from datetime import datetime, timezone
 
 import polars as pl
 from kaggle import transform
+
+logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 
 # Load a small sample from the real CSV
 df = pl.read_csv(
