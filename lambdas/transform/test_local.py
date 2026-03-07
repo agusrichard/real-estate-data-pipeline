@@ -1,4 +1,5 @@
 import logging
+import os
 import uuid
 from datetime import datetime, timezone
 
@@ -43,3 +44,11 @@ print(dim_property_type)
 print("\nfact_listings sample:")
 print(fact_listings.head(5))
 print("\nAll checks passed.")
+
+# Write output Parquet files locally for inspection
+os.makedirs("output", exist_ok=True)
+dim_location.write_parquet("output/dim_location.parquet")
+dim_property_type.write_parquet("output/dim_property_type.parquet")
+fact_listings.write_parquet("output/fact_listings.parquet")
+
+print("\nParquet files written to lambdas/transform/output/ ")
