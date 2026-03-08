@@ -11,7 +11,9 @@ sys.path.insert(
 )
 from conftest import load_module
 
-handler = load_module("lambdas/ingest_rentcast/handler.py", "rentcast_handler", ["lambdas"])
+handler = load_module(
+    "lambdas/ingest_rentcast/handler.py", "rentcast_handler", ["lambdas"]
+)
 
 
 @pytest.fixture(autouse=True)

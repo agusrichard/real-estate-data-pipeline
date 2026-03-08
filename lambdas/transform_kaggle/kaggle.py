@@ -1,5 +1,4 @@
 import polars as pl
-
 from common.utils import build_dim_location, build_dim_property_type, normalize_state
 
 

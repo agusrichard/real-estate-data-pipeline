@@ -95,7 +95,6 @@ def test_property_type_mapping():
     fact = rentcast.build_fact_listings(df, dim_loc, dim_pt, BATCH_ID, INGESTED_AT)
 
     from common.utils import build_dim_property_type
-    canonical = set(build_dim_property_type()["property_type"].to_list())
     assert set(fact["property_type_id"].drop_nulls().to_list()).issubset(
         set(build_dim_property_type()["property_type_id"].to_list())
     )
@@ -106,7 +105,7 @@ def test_property_type_mapping():
 def test_dim_location_no_duplicates():
     records = [
         make_record(id="1", city="Austin", state="TX", zipCode="78701"),
-        make_record(id="2", city="Austin", state="TX", zipCode="78701"),  # duplicate location
+        make_record(id="2", city="Austin", state="TX", zipCode="78701"),  # duplicate
         make_record(id="3", city="Dallas", state="TX", zipCode="75201"),
     ]
     df = pl.DataFrame(records)
@@ -137,15 +136,27 @@ def test_market_stats_row_count():
     n_months = 5
     market_raw = make_market_raw(n_months=n_months)
     dim_loc = pl.DataFrame(
-        {"location_id": [1], "city": ["austin"], "state": ["texas"], "zip_code": ["78701"]}
+        {
+            "location_id": [1],
+            "city": ["austin"],
+            "state": ["texas"],
+            "zip_code": ["78701"],
+        }
     )
-    result = rentcast.build_fact_market_stats([market_raw], dim_loc, BATCH_ID, INGESTED_AT)
+    result = rentcast.build_fact_market_stats(
+        [market_raw], dim_loc, BATCH_ID, INGESTED_AT
+    )
     assert result.shape[0] == n_months
 
 
 def test_market_stats_empty_when_no_data():
     dim_loc = pl.DataFrame(
-        {"location_id": [1], "city": ["austin"], "state": ["texas"], "zip_code": ["78701"]}
+        {
+            "location_id": [1],
+            "city": ["austin"],
+            "state": ["texas"],
+            "zip_code": ["78701"],
+        }
     )
     result = rentcast.build_fact_market_stats([], dim_loc, BATCH_ID, INGESTED_AT)
     assert result.shape[0] == 0
