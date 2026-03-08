@@ -1,4 +1,5 @@
 import polars as pl
+from common.constants import STATE_CODES
 
 STREET_ABBR = {
     r"\bStreet\b": "St",
@@ -9,6 +10,9 @@ STREET_ABBR = {
     r"\bLane\b": "Ln",
     r"\bCourt\b": "Ct",
 }
+
+
+STATE_ABBR_TO_NAME = {v.lower(): k.lower() for k, v in STATE_CODES.items()}
 
 
 def normalize_state(series: pl.Expr) -> pl.Expr:
@@ -51,3 +55,10 @@ def normalize_address(series: pl.Expr) -> pl.Expr:
     for pattern, replacement in STREET_ABBR.items():
         result = result.str.replace(pattern, replacement)
     return result
+
+
+def expand_state_abbr(col: pl.Expr) -> pl.Expr:
+    """
+    Convert a 2-letter state abbreviation (case-insensitive) to a lowercase full name.
+    """
+    return col.str.to_lowercase().replace(STATE_ABBR_TO_NAME)

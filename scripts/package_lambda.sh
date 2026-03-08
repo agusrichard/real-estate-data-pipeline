@@ -37,8 +37,14 @@ rm -rf "$PACKAGE_DIR" "$ZIP_PATH"
 echo "Installing dependencies..."
 pip install -r "$LAMBDA_DIR/requirements.txt" --target "$PACKAGE_DIR" --quiet
 
-echo "Copying handler..."
-cp "$LAMBDA_DIR/handler.py" "$PACKAGE_DIR/handler.py"
+echo "Copying lambda source files..."
+cp "$LAMBDA_DIR"/*.py "$PACKAGE_DIR/"
+
+COMMON_DIR="$(dirname "$LAMBDA_DIR")/common"
+if [ -d "$COMMON_DIR" ]; then
+  echo "Copying common module..."
+  cp -r "$COMMON_DIR" "$PACKAGE_DIR/common"
+fi
 
 echo "Creating zip..."
 cd "$PACKAGE_DIR"

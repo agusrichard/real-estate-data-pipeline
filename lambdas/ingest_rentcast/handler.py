@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 
 import boto3
 import requests
-from constant import STATE_CODES
+from common.constants import STATE_CODES
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
