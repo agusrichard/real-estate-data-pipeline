@@ -1,5 +1,7 @@
 import polars as pl
 
+from .utils import assign_surrogate_keys, normalize_state
+
 
 def clean(df: pl.DataFrame) -> pl.DataFrame:
     # 1. Drop rows where price is missing or non-positive
@@ -29,7 +31,7 @@ def clean(df: pl.DataFrame) -> pl.DataFrame:
     df = df.with_columns(
         [
             pl.col("city").str.strip_chars().str.to_lowercase(),
-            pl.col("state").str.strip_chars().str.to_lowercase(),
+            normalize_state(pl.col("state")),
         ]
     )
 
@@ -37,11 +39,11 @@ def clean(df: pl.DataFrame) -> pl.DataFrame:
 
 
 def build_dim_location(df: pl.DataFrame) -> pl.DataFrame:
-    return (
+    return assign_surrogate_keys(
         df.select(["city", "state", "zip_code"])
         .unique()
-        .sort(["state", "city", "zip_code"])
-        .with_row_index(name="location_id", offset=1)
+        .sort(["state", "city", "zip_code"]),
+        "location_id",
     )
 
 
