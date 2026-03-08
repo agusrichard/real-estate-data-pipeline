@@ -7,6 +7,7 @@ utils = load_module("lambdas/common/utils.py", "utils", ["lambdas"])
 
 # --- normalize_state ---
 
+
 def test_normalize_state_lowercases():
     df = pl.DataFrame({"state": ["Alabama"]})
     result = df.select(utils.normalize_state(pl.col("state")))["state"].to_list()
@@ -27,6 +28,7 @@ def test_normalize_state_already_normalized():
 
 # --- expand_state_abbr ---
 
+
 def test_expand_state_abbr():
     df = pl.DataFrame({"state": ["AL"]})
     result = df.select(utils.expand_state_abbr(pl.col("state")))["state"].to_list()
@@ -41,6 +43,7 @@ def test_expand_state_abbr_case_insensitive():
 
 # --- normalize_address ---
 
+
 def test_normalize_address_street():
     df = pl.DataFrame({"address": ["123 Main Street"]})
     result = df.select(utils.normalize_address(pl.col("address")))["address"].to_list()
@@ -54,6 +57,7 @@ def test_normalize_address_avenue():
 
 
 # --- validate_lat_long ---
+
 
 def test_validate_lat_long_in_bounds():
     df = pl.DataFrame({"latitude": [35.0], "longitude": [-90.0]})

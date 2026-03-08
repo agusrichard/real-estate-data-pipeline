@@ -5,9 +5,7 @@ from conftest import load_module
 rentcast = load_module(
     "lambdas/transform_rentcast/rentcast.py", "rentcast", ["lambdas"]
 )
-kaggle = load_module(
-    "lambdas/transform_kaggle/kaggle.py", "kaggle", ["lambdas"]
-)
+kaggle = load_module("lambdas/transform_kaggle/kaggle.py", "kaggle", ["lambdas"])
 
 
 def make_record(**overrides) -> dict:
@@ -54,6 +52,7 @@ INGESTED_AT = "2026-01-01T00:00:00+00:00"
 
 # --- clean ---
 
+
 def test_clean_drops_null_id():
     df = pl.DataFrame([make_record(id=None)])
     assert rentcast.clean(df).shape[0] == 0
@@ -80,6 +79,7 @@ def test_clean_lowercases_city():
 
 # --- build_fact_listings / property type mapping ---
 
+
 def test_property_type_mapping():
     records = [
         make_record(propertyType="Single Family"),
@@ -95,12 +95,14 @@ def test_property_type_mapping():
     fact = rentcast.build_fact_listings(df, dim_loc, dim_pt, BATCH_ID, INGESTED_AT)
 
     from common.utils import build_dim_property_type
+
     assert set(fact["property_type_id"].drop_nulls().to_list()).issubset(
         set(build_dim_property_type()["property_type_id"].to_list())
     )
 
 
 # --- dim_location ---
+
 
 def test_dim_location_no_duplicates():
     records = [
@@ -116,6 +118,7 @@ def test_dim_location_no_duplicates():
 
 # --- fact_listings FK integrity ---
 
+
 def test_fact_foreign_key_integrity():
     records = [make_record(), make_record(id="2", city="Dallas", zipCode="75201")]
     df = pl.DataFrame(records)
@@ -124,13 +127,12 @@ def test_fact_foreign_key_integrity():
     dim_pt = rentcast.build_dim_property_type()
     fact = rentcast.build_fact_listings(df, dim_loc, dim_pt, BATCH_ID, INGESTED_AT)
 
-    orphans = fact.join(
-        dim_loc.select("location_id"), on="location_id", how="anti"
-    )
+    orphans = fact.join(dim_loc.select("location_id"), on="location_id", how="anti")
     assert orphans.shape[0] == 0
 
 
 # --- fact_market_stats ---
+
 
 def test_market_stats_row_count():
     n_months = 5
@@ -164,6 +166,7 @@ def test_market_stats_empty_when_no_data():
 
 # --- audit columns ---
 
+
 def test_audit_columns_present():
     records = [make_record()]
     df = pl.DataFrame(records)
@@ -180,25 +183,38 @@ def test_audit_columns_present():
 
 # --- schema alignment with Kaggle ---
 
+
 def test_schema_alignment_with_kaggle():
     rc_records = [make_record()]
     rc_df = pl.DataFrame(rc_records)
     rc_df = rentcast.clean(rc_df)
     rc_dim_loc = rentcast.build_dim_location(rc_df)
 
-    kg_df = pl.DataFrame({
-        "brokered_by": [1.0], "status": ["for_sale"], "price": [300_000.0],
-        "bed": [3.0], "bath": [2.0], "acre_lot": [0.1], "street": [123.0],
-        "city": ["Austin"], "state": ["Texas"], "zip_code": [78701.0],
-        "house_size": [1500.0], "prev_sold_date": ["2020-01-15"],
-    })
+    kg_df = pl.DataFrame(
+        {
+            "brokered_by": [1.0],
+            "status": ["for_sale"],
+            "price": [300_000.0],
+            "bed": [3.0],
+            "bath": [2.0],
+            "acre_lot": [0.1],
+            "street": [123.0],
+            "city": ["Austin"],
+            "state": ["Texas"],
+            "zip_code": [78701.0],
+            "house_size": [1500.0],
+            "prev_sold_date": ["2020-01-15"],
+        }
+    )
     kg_df = kaggle.clean(kg_df)
     kg_dim_loc = kaggle.build_dim_location(kg_df)
 
     assert rc_dim_loc.schema == kg_dim_loc.schema
 
-    combined = pl.concat([
-        kg_dim_loc.select(["city", "state", "zip_code"]),
-        rc_dim_loc.select(["city", "state", "zip_code"]),
-    ]).unique()
+    combined = pl.concat(
+        [
+            kg_dim_loc.select(["city", "state", "zip_code"]),
+            rc_dim_loc.select(["city", "state", "zip_code"]),
+        ]
+    ).unique()
     assert combined.shape[0] > 0
