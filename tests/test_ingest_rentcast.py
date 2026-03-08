@@ -1,4 +1,3 @@
-import importlib.util
 import json
 import os
 import sys
@@ -7,19 +6,14 @@ from unittest.mock import MagicMock, patch
 import pytest
 from botocore.exceptions import ClientError
 
-# constant.py lives alongside handler.py — add the directory to sys.path so
-# the handler's "from constant import STATE_CODES" resolves correctly.
 sys.path.insert(
     0, os.path.join(os.path.dirname(__file__), "../lambdas/ingest_rentcast")
 )
+from conftest import load_module
 
-_handler_path = os.path.join(
-    os.path.dirname(__file__), "../lambdas/ingest_rentcast/handler.py"
+handler = load_module(
+    "lambdas/ingest_rentcast/handler.py", "rentcast_handler", ["lambdas"]
 )
-_spec = importlib.util.spec_from_file_location("rentcast_handler", _handler_path)
-handler = importlib.util.module_from_spec(_spec)
-sys.modules["rentcast_handler"] = handler
-_spec.loader.exec_module(handler)
 
 
 @pytest.fixture(autouse=True)
