@@ -1,5 +1,4 @@
 import polars as pl
-
 from common.utils import (
     build_dim_location,
     build_dim_property_type,
@@ -35,7 +34,7 @@ def build_fact_listings(
 ) -> pl.DataFrame:
     df = df.with_columns(
         pl.col("propertyType")
-        .replace(PROPERTY_TYPE_MAP, default="unknown")
+        .replace_strict(PROPERTY_TYPE_MAP, default="unknown")
         .alias("property_type")
     )
 
@@ -80,17 +79,14 @@ def build_fact_listings(
 
 
 def build_fact_market_stats(
-    market_raw: dict,
+    market_raws: list[dict],
     dim_location: pl.DataFrame,
     batch_id: str,
     ingested_at: str,
 ) -> pl.DataFrame:
-    zip_code = market_raw["zipCode"]
-    history = market_raw["saleData"]["history"]
-
     rows = [
         {
-            "zip_code": zip_code,
+            "zip_code": market_raw["zipCode"],
             "snapshot_date": entry["date"],
             "median_listing_price": entry.get("medianPrice"),
             "median_price_per_sqft": entry.get("medianPricePerSquareFoot"),
@@ -98,8 +94,25 @@ def build_fact_market_stats(
             "total_listings": entry.get("totalListings"),
             "new_listings": entry.get("newListings"),
         }
-        for entry in history.values()
+        for market_raw in market_raws
+        for entry in market_raw["saleData"]["history"].values()
     ]
+
+    if not rows:
+        return pl.DataFrame(
+            schema={
+                "location_id": pl.UInt32,
+                "snapshot_date": pl.Date,
+                "median_listing_price": pl.Int64,
+                "median_price_per_sqft": pl.Float64,
+                "median_days_on_market": pl.Int64,
+                "total_listings": pl.Int64,
+                "new_listings": pl.Int64,
+                "source": pl.String,
+                "batch_id": pl.String,
+                "ingested_at": pl.String,
+            }
+        )
     df = pl.DataFrame(rows)
     df = df.join(
         dim_location.select(["zip_code", "location_id"]), on="zip_code", how="left"
@@ -132,7 +145,7 @@ def build_fact_market_stats(
 
 def transform(
     records: list[dict],
-    market_raw: dict,
+    market_raws: list[dict],
     batch_id: str,
     ingested_at: str,
 ) -> tuple[pl.DataFrame, pl.DataFrame, pl.DataFrame, pl.DataFrame]:
@@ -144,6 +157,6 @@ def transform(
         df, dim_location, dim_property_type, batch_id, ingested_at
     )
     fact_market_stats = build_fact_market_stats(
-        market_raw, dim_location, batch_id, ingested_at
+        market_raws, dim_location, batch_id, ingested_at
     )
     return dim_location, dim_property_type, fact_listings, fact_market_stats

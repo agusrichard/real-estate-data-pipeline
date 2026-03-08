@@ -68,6 +68,7 @@ def clean(df: pl.DataFrame) -> pl.DataFrame:
         & pl.col("zip_code").is_not_null()
         & (pl.col("zip_code") > 0)
     )
+    df = df.with_columns(pl.col("zip_code").cast(pl.String))
 
     # 5. Drop rows where both bed and bath are null
     df = df.filter(pl.col("bed").is_not_null() | pl.col("bath").is_not_null())
