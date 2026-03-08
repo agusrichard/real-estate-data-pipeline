@@ -2,7 +2,7 @@ import polars as pl
 
 from conftest import load_module
 
-kaggle = load_module("lambdas/transform/kaggle.py", "kaggle")
+kaggle = load_module("lambdas/transform_kaggle/kaggle.py", "kaggle", ["lambdas"])
 
 
 def make_df(**overrides) -> pl.DataFrame:

@@ -1,4 +1,5 @@
 import polars as pl
+
 from common.constants import STATE_CODES
 
 STREET_ABBR = {
@@ -11,12 +12,11 @@ STREET_ABBR = {
     r"\bCourt\b": "Ct",
 }
 
-
 STATE_ABBR_TO_NAME = {v.lower(): k.lower() for k, v in STATE_CODES.items()}
 
 
-def normalize_state(series: pl.Expr) -> pl.Expr:
-    return series.str.strip_chars().str.to_lowercase()
+def normalize_state(col: pl.Expr) -> pl.Expr:
+    return col.str.strip_chars().str.to_lowercase()
 
 
 def assign_surrogate_keys(
@@ -62,3 +62,28 @@ def expand_state_abbr(col: pl.Expr) -> pl.Expr:
     Convert a 2-letter state abbreviation (case-insensitive) to a lowercase full name.
     """
     return col.str.to_lowercase().replace(STATE_ABBR_TO_NAME)
+
+
+def build_dim_property_type() -> pl.DataFrame:
+    return pl.DataFrame(
+        {
+            "property_type_id": [1, 2, 3, 4, 5, 6],
+            "property_type": [
+                "studio",
+                "single_family",
+                "multi_family",
+                "condo",
+                "townhouse",
+                "unknown",
+            ],
+        }
+    )
+
+
+def build_dim_location(df: pl.DataFrame) -> pl.DataFrame:
+    return assign_surrogate_keys(
+        df.select(["city", "state", "zip_code"])
+        .unique()
+        .sort(["state", "city", "zip_code"]),
+        "location_id",
+    )

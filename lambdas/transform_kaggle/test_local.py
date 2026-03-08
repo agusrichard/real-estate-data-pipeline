@@ -51,4 +51,4 @@ dim_location.write_parquet("output/dim_location.parquet")
 dim_property_type.write_parquet("output/dim_property_type.parquet")
 fact_listings.write_parquet("output/fact_listings.parquet")
 
-print("\nParquet files written to lambdas/transform/output/ ")
+print("\nParquet files written to lambdas/transform_kaggle/output/")
