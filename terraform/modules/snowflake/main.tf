@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    snowflake = {
+      source  = "snowflakedb/snowflake"
+      version = "~> 1.0"
+    }
+  }
+}
+
 resource "snowflake_database" "real_estate" {
   name = var.database_name
 }
@@ -24,7 +33,7 @@ resource "snowflake_account_role" "pipeline_role" {
 }
 
 resource "snowflake_grant_privileges_to_account_role" "warehouse_usage" {
-  role_name  = snowflake_account_role.pipeline_role.name
+  account_role_name = snowflake_account_role.pipeline_role.name
   privileges = ["USAGE"]
 
   on_account_object {
@@ -34,7 +43,7 @@ resource "snowflake_grant_privileges_to_account_role" "warehouse_usage" {
 }
 
 resource "snowflake_grant_privileges_to_account_role" "database_usage" {
-  role_name  = snowflake_account_role.pipeline_role.name
+  account_role_name = snowflake_account_role.pipeline_role.name
   privileges = ["USAGE", "CREATE SCHEMA"]
 
   on_account_object {
@@ -44,9 +53,14 @@ resource "snowflake_grant_privileges_to_account_role" "database_usage" {
 }
 
 resource "snowflake_grant_privileges_to_account_role" "schema_privileges" {
-  for_each   = toset(["STAGING", "ANALYTICS"])
-  role_name  = snowflake_account_role.pipeline_role.name
-  privileges = ["USAGE", "CREATE TABLE", "CREATE STAGE", "CREATE SEQUENCE"]
+  for_each          = toset(["STAGING", "ANALYTICS"])
+  account_role_name = snowflake_account_role.pipeline_role.name
+  privileges        = ["USAGE", "CREATE TABLE", "CREATE STAGE", "CREATE SEQUENCE"]
+
+  depends_on = [
+    snowflake_schema.staging,
+    snowflake_schema.analytics,
+  ]
 
   on_schema {
     schema_name = "\"${var.database_name}\".\"${each.value}\""

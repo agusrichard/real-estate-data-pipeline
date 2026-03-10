@@ -7,6 +7,59 @@ resource "aws_sns_topic" "pipeline_alerts" {
   name = "real-estate-pipeline-alerts"
 }
 
+# IAM role that Snowflake will assume to read from S3.
+# Uses a placeholder trust policy (Deny all) to break the circular dependency with
+# the Snowflake storage integration. The null_resource below updates the trust
+# policy after the storage integration outputs are known.
+resource "aws_iam_role" "snowflake_s3" {
+  name = "snowflake-s3-access-role"
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Effect    = "Deny"
+      Principal = { AWS = "*" }
+      Action    = "sts:AssumeRole"
+    }]
+  })
+}
+
+# Updates the IAM role trust policy after the storage integration is created,
+# wiring in the real Snowflake IAM user ARN and external ID.
+resource "null_resource" "snowflake_trust_policy" {
+  depends_on = [module.snowflake]
+
+  triggers = {
+    iam_user_arn = module.snowflake.storage_aws_iam_user_arn
+    external_id  = module.snowflake.storage_aws_external_id
+  }
+
+  provisioner "local-exec" {
+    command = <<-EOF
+      aws iam update-assume-role-policy \
+        --role-name snowflake-s3-access-role \
+        --policy-document "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"${module.snowflake.storage_aws_iam_user_arn}\"},\"Action\":\"sts:AssumeRole\",\"Condition\":{\"StringEquals\":{\"sts:ExternalId\":\"${module.snowflake.storage_aws_external_id}\"}}}]}" \
+        --profile ${var.aws_profile}
+    EOF
+  }
+}
+
+# S3 read policy — allows Snowflake to read files from the staging prefix
+resource "aws_iam_role_policy" "snowflake_s3_read" {
+  name = "snowflake-s3-read"
+  role = aws_iam_role.snowflake_s3.id
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Effect = "Allow"
+      Action = ["s3:GetObject", "s3:ListBucket"]
+      Resource = [
+        module.s3.bucket_arn,
+        "${module.s3.bucket_arn}/staging/*"
+      ]
+    }]
+  })
+}
+
 module "s3" {
   source      = "./modules/s3"
   bucket_name = var.bucket_name
@@ -49,6 +102,7 @@ module "ingest_rentcast_lambda" {
 }
 
 module "snowflake" {
-  source      = "./modules/snowflake"
-  bucket_name = var.bucket_name
+  source                 = "./modules/snowflake"
+  bucket_name            = var.bucket_name
+  snowflake_iam_role_arn = aws_iam_role.snowflake_s3.arn
 }

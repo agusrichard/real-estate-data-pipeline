@@ -3,6 +3,12 @@ variable "aws_region" {
   description = "AWS region to deploy resources into"
 }
 
+variable "aws_profile" {
+  type        = string
+  description = "AWS CLI profile to use for local-exec provisioners"
+  default     = "default"
+}
+
 variable "bucket_name" {
   type        = string
   description = "Name for the S3 pipeline bucket"

@@ -6,7 +6,7 @@ terraform {
     }
 
     snowflake = {
-      source  = "Snowflake-Labs/snowflake"
+      source  = "snowflakedb/snowflake"
       version = "~> 1.0"
     }
   }
@@ -19,7 +19,8 @@ provider "aws" {
 provider "snowflake" {
   organization_name = var.snowflake_organization
   account_name      = var.snowflake_account
-  username          = var.snowflake_username
+  user              = var.snowflake_username
   password          = var.snowflake_password
   role              = "ACCOUNTADMIN"
+  preview_features_enabled = ["snowflake_storage_integration_resource", "snowflake_stage_resource"]
 }
