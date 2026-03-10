@@ -22,3 +22,9 @@ variable "snowflake_password" {
   sensitive = true
 }
 
+variable "snowflake_pipeline_password" {
+  type        = string
+  sensitive   = true
+  description = "Password for pipeline_user — stored in Secrets Manager for Lambda use"
+}
+

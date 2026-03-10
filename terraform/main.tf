@@ -21,6 +21,10 @@ resource "aws_iam_role" "snowflake_s3" {
       Action    = "sts:AssumeRole"
     }]
   })
+
+  lifecycle {
+    ignore_changes = [assume_role_policy]
+  }
 }
 
 # Updates the IAM role trust policy after the storage integration is created,
@@ -105,4 +109,35 @@ module "snowflake" {
   source                 = "./modules/snowflake"
   bucket_name            = var.bucket_name
   snowflake_iam_role_arn = aws_iam_role.snowflake_s3.arn
+}
+
+# Snowflake credentials secret — read by the load Lambda at runtime
+resource "aws_secretsmanager_secret" "snowflake_creds" {
+  name                    = "real-estate-pipeline/snowflake"
+  description             = "Snowflake credentials for the pipeline service account"
+  recovery_window_in_days = 0
+}
+
+resource "aws_secretsmanager_secret_version" "snowflake_creds" {
+  secret_id = aws_secretsmanager_secret.snowflake_creds.id
+  secret_string = jsonencode({
+    account      = var.snowflake_account
+    organization = var.snowflake_organization
+    username     = "pipeline_user"
+    password     = var.snowflake_pipeline_password
+  })
+}
+
+# Allow the Lambda execution role to read the Snowflake secret
+resource "aws_iam_role_policy" "lambda_snowflake_secret" {
+  name = "lambda-read-snowflake-secret"
+  role = module.iam.lambda_role_name
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Effect   = "Allow"
+      Action   = ["secretsmanager:GetSecretValue"]
+      Resource = aws_secretsmanager_secret.snowflake_creds.arn
+    }]
+  })
 }
