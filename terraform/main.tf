@@ -47,3 +47,8 @@ module "ingest_rentcast_lambda" {
     TARGET_STATES      = "Alabama,Texas,Florida"
   }
 }
+
+module "snowflake" {
+  source      = "./modules/snowflake"
+  bucket_name = var.bucket_name
+}
