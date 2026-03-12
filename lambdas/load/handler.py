@@ -44,30 +44,32 @@ def truncate_staging(connection):
 
 
 def load_to_staging(connection, execution_date: str):
+    kaggle = f"@REAL_ESTATE.STAGING.S3_STAGE/kaggle/{execution_date}"
+    rentcast = f"@REAL_ESTATE.STAGING.S3_STAGE/rentcast/{execution_date}"
     queries = [
         f"""
         COPY INTO REAL_ESTATE.STAGING.stg_dim_location
-        FROM @REAL_ESTATE.STAGING.S3_STAGE/kaggle/{execution_date}/dim_location.parquet
+        FROM {kaggle}/dim_location.parquet
         FILE_FORMAT = (TYPE = PARQUET) MATCH_BY_COLUMN_NAME = CASE_INSENSITIVE;
         """,
         f"""
         COPY INTO REAL_ESTATE.STAGING.stg_fact_listings_kaggle
-        FROM @REAL_ESTATE.STAGING.S3_STAGE/kaggle/{execution_date}/fact_listings.parquet
+        FROM {kaggle}/fact_listings.parquet
         FILE_FORMAT = (TYPE = PARQUET) MATCH_BY_COLUMN_NAME = CASE_INSENSITIVE;
         """,
         f"""
         COPY INTO REAL_ESTATE.STAGING.stg_dim_location
-        FROM @REAL_ESTATE.STAGING.S3_STAGE/rentcast/{execution_date}/dim_location.parquet
+        FROM {rentcast}/dim_location.parquet
         FILE_FORMAT = (TYPE = PARQUET) MATCH_BY_COLUMN_NAME = CASE_INSENSITIVE;
         """,
         f"""
         COPY INTO REAL_ESTATE.STAGING.stg_fact_listings_rentcast
-        FROM @REAL_ESTATE.STAGING.S3_STAGE/rentcast/{execution_date}/fact_listings.parquet
+        FROM {rentcast}/fact_listings.parquet
         FILE_FORMAT = (TYPE = PARQUET) MATCH_BY_COLUMN_NAME = CASE_INSENSITIVE;
         """,
         f"""
         COPY INTO REAL_ESTATE.STAGING.stg_fact_market_stats
-        FROM @REAL_ESTATE.STAGING.S3_STAGE/rentcast/{execution_date}/fact_market_stats.parquet
+        FROM {rentcast}/fact_market_stats.parquet
         FILE_FORMAT = (TYPE = PARQUET) MATCH_BY_COLUMN_NAME = CASE_INSENSITIVE;
         """,
     ]
@@ -85,7 +87,10 @@ def merge_dim_location(connection):
             AND target.zip_code = source.zip_code
         WHEN NOT MATCHED THEN
             INSERT (location_id, city, state, zip_code)
-            VALUES (REAL_ESTATE.ANALYTICS.dim_location_seq.NEXTVAL, source.city, source.state, source.zip_code);
+            VALUES (
+                REAL_ESTATE.ANALYTICS.dim_location_seq.NEXTVAL,
+                source.city, source.state, source.zip_code
+            );
         """
     ]
 
@@ -152,7 +157,8 @@ def insert_fact_tables(connection):
         SELECT
             dim_loc.location_id,
             stg.snapshot_date,
-            stg.median_listing_price, stg.median_price_per_sqft, stg.median_days_on_market,
+            stg.median_listing_price, stg.median_price_per_sqft,
+            stg.median_days_on_market,
             stg.total_listings, stg.new_listings,
             stg.source, stg.batch_id, stg.ingested_at
         FROM REAL_ESTATE.STAGING.stg_fact_market_stats stg
