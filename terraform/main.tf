@@ -105,6 +105,46 @@ module "ingest_rentcast_lambda" {
   }
 }
 
+module "transform_kaggle_lambda" {
+  source        = "./modules/lambda"
+  function_name = "transform-kaggle"
+  role_arn      = module.iam.lambda_role_arn
+  zip_path      = "../lambdas/transform_kaggle/lambda.zip"
+  timeout       = 300
+  memory_size   = 1024
+  sns_topic_arn = aws_sns_topic.pipeline_alerts.arn
+  environment_variables = {
+    BUCKET_NAME = module.s3.bucket_name
+  }
+}
+
+module "transform_rentcast_lambda" {
+  source        = "./modules/lambda"
+  function_name = "transform-rentcast"
+  role_arn      = module.iam.lambda_role_arn
+  zip_path      = "../lambdas/transform_rentcast/lambda.zip"
+  timeout       = 300
+  memory_size   = 1024
+  sns_topic_arn = aws_sns_topic.pipeline_alerts.arn
+  environment_variables = {
+    BUCKET_NAME = module.s3.bucket_name
+  }
+}
+
+module "load_lambda" {
+  source        = "./modules/lambda"
+  function_name = "load"
+  role_arn      = module.iam.lambda_role_arn
+  zip_path      = "../lambdas/load/lambda.zip"
+  timeout       = 300
+  memory_size   = 512
+  sns_topic_arn = aws_sns_topic.pipeline_alerts.arn
+  environment_variables = {
+    BUCKET_NAME         = module.s3.bucket_name
+    SNOWFLAKE_SECRET_ID = aws_secretsmanager_secret.snowflake_creds.name
+  }
+}
+
 module "snowflake" {
   source                 = "./modules/snowflake"
   bucket_name            = var.bucket_name
