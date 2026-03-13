@@ -1,16 +1,16 @@
+# ruff: noqa: I001 E402
 import sys
 from pathlib import Path
 
 HERE = Path(__file__).parent
 sys.path.insert(0, str(HERE.parent))  # makes lambdas/common importable
 
-# isort: split
-import logging  # noqa: E402
-import uuid  # noqa: E402
-from datetime import datetime, timezone  # noqa: E402
+import logging
+import uuid
+from datetime import datetime, timezone
 
-import polars as pl  # noqa: E402
-from kaggle import transform  # noqa: E402
+import polars as pl
+from kaggle import transform
 
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
