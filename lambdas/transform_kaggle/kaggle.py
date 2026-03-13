@@ -47,48 +47,44 @@ def build_fact_listings(
     )
 
 
-def clean(df: pl.DataFrame) -> pl.DataFrame:
-    # 1. Drop rows where price is missing or non-positive
-    df = df.filter(pl.col("price").is_not_null() & (pl.col("price") > 0))
-
-    # 2. Parse prev_sold_date; unparseable strings become null
-    df = df.with_columns(
-        pl.col("prev_sold_date").str.to_date(format="%Y-%m-%d", strict=False)
+def clean(lf: pl.LazyFrame) -> pl.LazyFrame:
+    return (
+        lf
+        # 1. Drop rows where price is missing or non-positive
+        .filter(pl.col("price").is_not_null() & (pl.col("price") > 0))
+        # 2. Parse prev_sold_date; unparseable strings become null
+        .with_columns(
+            pl.col("prev_sold_date").str.to_date(format="%Y-%m-%d", strict=False)
+        )
+        # 3. Remove price and bed outliers over $100M
+        .filter(pl.col("price") <= 100_000_000)
+        .filter(pl.col("bed").is_null() | (pl.col("bed") <= 20))
+        # 4. Drop rows where city, state, or zip_code are null/invalid
+        .filter(
+            pl.col("city").is_not_null()
+            & pl.col("state").is_not_null()
+            & pl.col("zip_code").is_not_null()
+            & (pl.col("zip_code") > 0)
+        )
+        .with_columns(pl.col("zip_code").cast(pl.String))
+        # 5. Drop rows where both bed and bath are null
+        .filter(pl.col("bed").is_not_null() | pl.col("bath").is_not_null())
+        # 6. Normalize city and state: strip whitespace, lowercase
+        .with_columns(
+            [
+                pl.col("city").str.strip_chars().str.to_lowercase(),
+                normalize_state(pl.col("state")),
+            ]
+        )
     )
-
-    # 3. Remove price and bed outliers over $100M
-    df = df.filter(pl.col("price") <= 100_000_000)
-    df = df.filter(pl.col("bed").is_null() | (pl.col("bed") <= 20))
-
-    # 4. Drop rows where city, state, or zip_code are null/invalid
-    df = df.filter(
-        pl.col("city").is_not_null()
-        & pl.col("state").is_not_null()
-        & pl.col("zip_code").is_not_null()
-        & (pl.col("zip_code") > 0)
-    )
-    df = df.with_columns(pl.col("zip_code").cast(pl.String))
-
-    # 5. Drop rows where both bed and bath are null
-    df = df.filter(pl.col("bed").is_not_null() | pl.col("bath").is_not_null())
-
-    # 6. Normalize city and state: strip whitespace, lowercase
-    df = df.with_columns(
-        [
-            pl.col("city").str.strip_chars().str.to_lowercase(),
-            normalize_state(pl.col("state")),
-        ]
-    )
-
-    return df
 
 
 def transform(
-    df: pl.DataFrame,
+    lf: pl.LazyFrame,
     batch_id: str,
     ingested_at: str,
 ) -> tuple[pl.DataFrame, pl.DataFrame, pl.DataFrame]:
-    df = clean(df)
+    df = clean(lf).collect(streaming=True)
     dim_location = build_dim_location(df)
     dim_property_type = build_dim_property_type()
     fact_listings = build_fact_listings(
