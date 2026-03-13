@@ -9,6 +9,6 @@ os.environ["AWS_PROFILE"] = "real-estate-dp"
 
 from handler import lambda_handler  # noqa: E402
 
-event = {"execution_date": "2024-01-01"}
+event = {"execution_date": "2026-01-01"}
 result = lambda_handler(event, {})
 print(result)
