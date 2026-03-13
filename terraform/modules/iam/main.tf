@@ -18,16 +18,17 @@ resource "aws_iam_policy" "lambda_policy" {
     Version = "2012-10-17"
     Statement = [
       {
-        Effect   = "Allow"
-        Action   = ["s3:GetObject"]
-        Resource = "${var.bucket_arn}/raw/*"
-      },
-      {
-        Effect   = "Allow"
-        Action   = ["s3:PutObject"]
+        Effect = "Allow"
+        Action = [
+          "s3:Get*",
+          "s3:List*",
+          "s3:Put*",
+          "s3:Delete*",
+          "s3:CreateBucket"
+        ]
         Resource = [
-          "${var.bucket_arn}/raw/*",
-          "${var.bucket_arn}/staging/*"
+          var.bucket_arn,
+          "${var.bucket_arn}/*"
         ]
       },
       {

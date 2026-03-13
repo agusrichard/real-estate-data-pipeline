@@ -35,7 +35,14 @@ echo "Cleaning previous build..."
 rm -rf "$PACKAGE_DIR" "$ZIP_PATH"
 
 echo "Installing dependencies..."
-.venv/bin/pip3 install -r "$LAMBDA_DIR/requirements.txt" --target "$PACKAGE_DIR" --quiet
+.venv/bin/pip3 install \
+  -r "$LAMBDA_DIR/requirements.txt" \
+  --target "$PACKAGE_DIR" \
+  --platform manylinux2014_x86_64 \
+  --implementation cp \
+  --python-version 3.12 \
+  --only-binary=:all: \
+  --quiet
 
 echo "Copying lambda source files..."
 cp "$LAMBDA_DIR"/*.py "$PACKAGE_DIR/"
