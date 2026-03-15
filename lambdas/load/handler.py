@@ -19,6 +19,7 @@ def get_snowflake_conn():
     return snowflake.connector.connect(
         account=f"{secret['organization']}-{secret['account']}",
         user=secret["username"],
+        role="PIPELINE_ROLE",
         password=secret["password"],
         warehouse="TRANSFORM_WH",
         database="REAL_ESTATE",
@@ -112,10 +113,12 @@ def insert_fact_tables(connection):
             stg.prev_sold_date, stg.brokered_by,
             stg.source, stg.batch_id, stg.ingested_at
         FROM REAL_ESTATE.STAGING.stg_fact_listings_kaggle stg
+        JOIN REAL_ESTATE.STAGING.stg_dim_location stg_loc
+            ON stg.location_id = stg_loc.location_id
         JOIN REAL_ESTATE.ANALYTICS.dim_location dim_loc
-            ON  stg.city     = dim_loc.city
-            AND stg.state    = dim_loc.state
-            AND stg.zip_code = dim_loc.zip_code
+            ON  stg_loc.city     = dim_loc.city
+            AND stg_loc.state    = dim_loc.state
+            AND stg_loc.zip_code = dim_loc.zip_code
         WHERE NOT EXISTS (
             SELECT 1 FROM REAL_ESTATE.ANALYTICS.fact_listings existing
             WHERE existing.batch_id = stg.batch_id
@@ -139,10 +142,12 @@ def insert_fact_tables(connection):
             stg.days_on_market, stg.listed_date,
             stg.source, stg.batch_id, stg.ingested_at
         FROM REAL_ESTATE.STAGING.stg_fact_listings_rentcast stg
+        JOIN REAL_ESTATE.STAGING.stg_dim_location stg_loc
+            ON stg.location_id = stg_loc.location_id
         JOIN REAL_ESTATE.ANALYTICS.dim_location dim_loc
-            ON  stg.city     = dim_loc.city
-            AND stg.state    = dim_loc.state
-            AND stg.zip_code = dim_loc.zip_code
+            ON  stg_loc.city     = dim_loc.city
+            AND stg_loc.state    = dim_loc.state
+            AND stg_loc.zip_code = dim_loc.zip_code
         WHERE NOT EXISTS (
             SELECT 1 FROM REAL_ESTATE.ANALYTICS.fact_listings existing
             WHERE existing.batch_id = stg.batch_id
@@ -162,10 +167,12 @@ def insert_fact_tables(connection):
             stg.total_listings, stg.new_listings,
             stg.source, stg.batch_id, stg.ingested_at
         FROM REAL_ESTATE.STAGING.stg_fact_market_stats stg
+        JOIN REAL_ESTATE.STAGING.stg_dim_location stg_loc
+            ON stg.location_id = stg_loc.location_id
         JOIN REAL_ESTATE.ANALYTICS.dim_location dim_loc
-            ON  stg.city     = dim_loc.city
-            AND stg.state    = dim_loc.state
-            AND stg.zip_code = dim_loc.zip_code
+            ON  stg_loc.city     = dim_loc.city
+            AND stg_loc.state    = dim_loc.state
+            AND stg_loc.zip_code = dim_loc.zip_code
         WHERE NOT EXISTS (
             SELECT 1 FROM REAL_ESTATE.ANALYTICS.fact_market_stats existing
             WHERE existing.batch_id = stg.batch_id

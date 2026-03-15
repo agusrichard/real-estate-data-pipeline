@@ -59,3 +59,13 @@ zip -r "../lambda.zip" . --quiet
 cd - > /dev/null
 
 echo "Done: $ZIP_PATH ($(du -sh "$ZIP_PATH" | cut -f1))"
+
+LAMBDA_NAME=$(basename "$LAMBDA_DIR")
+MODULE_NAME="${LAMBDA_NAME}_lambda"
+TERRAFORM_DIR="$(dirname "$(dirname "$LAMBDA_DIR")")/terraform"
+
+echo "Applying Terraform for module.$MODULE_NAME..."
+AWS_PROFILE=real-estate-dp terraform -chdir="$TERRAFORM_DIR" apply \
+  -var-file="environments/dev.tfvars" \
+  -target="module.$MODULE_NAME" \
+  -auto-approve
