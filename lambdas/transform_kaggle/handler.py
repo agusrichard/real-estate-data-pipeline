@@ -31,15 +31,18 @@ def lambda_handler(event, context):
     response = s3.list_objects_v2(Bucket=bucket, Prefix=raw_prefix)
     keys = [obj["Key"] for obj in response.get("Contents", [])]
 
-    frames = []
-    for key in keys:
+    tmp_dir = "/tmp/raw_kaggle"
+    os.makedirs(tmp_dir, exist_ok=True)
+    for i, key in enumerate(keys):
         obj = s3.get_object(Bucket=bucket, Key=key)
-        frames.append(pl.read_parquet(io.BytesIO(obj["Body"].read())))
-    df = pl.concat(frames)
-    logger.info(f"Loaded {len(frames)} files | total rows={df.shape[0]}")
+        with open(f"{tmp_dir}/{i}.parquet", "wb") as f:
+            f.write(obj["Body"].read())
+    logger.info(f"Downloaded {len(keys)} files to {tmp_dir} | ready for lazy scan")
+
+    lf = pl.scan_parquet(f"{tmp_dir}/*.parquet")
 
     dim_location, dim_property_type, fact_listings = transform(
-        df, batch_id, ingested_at
+        lf, batch_id, ingested_at
     )
 
     # Write output tables to staging
@@ -50,8 +53,9 @@ def lambda_handler(event, context):
     ]:
         buf = io.BytesIO()
         frame.write_parquet(buf)
+        buf.seek(0)
         key = f"{staging_prefix}{name}.parquet"
-        s3.put_object(Bucket=bucket, Key=key, Body=buf.getvalue())
+        s3.put_object(Bucket=bucket, Key=key, Body=buf)
         logger.info(f"Uploaded {name} | rows={frame.shape[0]} key={key}")
 
     summary = {

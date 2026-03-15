@@ -1,28 +1,33 @@
+# ruff: noqa: I001 E402
+import sys
+from pathlib import Path
+
+HERE = Path(__file__).parent
+sys.path.insert(0, str(HERE.parent))  # makes lambdas/common importable
+
 import logging
-import os
 import uuid
 from datetime import datetime, timezone
 
 import polars as pl
 from kaggle import transform
 
+
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 
-# Load a small sample from the real CSV
-df = pl.read_csv(
-    "../../inspect/realtor-data.csv",
+# Load a small sample from the real CSV as a LazyFrame (matches Lambda behaviour)
+lf = pl.scan_csv(
+    HERE / "../../inspect/realtor-data.csv",
     infer_schema_length=10_000,
     n_rows=1_000,
 )
 
-print(f"Rows before cleaning: {df.shape[0]}")
-
 batch_id = str(uuid.uuid4())
 ingested_at = datetime.now(timezone.utc).isoformat()
 
-dim_location, dim_property_type, fact_listings = transform(df, batch_id, ingested_at)
+dim_location, dim_property_type, fact_listings = transform(lf, batch_id, ingested_at)
 
-print(f"Rows after cleaning (fact_listings): {fact_listings.shape[0]}")
+print(f"Rows after cleaning (fact_listings): {fact_listings.shape[0]}")  # noqa: E501
 print(f"dim_location rows: {dim_location.shape[0]}")
 print(f"dim_property_type rows: {dim_property_type.shape[0]}")
 
@@ -46,9 +51,10 @@ print(fact_listings.head(5))
 print("\nAll checks passed.")
 
 # Write output Parquet files locally for inspection
-os.makedirs("output", exist_ok=True)
-dim_location.write_parquet("output/dim_location.parquet")
-dim_property_type.write_parquet("output/dim_property_type.parquet")
-fact_listings.write_parquet("output/fact_listings.parquet")
+output_dir = HERE / "output"
+output_dir.mkdir(exist_ok=True)
+dim_location.write_parquet(output_dir / "dim_location.parquet")
+dim_property_type.write_parquet(output_dir / "dim_property_type.parquet")
+fact_listings.write_parquet(output_dir / "fact_listings.parquet")
 
 print("\nParquet files written to lambdas/transform_kaggle/output/")
