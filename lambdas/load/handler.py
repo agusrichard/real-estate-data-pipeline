@@ -1,6 +1,7 @@
 import json
 import logging
 import os
+import uuid
 from datetime import datetime, timezone
 
 import boto3
@@ -79,8 +80,7 @@ def load_to_staging(connection, execution_date: str):
 
 
 def merge_dim_location(connection):
-    queries = [
-        """
+    merge_sql = """
         MERGE INTO REAL_ESTATE.ANALYTICS.dim_location AS target
         USING REAL_ESTATE.STAGING.stg_dim_location AS source
             ON  target.city     = source.city
@@ -92,15 +92,15 @@ def merge_dim_location(connection):
                 REAL_ESTATE.ANALYTICS.dim_location_seq.NEXTVAL,
                 source.city, source.state, source.zip_code
             );
-        """
-    ]
+    """
 
-    snowflake_execute(connection, queries)
+    with connection.cursor() as cursor:
+        cursor.execute(merge_sql)
+        return cursor.rowcount
 
 
 def insert_fact_tables(connection):
-    queries = [
-        """
+    kaggle_insert_sql = """
         INSERT INTO REAL_ESTATE.ANALYTICS.fact_listings
             (location_id, property_type_id, price, status,
              bed, bath, acre_lot, house_size, prev_sold_date, brokered_by,
@@ -123,8 +123,8 @@ def insert_fact_tables(connection):
             SELECT 1 FROM REAL_ESTATE.ANALYTICS.fact_listings existing
             WHERE existing.batch_id = stg.batch_id
         );
-        """,
         """
+    rentcast_insert_sql = """
         INSERT INTO REAL_ESTATE.ANALYTICS.fact_listings
             (location_id, property_type_id, price, status,
              rentcast_id, address, bedrooms, bathrooms,
@@ -152,8 +152,8 @@ def insert_fact_tables(connection):
             SELECT 1 FROM REAL_ESTATE.ANALYTICS.fact_listings existing
             WHERE existing.batch_id = stg.batch_id
         );
-        """,
-        """
+    """
+    market_stats_insert_sql = """
         INSERT INTO REAL_ESTATE.ANALYTICS.fact_market_stats
             (location_id, snapshot_date,
              median_listing_price, median_price_per_sqft, median_days_on_market,
@@ -177,13 +177,38 @@ def insert_fact_tables(connection):
             SELECT 1 FROM REAL_ESTATE.ANALYTICS.fact_market_stats existing
             WHERE existing.batch_id = stg.batch_id
         );
-        """,
-    ]
+    """
 
-    snowflake_execute(connection, queries)
+    with connection.cursor() as cursor:
+        cursor.execute(kaggle_insert_sql)
+        kaggle_rows = cursor.rowcount
+
+        cursor.execute(rentcast_insert_sql)
+        rentcast_rows = cursor.rowcount
+
+        cursor.execute(market_stats_insert_sql)
+        market_rows = cursor.rowcount
+
+    return kaggle_rows, rentcast_rows, market_rows
+
+
+def insert_pipeline_metadata(
+    connection, batch_id, source, table_name, row_count, start_time
+):
+    with connection.cursor() as cursor:
+        cursor.execute(
+            """
+            INSERT INTO REAL_ESTATE.ANALYTICS.pipeline_metadata
+                (batch_id, source, table_name, row_count, load_started_at, load_ended_at, status)
+            VALUES (%s, %s, %s, %s, %s, CURRENT_TIMESTAMP(), %s)
+            """,
+            (batch_id, source, table_name, row_count, start_time, "SUCCESS"),
+        )
 
 
 def lambda_handler(event, context):
+    batch_id = str(uuid.uuid4())
+    start_time = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
     execution_date = event.get(
         "execution_date", datetime.now(timezone.utc).strftime("%Y-%m-%d")
     )
@@ -196,13 +221,34 @@ def lambda_handler(event, context):
 
         logger.info("Loading data from S3 to Snowflake Staging schema")
         load_to_staging(connection, execution_date)
-        merge_dim_location(connection)
+        dim_location_rows = merge_dim_location(connection)
 
         logger.info("Loading data from Snowflake Staging to Snowflake Analytics")
-        insert_fact_tables(connection)
+        kaggle_rows, rentcast_rows, market_rows = insert_fact_tables(connection)
+
+        logger.info("Logging pipeline metadata")
+        insert_pipeline_metadata(
+            connection, batch_id, "all", "dim_location", dim_location_rows, start_time
+        )
+        insert_pipeline_metadata(
+            connection, batch_id, "kaggle", "fact_listings", kaggle_rows, start_time
+        )
+        insert_pipeline_metadata(
+            connection, batch_id, "rentcast", "fact_listings", rentcast_rows, start_time
+        )
+        insert_pipeline_metadata(
+            connection, batch_id, "rentcast", "fact_market_stats", market_rows, start_time
+        )
 
     summary = {
         "execution_date": execution_date,
+        "batch_id": batch_id,
+        "rows_loaded": {
+            "dim_location": dim_location_rows,
+            "fact_listings_kaggle": kaggle_rows,
+            "fact_listings_rentcast": rentcast_rows,
+            "fact_market_stats": market_rows,
+        },
         "ingested_at": datetime.now(timezone.utc).isoformat(),
     }
 
