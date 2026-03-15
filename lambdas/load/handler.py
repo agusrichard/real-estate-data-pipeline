@@ -199,7 +199,8 @@ def insert_pipeline_metadata(
         cursor.execute(
             """
             INSERT INTO REAL_ESTATE.ANALYTICS.pipeline_metadata
-                (batch_id, source, table_name, row_count, load_started_at, load_ended_at, status)
+                (batch_id, source, table_name, row_count,
+                 load_started_at, load_ended_at, status)
             VALUES (%s, %s, %s, %s, %s, CURRENT_TIMESTAMP(), %s)
             """,
             (batch_id, source, table_name, row_count, start_time, status),
@@ -295,13 +296,28 @@ def lambda_handler(event, context):
 
             logger.info("Logging pipeline metadata")
             insert_pipeline_metadata(
-                connection, batch_id, "all", "dim_location", dim_location_rows, start_time
+                connection,
+                batch_id,
+                "all",
+                "dim_location",
+                dim_location_rows,
+                start_time,
             )
             insert_pipeline_metadata(
-                connection, batch_id, "kaggle", "fact_listings", kaggle_rows, start_time
+                connection,
+                batch_id,
+                "kaggle",
+                "fact_listings",
+                kaggle_rows,
+                start_time,
             )
             insert_pipeline_metadata(
-                connection, batch_id, "rentcast", "fact_listings", rentcast_rows, start_time
+                connection,
+                batch_id,
+                "rentcast",
+                "fact_listings",
+                rentcast_rows,
+                start_time,
             )
             insert_pipeline_metadata(
                 connection,
