@@ -32,6 +32,8 @@ def mock_cursor():
     cursor = MagicMock()
     cursor.__enter__ = MagicMock(return_value=cursor)
     cursor.__exit__ = MagicMock(return_value=False)
+    cursor.fetchone.return_value = (0,)
+    cursor.rowcount = 0
     return cursor
 
 
@@ -161,18 +163,31 @@ def test_lambda_handler_happy_path(mock_get_conn, mock_connection, mock_cursor):
     result = handler.lambda_handler({"execution_date": "2024-06-01"}, {})
 
     assert result["statusCode"] == 200
-    assert result["body"]["execution_date"] == "2024-06-01"
-    assert "ingested_at" in result["body"]
+    body = result["body"]
+    assert body["execution_date"] == "2024-06-01"
+    assert "ingested_at" in body
+    assert "batch_id" in body
+    assert "rows_loaded" in body
+    assert "quality_checks_result" in body
 
     executed = [c.args[0] for c in mock_cursor.execute.call_args_list]
     truncates = [q for q in executed if "TRUNCATE" in q]
     copies = [q for q in executed if "COPY INTO" in q]
     merges = [q for q in executed if "MERGE INTO" in q]
     inserts = [q for q in executed if "INSERT INTO" in q]
+    metadata_inserts = [q for q in inserts if "pipeline_metadata" in q]
+    quality_inserts = [q for q in inserts if "data_quality_log" in q]
+    fact_inserts = [
+        q
+        for q in inserts
+        if "pipeline_metadata" not in q and "data_quality_log" not in q
+    ]
     assert len(truncates) == 5
     assert len(copies) == 5
     assert len(merges) == 1
-    assert len(inserts) == 3
+    assert len(fact_inserts) == 3
+    assert len(metadata_inserts) == 4
+    assert len(quality_inserts) == 4
 
 
 @patch("load_handler.get_snowflake_conn")
