@@ -14,17 +14,12 @@ variable "bucket_name" {
   description = "Name for the S3 pipeline bucket"
 }
 
-variable "snowflake_organization" { type = string }
-variable "snowflake_account" { type = string }
-variable "snowflake_username" { type = string }
-variable "snowflake_password" {
-  type      = string
-  sensitive = true
-}
-
-variable "snowflake_pipeline_password" {
+variable "snowflake_iam_user_arn" {
   type        = string
-  sensitive   = true
-  description = "Password for pipeline_user — stored in Secrets Manager for Lambda use"
+  description = "STORAGE_AWS_IAM_USER_ARN from Snowflake DESC INTEGRATION"
 }
 
+variable "snowflake_external_id" {
+  type        = string
+  description = "STORAGE_AWS_EXTERNAL_ID from Snowflake DESC INTEGRATION"
+}
