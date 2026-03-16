@@ -34,7 +34,23 @@ def create_lambda_operator(
 
 
 def check_data_quality(**context):
-    logger.info("All quality checks passed")
+    load_response = context["ti"].xcom_pull(task_ids="load")
+    response = json.loads(load_response)
+    body = response["body"]
+
+    quality_checks = body["quality_checks_result"]
+    failed = [check for check in quality_checks if not check["passed"]]
+
+    if failed:
+        for check in failed:
+            logger.error(f"FAILED: {check['name']} (value: {check['value']})")
+        raise ValueError(
+            f"{len(failed)} quality check(s) failed: {[c['name'] for c in failed]}"
+        )
+
+    logger.info(f"All {len(quality_checks)} quality checks passed")
+    logger.info(f"Batch: {body['batch_id']}")
+    logger.info(f"Rows loaded: {body['rows_loaded']}")
 
 
 with DAG(
@@ -48,8 +64,13 @@ with DAG(
     ],
 ) as dag:
     ingest_kaggle = create_lambda_operator(task_id="ingest_kaggle")
-    ingest_rentcast = create_lambda_operator(
-        task_id="ingest_rentcast", extra_payload={"states": ["Alabama"]}
+    ingest_rentcast = LambdaInvokeFunctionOperator(
+        task_id="ingest_rentcast",
+        function_name="ingest-rentcast",
+        payload=(
+            '{"execution_date": "{{ ds }}",'
+            ' "states": {{ dag_run.conf.get("states", ["Alabama"]) | tojson }}}'
+        ),
     )
     transform_kaggle = create_lambda_operator(task_id="transform_kaggle")
     transform_rentcast = create_lambda_operator(task_id="transform_rentcast")
