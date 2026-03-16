@@ -145,9 +145,13 @@ resource "aws_iam_role_policy" "mwaa_execution" {
         ]
       },
       {
-        Effect   = "Allow"
-        Action   = ["lambda:InvokeFunction"]
-        Resource = "arn:aws:lambda:*:*:function:real-estate-*"
+        Effect = "Allow"
+        Action = ["lambda:InvokeFunction"]
+        Resource = [
+          "arn:aws:lambda:*:*:function:ingest-*",
+          "arn:aws:lambda:*:*:function:transform-*",
+          "arn:aws:lambda:*:*:function:load"
+        ]
       },
       {
         Effect = "Allow"
