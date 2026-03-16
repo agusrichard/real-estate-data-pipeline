@@ -7,6 +7,20 @@ resource "aws_sns_topic" "pipeline_alerts" {
   name = "real-estate-pipeline-alerts"
 }
 
+resource "aws_iam_role_policy" "lambda_read_snowflake_secret" {
+  name = "lambda-read-snowflake-secret"
+  role = module.iam.lambda_role_name
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Effect   = "Allow"
+      Action   = ["secretsmanager:GetSecretValue"]
+      Resource = module.snowflake_iam.secret_arn
+    }]
+  })
+}
+
 module "s3" {
   source      = "./modules/s3"
   bucket_name = var.bucket_name
@@ -95,16 +109,15 @@ module "snowflake_iam" {
   snowflake_external_id  = var.snowflake_external_id
 }
 
-resource "aws_iam_role_policy" "lambda_read_snowflake_secret" {
-  name = "lambda-read-snowflake-secret"
-  role = module.iam.lambda_role_name
+module "mwaa" {
+  source = "./modules/mwaa"
 
-  policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [{
-      Effect   = "Allow"
-      Action   = ["secretsmanager:GetSecretValue"]
-      Resource = module.snowflake_iam.secret_arn
-    }]
-  })
+  environment_name  = "real-estate-pipeline"
+  environment_class = "mw1.small"
+  max_workers       = 2
+
+  tags = {
+    Project     = "real-estate-data-pipeline"
+    Environment = "dev"
+  }
 }
