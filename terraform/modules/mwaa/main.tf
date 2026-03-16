@@ -138,11 +138,16 @@ resource "aws_iam_role_policy" "mwaa_execution" {
     Statement = [
       {
         Effect = "Allow"
-        Action = ["s3:GetObject*", "s3:PutObject*", "s3:ListBucket", "s3:GetBucketLocation"]
+        Action = ["s3:GetObject*", "s3:PutObject*", "s3:ListBucket", "s3:GetBucket*"]
         Resource = [
           aws_s3_bucket.mwaa_dags.arn,
           "${aws_s3_bucket.mwaa_dags.arn}/*"
         ]
+      },
+      {
+        Effect   = "Allow"
+        Action   = ["s3:GetAccountPublicAccessBlock"]
+        Resource = "*"
       },
       {
         Effect = "Allow"
@@ -177,6 +182,19 @@ resource "aws_iam_role_policy" "mwaa_execution" {
         Effect   = "Allow"
         Action   = ["sqs:*"]
         Resource = "arn:aws:sqs:*:*:airflow-celery-*"
+      },
+      {
+        Effect = "Allow"
+        Action = [
+          "ec2:CreateNetworkInterface",
+          "ec2:CreateNetworkInterfacePermission",
+          "ec2:DeleteNetworkInterface",
+          "ec2:DescribeNetworkInterfaces",
+          "ec2:DescribeSecurityGroups",
+          "ec2:DescribeSubnets",
+          "ec2:DescribeVpcs"
+        ]
+        Resource = "*"
       },
       {
         Effect = "Allow"

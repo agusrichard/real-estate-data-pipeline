@@ -1,3 +1,4 @@
+import json
 import logging
 from datetime import datetime, timedelta
 
@@ -20,11 +21,15 @@ def snake_to_kebab(s: str) -> str:
     return s.replace("_", "-")
 
 
-def create_lambda_operator(task_id: str) -> LambdaInvokeFunctionOperator:
+def create_lambda_operator(
+    task_id: str, extra_payload: dict | None = None
+) -> LambdaInvokeFunctionOperator:
+    base = {"execution_date": "{{ ds }}"}
+    base.update(extra_payload or {})
     return LambdaInvokeFunctionOperator(
         task_id=task_id,
         function_name=snake_to_kebab(task_id),
-        payload='{"execution_date": "{{ ds }}"}',
+        payload=json.dumps(base),
     )
 
 
@@ -43,7 +48,9 @@ with DAG(
     ],
 ) as dag:
     ingest_kaggle = create_lambda_operator(task_id="ingest_kaggle")
-    ingest_rentcast = create_lambda_operator(task_id="ingest_rentcast")
+    ingest_rentcast = create_lambda_operator(
+        task_id="ingest_rentcast", extra_payload={"states": ["Alabama"]}
+    )
     transform_kaggle = create_lambda_operator(task_id="transform_kaggle")
     transform_rentcast = create_lambda_operator(task_id="transform_rentcast")
     load = create_lambda_operator(task_id="load")
